@@ -1,0 +1,45 @@
+.chip {
+  --borderOnColor: #000;
+  --borderOffColor: #000;
+  --fontOnColor: #fff;
+  --fontOffColor: #000;
+  --bgOnColor: #000;
+  --bgOffColor: #fff;
+  --px: 10px;
+  --py: 4px;
+  --fontSize: 16px;
+  --rounded: 100px;
+  --gap: 5px;
+
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    &:checked {
+      + label {
+        border-color: var(--borderOnColor);
+        background-color: var(--bgOnColor);
+        color: var(--fontOnColor);
+      }
+    }
+    &:focus {
+      + label {
+        outline: 2px solid #000;
+        outline-offset: 2px;
+      }
+    }
+  }
+  label {
+    padding: var(--py) var(--px);
+    border: 1px solid var(--borderOffColor);
+    background-color: var(--bgOffColor);
+    border-radius: var(--rounded);
+    font-size: var(--fontSize);
+    color: var(--fontOffColor);
+  }
+}

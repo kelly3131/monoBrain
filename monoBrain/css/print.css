@@ -1,0 +1,21 @@
+@media print {
+  .header,
+  .footer,
+  .visual {
+    display: none;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+}
+@page {
+  margin: 1cm 2cm;
+}
+.print {
+  display: block;
+}
+@media screen {
+  .print {
+    display: none;
+  }
+}

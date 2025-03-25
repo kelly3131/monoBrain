@@ -1,0 +1,12 @@
+.table-type1 {
+  th,
+  td {
+    border: 1px solid var(--gray400);
+  }
+}
+.table-type2 {
+  th,
+  td {
+    border: 1px solid var(--gray400);
+  }
+}

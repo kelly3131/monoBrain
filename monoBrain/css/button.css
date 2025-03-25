@@ -1,0 +1,126 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+
+  /* -------------------------------------------------------------------------- */
+  /*                                    크기정의                                  */
+  /* -------------------------------------------------------------------------- */
+  &.base {
+    --px: 1rem;
+    --py: 1rem;
+    /* --fs:1.2rem; */
+
+    padding-inline: var(--px);
+    padding-block: var(--py);
+    font-size: var(--fs, var(--font-base));
+  }
+  &.md {
+    --px: 1.2rem;
+    --py: 1.2rem;
+    /* --fs:1.2rem; */
+
+    padding-inline: var(--px);
+    padding-block: var(--py);
+    font-size: var(--fs, var(--font-base));
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                                    색상정의                                  */
+  /* -------------------------------------------------------------------------- */
+  &.primary {
+    color: var(--white);
+    background-color: var(--primary);
+  }
+  &.secondary {
+    color: var(----gray500);
+    background-color: var(--white);
+    border: 1px solid var(--gray500);
+  }
+  &:disabled {
+    opacity: 0.2;
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                                    아이콘정의                                */
+  /* -------------------------------------------------------------------------- */
+  &[class*='ico'] {
+    &::after {
+      content: '';
+      width: var(--width);
+      aspect-ratio: 1;
+      background: var(--bg) no-repeat center / contain;
+    }
+  }
+  &.ico1 {
+    --width: 2rem;
+    --bg: url('../images/ico1.svg');
+  }
+  &.ico2 {
+    --width: 2rem;
+    --bg: url('../images/ico2.svg');
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    아이콘전용                                */
+/* -------------------------------------------------------------------------- */
+.ico-button {
+  --size: var(--icon-size, 3rem);
+  --rounded: 0;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: var(--rounded, 0);
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+
+  /* 아이콘 유효성 검사 */
+  &:has(svg:not(svg[aria-hidden='true'])) {
+    &::after {
+      content: 'svg에 aria-hidden을 정의하세요';
+      position: absolute;
+      left: 0;
+      top: -1.5rem;
+      white-space: nowrap;
+      font-size: 1.2rem;
+      color: red;
+      background-color: var(--white);
+    }
+  }
+  &:not([aria-label]) {
+    &::after {
+      content: 'button에 aria-label에 대체텍스트를 넣어주세요';
+      position: absolute;
+      left: 0;
+      top: -1.5rem;
+      white-space: nowrap;
+      font-size: 1.2rem;
+      color: red;
+      background-color: var(--white);
+    }
+  }
+
+  /* 아이콘 크기 정의 */
+  &.xs {
+    --icon-size: 1.5rem;
+  }
+  &.sm {
+    --icon-size: 1.6rem;
+  }
+  &.base {
+    --icon-size: 2rem;
+  }
+  &.md {
+    --icon-size: 2.5rem;
+  }
+  &.lg {
+    --icon-size: 2.8rem;
+  }
+}

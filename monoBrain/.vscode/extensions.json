@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "figma.figma-vscode-extension",
+    "naumovs.color-highlight",
+    "ritwickdey.liveserver",
+    "sculove.translator",
+    "celianriboulet.webvalidator",
+    "esbenp.prettier-vscode",
+    "kisstkondoros.vscode-gutter-preview",
+    "vunguyentuan.vscode-css-variables"
+  ]
+}

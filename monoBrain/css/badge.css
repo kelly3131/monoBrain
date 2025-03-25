@@ -1,0 +1,28 @@
+.badge {
+  --paddingX: 1rem;
+  --paddingY: 1rem;
+  --fontSize: 1.2rem;
+  --radius: 1rem;
+
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+  padding-inline: var(--paddingX);
+  padding-block: var(--paddingY);
+  font-size: var(--fontSize, var(--font-base));
+  border-radius: var(--radius);
+
+  /* -------------------------------------------------------------------------- */
+  /*                                    색상정의                                  */
+  /* -------------------------------------------------------------------------- */
+  &.blue {
+    color: var(--white);
+    background-color: var(--blue600);
+  }
+  &.orange {
+    color: var(--white);
+    background-color: var(--red500);
+  }
+}

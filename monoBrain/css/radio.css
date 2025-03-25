@@ -1,0 +1,44 @@
+.radio {
+  --offImage: url(../images/ico_radio_off.svg);
+  --onImage: url(../images/ico_radio_on.svg);
+  --fontSize: 19px;
+  --offColor: gray;
+  --onColor: tomato;
+  --pl: 32px;
+  --height: 24px;
+
+  display: inline-flex;
+  align-items: center;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    &:checked {
+      + label {
+        color: var(--onColor);
+        background: var(--onImage) no-repeat left;
+      }
+    }
+    &:focus {
+      + label {
+        outline: 2px solid #000;
+        border-radius: 2px;
+      }
+    }
+  }
+  label {
+    padding-left: var(--pl);
+    background: var(--offImage) no-repeat left;
+    font-size: var(--fontSize);
+    color: var(--offColor);
+    height: var(--height);
+    align-content: center;
+  }
+
+  &:has(label:empty) {
+    --pl: 24px;
+  }
+}

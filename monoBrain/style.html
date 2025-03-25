@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>디자인 시스템 - Rebehayan</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./guide/css/guide.css" />
+  <link rel="shortcut icon" href="./guide/images/favicon.ico" type="image/x-icon">
+  <script type="module" src="./guide/js/style.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div>
+      <dialog class="sidebar" id="sidebar">
+        <h1><img src="./guide/images/logo.png" alt=""><span>Rebehayan</span><span>Deep-Dive</span></h1>
+        <nav id="gnb">
+          <details name="gnb" open>
+            <summary>Atoms (원자)</summary>
+            <!-- 기본적인 속성 → UI 요소 → 기능성 컴포넌트 -->
+            <ul>
+              <li><a href="./guide/colors.html" class="active" target="frame">Colors</a></li>
+              <li><a href="./guide/typography.html" target="frame">Typography</a></li>
+              <li><a href="./guide/align.html" target="frame">Align</a></li>
+              <li><a href="./guide/spacing.html" target="frame">Spacing</a></li>
+              <li><a href="" target="frame">Shadows</a></li>
+              <li><a href="" target="frame">Icons</a></li>
+            </ul>
+          </details>
+          <details name="gnb">
+            <summary>Molecules (분자)</summary>
+            <!-- 기본 UI → 내비게이션 → 폼 → 인터랙션 요소 -->
+            <ul>
+              <li><a href="./guide/badge.html" target="frame">Badge</a></li>
+              <li><a href="./guide/button.html" target="frame">Button</a></li>
+              <li><a href="" target="frame">Rating</a></li>
+              <li><a href="" target="frame">Toast</a></li>
+              <li><a href="" target="frame">Avatar</a></li>
+              <li><a href="" target="frame">Button Group</a></li>
+              <li><a href="" target="frame">Breadcrumb</a></li>
+              <li><a href="" target="frame">Pagination</a></li>
+              <li><a href="" target="frame">Tabs</a></li>
+              <li><a href="./guide/pipe.html" target="frame">Pipe Navigation</a></li>
+              <li><a href="./guide/forms.html" target="frame">Forms</a></li>
+              <li><a href="" target="frame">Tag</a></li>
+              <li><a href="" target="frame">Dialog</a></li>
+            </ul>
+          </details>
+          <details name="gnb">
+            <summary>Organisms (유기체)</summary>
+            <!-- 레이아웃 → 콘텐츠 → 입력/필터링 → 인터랙션 -->
+            <ul>
+              <li><a href="" target="frame">Header</a></li>
+              <li><a href="" target="frame">Hero Section</a></li>
+              <li><a href="" target="frame">Banner</a></li>
+              <li><a href="" target="frame">Footer</a></li>
+              <li><a href="" target="frame">Sidebar</a></li>
+
+              <li><a href="" target="frame">Card</a></li>
+              <li><a href="" target="frame">Gallery</a></li>
+              <li><a href="" target="frame">Carousel</a></li>
+              <li><a href="./guide/tables.html" target="frame">Tables</a></li>
+
+              <li><a href="" target="frame">Search</a></li>
+              <li><a href="" target="frame">Filter</a></li>
+
+              <li><a href="" target="frame">Datepicker</a></li>
+              <li><a href="" target="frame">Accordion</a></li>
+              <li><a href="" target="frame">Dialog</a></li>
+              <li><a href="" target="frame">Indicators</a></li>
+            </ul>
+          </details>
+          <details name="gnb">
+            <summary>Template (템플릿)</summary>
+            <ul>
+              <li><a href="" target="frame">Basic Layout</a></li> <!-- header, footer 콘텐츠 영역이 포함된 기본 레이아웃-->
+              <li><a href="" target="frame">Card Grid</a></li> <!-- 카드형태로 아이템을 나열하는 UI -->
+              <li><a href="" target="frame">Detail View</a></li> <!-- 특정 상세정보를 보여주는 UI -->
+              <li><a href="" target="frame">Form Layout</a></li> <!-- 사용자 입력을 받는 UI -->
+              <li><a href="" target="frame">Filter & Search</a></li> <!-- 검색과 필터링 UI -->
+              <li><a href="" target="frame">Login</a></li> <!-- 로그인 UI -->
+              <li><a href="" target="frame">Signup</a></li> <!-- 회원가입 UI -->
+              <li><a href="" target="frame">Profile</a></li> <!-- 회원정보수정 UI -->
+              <li><a href="" target="frame">Sidebar</a></li> <!-- 좌,우측에서 열리는 메뉴 UI -->
+            </ul>
+          </details>
+        </nav>
+      </dialog>
+    </div>
+    <main>
+      <article class="header">
+        <button aria-label="메뉴열기" class="toggle"></button>
+        <button type="button" class="btn-mobile">타블렛 보기</button>
+        <a href="" class="blank" target="_blank">새창열기</a>
+      </article>
+      <iframe src="./guide/colors.html" title="콘텐츠" frameborder="0" name="frame"></iframe>
+    </main>
+  </div>
+</body>
+
+</html>

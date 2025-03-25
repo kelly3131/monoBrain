@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>파일리스트</title>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1>퍼블리싱 현황</h1>
+      <div class="top clear">
+        <ul>
+          <li>구분 :</li>
+          <li><span class="state r"></span></li>
+          <li>반응형</li>
+          <li><span class="state w"></span></li>
+          <li>WEB</li>
+          <li><span class="state m"></span></li>
+          <li>모바일&nbsp;&nbsp;&nbsp;/</li>
+          <li>상태 :</li>
+          <li><span class="state end"></span></li>
+          <li>완료</li>
+          <li><span class="state ing"></span></li>
+          <li>진행중&nbsp;&nbsp;&nbsp;/</li>
+          <li><span class="state modify"></span></li>
+          <li>수정</li>
+        </ul>
+        <div class="status">
+          <span id="progress"><em></em></span> <span id="total"></span>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>페이지</th>
+            <th>파일명</th>
+            <th>시작일</th>
+            <th>종료일</th>
+            <th>웹표준</th>
+            <th>호환성</th>
+            <th>웹접근성</th>
+            <th>구분</th>
+            <th>상태</th>
+            <th>참고사항</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="list">
+            <td>스타일가이드</td>
+            <td><a href="./style.html" target="_blank">style.html</a></td>
+            <td>2025.00.00</td>
+            <td>2025.00.00</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><span class="state w"></span></td>
+            <td><span class="state ing"></span></td>
+            <td>
+              <p class="t_em"></p>
+            </td>
+          </tr>
+          <tr class="list">
+            <td>MAIN</td>
+            <td><a href=".html" target="_blank">.html</a></td>
+            <td>2025.00.00</td>
+            <td>2025.00.00</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><span class="state w"></span></td>
+            <td><span class="state ing"></span></td>
+            <td>
+              <p class="t_em"></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="category" colspan="10">메뉴명1</td>
+          </tr>
+          <tr class="list">
+            <td>5-1-1</td>
+            <td><a href=".html" target="_blank">.html</a></td>
+            <td>2025.00.20</td>
+            <td>2025.00.00</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><span class="state w"></span></td>
+            <td><span class="state ing"></span></td>
+            <td>
+              <p class="t_em"></p>
+            </td>
+          </tr>
+          <tr class="list">
+            <td>5-1-2</td>
+            <td><a href=".html" target="_blank">.html</a></td>
+            <td>2025.00.00</td>
+            <td>2025.00.00</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><span class="state w"></span></td>
+            <td><span class="state ing"></span></td>
+            <td>
+              <p class="t_em"></p>
+            </td>
+          </tr>
+          <tr class="list">
+            <td>5-1-3</td>
+            <td><a href=".html" target="_blank">.html</a></td>
+            <td>2025.00.00</td>
+            <td>2025.00.00</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><span class="state w"></span></td>
+            <td><span class="state ing"></span></td>
+            <td>
+              <p class="t_em"></p>
+            </td>
+          </tr>
+          <tr class="list">
+            <td>5-1-4</td>
+            <td><a href=".html" target="_blank">.html</a></td>
+            <td>2025.00.00</td>
+            <td>2025.00.00</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><span class="state w"></span></td>
+            <td><span class="state ing"></span></td>
+            <td>
+              <p class="t_em"></p>
+            </td>
+          </tr>
+          <tr class="list">
+            <td>5-1-5</td>
+            <td><a href=".html" target="_blank">.html</a></td>
+            <td>2025.00.00</td>
+            <td>2025.00.00</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><span class="state w"></span></td>
+            <td><span class="state ing"></span></td>
+            <td>
+              <p class="t_em"></p>
+            </td>
+          </tr>
+          <tr class="list">
+            <td>5-1-6</td>
+            <td><a href=".html" target="_blank">.html</a></td>
+            <td>2025.00.00</td>
+            <td>2025.00.00</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td><span class="state w"></span></td>
+            <td><span class="state ing"></span></td>
+            <td>
+              <p class="t_em"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      font-style: normal;
+    }
+
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    img {
+      border: 0;
+    }
+
+    label,
+    input {
+      vertical-align: middle;
+    }
+
+    input {
+      outline: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    caption {
+      width: 100%;
+      height: 30px;
+    }
+
+    body {
+      padding: 0 20px;
+      font-size: 16px;
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .wrapper {
+      width: 100%;
+      margin: auto;
+    }
+
+    table {
+      border-bottom: 1px solid #f4f4f4;
+      margin-bottom: 50px;
+      border-top: 3px solid #d2d6de;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin: 40px 0;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      margin-bottom: 50px;
+    }
+
+    table {
+      tr {
+        &:last-child {
+          td {
+            border-bottom: none;
+          }
+        }
+
+        th,
+        td {
+          padding: 10px;
+          font-size: 16px;
+          text-align: center;
+        }
+
+        th {
+          font-weight: normal;
+          border-right: 1px solid #f4f4f4;
+          border-bottom: 1px solid #f4f4f4;
+          background-color: #fff;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+
+        td {
+          padding: 5px;
+          font-size: 14px;
+          border-bottom: 1px solid #f4f4f4;
+          border-right: 1px solid #f4f4f4;
+          color: #666;
+
+          &:first-child {
+            width: 20%;
+            padding-left: 20px;
+            text-align: left;
+          }
+
+          &:nth-of-type(2) {
+            width: 20%;
+          }
+
+          &:nth-of-type(3) {
+            width: 10%;
+          }
+
+          &:nth-of-type(4) {
+            width: 5%;
+          }
+
+          &:nth-of-type(5) {
+            width: 5%;
+          }
+
+          &:nth-of-type(6) {
+            width: 5%;
+          }
+
+          &:nth-of-type(7) {
+            width: 5%;
+          }
+
+          &:nth-of-type(8) {
+            width: 5%;
+          }
+
+          &:nth-of-type(9) {
+            width: 5%;
+          }
+
+          &:last-child {
+            width: 40%;
+            text-align: left;
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+          &.category {
+            position: relative;
+            padding: 10px;
+            text-align: left;
+            font-size: 15px;
+            background-color: #f9f9f9;
+            color: #1d1e25;
+
+            &:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: inline-block;
+              width: 3px;
+              height: 100%;
+              background-color: #d2d6de;
+              content: "";
+            }
+          }
+        }
+      }
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        display: flex;
+        margin-bottom: 50px;
+      }
+
+      li {
+        display: flex;
+        margin-right: 10px;
+        line-height: 25px;
+
+        &:first-child,
+        &:nth-of-type(8) {
+          font-size: 1rem;
+        }
+
+        &:nth-of-type(2) span,
+        &:nth-of-type(4),
+        &:nth-of-type(6),
+        &:nth-of-type(9),
+        &:nth-of-type(11) {
+          text-align: center;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .header .list {
+      padding: 0 0 50px 0;
+      line-height: 30px;
+    }
+
+    .state {
+      display: inline-block;
+      color: #fff;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      line-height: 25px;
+
+      &.r {
+        background-color: #a55eea;
+
+        &::before {
+          content: "R";
+        }
+      }
+
+      &.w {
+        background-color: #20bf6b;
+
+        &::before {
+          content: "W";
+        }
+      }
+
+      &.m {
+        background-color: #f7b731;
+
+        &::before {
+          content: "M";
+        }
+      }
+
+      &.end {
+        background-color: #eb3b5a;
+        font-weight: bold;
+
+        &::before {
+          content: "완";
+        }
+      }
+
+      &.ing {
+        background-color: #2d98da;
+        font-weight: bold;
+
+        &::before {
+          content: "진";
+        }
+      }
+
+      &.modify {
+        padding: 0 5px;
+        border-radius: 30px;
+        font-weight: bold;
+        background-color: #39c4cd;
+        text-align: center;
+
+        &::before {
+          content: "수정";
+        }
+      }
+
+      span {
+        font-size: 16px;
+        color: #666;
+      }
+    }
+
+    .t_em {
+      color: #e10e0e;
+    }
+
+    .t_re {
+      color: #046ac9;
+    }
+
+    .t_pu {
+      color: #17ae03;
+    }
+
+    .t_lg {
+      color: #c904b4;
+    }
+
+    .list.none a {
+      text-decoration: line-through;
+      color: #aeaeae;
+      cursor: not-allowed;
+    }
+
+    #progress {
+      overflow: hidden;
+      float: left;
+      display: block;
+      width: 100%;
+      height: 20px;
+      margin-bottom: 5px;
+      background: #eee;
+      border-radius: 30px;
+
+      em {
+        display: block;
+        height: 100%;
+        background: #eb3b5a;
+        border-radius: 30px;
+      }
+    }
+
+    .status {
+      width: 300px;
+    }
+
+    #finish {
+      color: #1352a2;
+    }
+
+    #total {
+      display: block;
+    }
+
+    .percent {
+      display: block;
+      float: right;
+    }
+  </style>
+  <script>
+    const content = document.querySelector(".content table");
+    const graph = document.querySelector("#progress em");
+    const graphTotal = document.querySelector("#total");
+    const total = content.querySelectorAll(".list").length;
+    const finish = content.querySelectorAll(".list .end").length;
+    const progress = Math.floor((finish / total) * 100);
+    graph.style.width = progress + "%";
+    graphTotal.innerHTML = `
+            ${finish} / ${total}page <span class='percent'>진행률 ${progress}%</span>
+        `;
+  </script>
+</body>
+
+</html>
