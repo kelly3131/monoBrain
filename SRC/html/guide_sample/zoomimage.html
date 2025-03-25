@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zoom image</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+</head>
+<body>
+    <div id="app_wrap" class="zoomimage">
+        <section class="title type2">
+            <h2 data-icon="speech">그림을 보고 자치회 활동에 참여했던 경험을 이야기해 봅시다.</h2>
+        </section>
+
+        <section class="contents">
+            <!-- 줌기능 팝업창 ui 동적 생성 -->
+            <!-- 팝업창 헤딩 data-head로 부여. 없을 시 생성 안됨 -->
+            <!-- 팝업창 타이틀 data-tit로 부여. 없을 시 section.title h2의 택스트를 받아옴-->
+            <div class="picture_wrap" data-head="1" data-tit="그림을 보고 자치회 활동에 참여했던 경험을 이야기해 봅시다.">
+                <!-- img태그의 src를 참조하므로 확대할 이미지를 이미지태그 대신 일반태그에 background로 설정해서 사용하는 형태는 안됩니다. -->
+                <img src="../../common_contents/img/EMA511_00_SU/0005_content.png" alt="자치회 활동 이미지">
+                <button class="zoom"></button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

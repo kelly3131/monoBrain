@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ema541_00_SU_0004_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css" />
+
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema541_00.css" />
+  </head>
+  <body>
+    <div id="app_wrap" class="ema541_00_su_0004">
+      <section class="title type2">
+        <h2 data-icon="speech">
+          영상을 보고 어떤 상황을 나타내고 있는지 이야기해 봅시다.
+        </h2>
+      </section>
+
+      <section class="contents">
+        <div class="flex">
+          <div class="video_wrap">
+            <button
+              class="play"
+              onclick="navigate('../guide_sample/vedio_player')"
+            ></button>
+          </div>
+          <div class="input_area">
+            <div class="input_wrap">
+              <textarea id="inputElement01" type="text"></textarea>
+              <ol class="example_box">
+                <li>세계 음식 축제를 촬영하고 있습니다.</li>
+                <li>준서가 친구들과 세계 음식 축제에 참여하고 있습니다.</li>
+                <li>필리핀 음식 체험장에서 망고주스를 나누어 주고 있습니다.</li>
+                <li>멕시코 음식 체험장에서 타코 만들기 체험을 하고 있습니다.</li>
+                <li>젤라토 체험장이 있습니다.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_area">
+          <!-- 예시 필드에서 사용 -->
+          <button class="btnType key">입력타입토글</button>
+          <button class="btnReset">리셋</button>
+          <button class="btnSubmit">제출</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

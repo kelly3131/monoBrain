@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ema511_04_su_0004_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema511_04.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema511_04_su_0004">
+        <section class="title type2">
+            <h2 data-head="2">두 식 <i class="ex1">가</i> 와 <i class="ex1">나</i> 를 각각 계산하고, 계산 결과를 비교해 봅시다.</h2>
+        </section>
+
+        <section class="contents paging_layout">
+            <div class="input_area">
+                <article class="page page_1">
+                    <h3>두 식이 어떻게 다른지 이야기해 보세요.</h3>
+                    <div class="question_box">
+                        <span class="flex align_center gap_12"><i class="ex1">가</i>44-32÷4+7</span>
+                        <span class="flex align_center gap_12"><i class="ex1">나</i>(44-32)÷4+7</span>
+                    </div>
+                    <div class="input_wrap">
+                        <textarea id="inputElement01" type="text"></textarea>
+                        <div class="example_box ex">
+                            <p>식<i class="ex1">가</i>는 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)가 없고, 식<i class="ex1">나</i>는 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)가 있습니다.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="page page_2">
+                    <h3>두 식의 계산 순서를 각각 나타내고, 계산해 보세요.</h3>
+                    <div class="flex justify_center mt_20">
+                        <div class="input_area dir_col">
+                            <div class="question_box">
+                                <span class="flex align_center gap_12"><i class="ex1">가</i>44-32÷4+7=</span>
+                                <div class="input_wrap answer1">
+                                    <input type="text" data-answer-single="43"/>
+                                </div>
+                            </div>
+                            <div class="drawing_area area1" data-dot-count="4" data-answer-connectline='[[2,3],[1,23],[4,123]]'>
+                                <svg class="connection_lines"></svg> <!-- 선을 그릴 SVG -->
+                            </div>
+                        </div>
+                        <div class="input_area dir_col">
+                            <div class="question_box">
+                                <span class="flex align_center gap_12"><i class="ex1">나</i>(44-32)÷4+7=</span>
+                                <div class="input_wrap answer2">
+                                    <input type="text" data-answer-single="10"/>
+                                </div>
+                            </div>
+                            <div class="drawing_area area2" data-dot-count="4" data-answer-connectline="[[1,2],[3,12],[4,123]]">
+                                <svg class="connection_lines"></svg> <!-- 선을 그릴 SVG -->
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="page page_3">
+                    <h3>두 식의 계산 결과를 비교해 보세요.</h3>
+                    <div class="question_box">
+                        <span class="flex align_center gap_12"><i class="ex1">가</i>44-32÷4+7</span>
+                        <span class="flex align_center gap_12"><i class="ex1">나</i>(44-32)÷4+7</span>
+                    </div>
+                    <div class="question_box">
+                        <span>(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)가 없을 때에는</span>
+                        <div class="input_wrap answer1">
+                            <input type="text" data-answer-single="43"/>
+                        </div>
+                        <span>,(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)가 있을 때에는</span>
+                        <div class="input_wrap answer2">
+                            <input type="text" data-answer-single="10"/>
+                        </div>
+                        <span>로 두 식의 계산 결과는</span>
+                        <div class="dropdown_wrap">
+                            <select class="custom_dropdown" data-answer-single="다릅니다.">
+                                <option></option>
+                                <option value="같습니다."></option>
+                                <option value="다릅니다."></option>
+                            </select>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+                <button class="btnSubmit">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA515_00_SU_0001_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema515_00.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema515_00_su_0001">
+        <section class="title type1">
+            <h1 data-number="5">분수의 덧셈과 뺄셈</h1>
+            <button class="goal" onclick="openPop('.pop_goal_wrap')">학습 목표</button>
+        </section>
+
+        <div class="pop_goal_wrap">
+            <div class="pop_goal">
+                <button class="close" onclick="closePop('.pop_goal_wrap')">닫기</button>
+                <div class="pop_goal_inner">
+                    <label>이번 시간에 공부할 내용</label>
+                    <p>우리 주변에서 볼 수 있는 자연수의 혼합 계산이 필요한 상황들을 이야기해 보고, 이 단원에서 배울 내용을 생각해 봅시다.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="contents">
+            <div class="text_box">
+                <p class="f20b fraction-text-align">세 발가락 나무늘보는 하루에
+                    <span class="fraction-style" data-whole="1" data-num="2" data-den="3">
+                        <span class="whole">14</span>
+                        <span class="fraction">
+                            <span>2</span>
+                            <span class="line"></span>
+                            <span>5</span>
+                        </span>
+                    </span>
+                    시간,</p>
+                <p class="f20b">말은 하루에          시간 정도 잠을 잔대.</p>
+                <p class="f20b">나무늘보는 말보다 몇 시간 더 자는 걸까?</p>
+            </div>
+            <div class="input_area">
+                <label for="inputElement01" class="img">그림은 어떤 상황을 나타내고 있나요?</label>
+                <div class="input_wrap">
+                    <textarea id="inputElement01" type="text"></textarea>
+                    <ol class="example_box">
+                        <li>잠을 자고 있는 나무늘보가 있습니다.</li>
+                        <li>세 발가락 나무늘보는 하루에            시간 정도 잠을 잔다고 이야기하고 있습니다.</li>
+                        <li>잠을 자고 있는 말이 있습니다.</li>
+                        <li>말은 하루에            시간 정도 잠을 잔다고 이야기하고 있습니다.</li>
+                        <li>나무늘보는 말보다 몇 시간 더 자는지 궁금해하고 있습니다.</li>
+                    </ol>
+                </div>
+    
+            </div>
+
+            <div class="btn_area">
+                <!-- 예시 필드에서 사용 -->
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnSample">예시</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

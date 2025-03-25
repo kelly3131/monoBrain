@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA511_02_SU_0006_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema511_02.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema511_02_su_0006">
+        <section class="title type2">
+            <h2 data-head="4"><span class="circle_blank"></span>안에 <span class="flex align-center"><img src="./../../common_contents//common/img/icon_devide.svg" alt="나누기">,</span><img src="./../../common_contents//common/img/icon_times.svg" alt="곱하기">를 한 번씩 써넣어 계산 결과가 더 작은 식을 만들고, 계산해 봅시다.</h2>
+        </section>
+
+        <section class="contents">
+            <div class="input_area">
+                <div class="question_box justify_center">
+                    <span>72</span>
+                    <div class="dropdown_wrap">
+                        <select class="custom_dropdown math_symbol" data-answer-single="÷">
+                            <option></option>
+                            <option value="×">×</option>
+                            <option value="÷">÷</option>
+                        </select>
+                    </div>
+                    <span>(6</span>
+                    <div class="dropdown_wrap">
+                        <select class="custom_dropdown math_symbol" data-answer-single="×">
+                            <option></option>
+                            <option value="×">×</option>
+                            <option value="÷">÷</option>
+                        </select>
+                    </div>
+                    <span>2)=</span>
+                    <div class="input_wrap answer1">
+                        <input type="text" data-answer-single="6"/>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

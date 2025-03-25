@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA511_00_SU_0005_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+</head>
+<body>
+    <div id="app_wrap" class="EMA511_00_SU_0005 video_player">
+        <div class="video_player_wrap">
+
+            <video src="../../common_contents/video/EMA511_00_SU/dummy_video.mp4"></video>
+            
+            <div class="controls">
+                <button class="play"></button>
+                <button class="stop"></button>
+                <button class="volume"></button>
+                <div class="volume_controller_wrap">
+                    <div class="volumebar">
+                        <input type="range" min="0" max="100" value="50">
+                        <!--영상볼륨 : value값 설정시 자동으로 프로그래스바 조정 됩니다.-->
+                        <span class="gague"></span>
+                    </div>
+                    <button class="mute"></button>
+                </div>
+                <div class="seekbar">
+                    <input type="range" min="0" max="100" value="0">
+                    <!--영상타임라인 : value값 설정시 자동으로 프로그래스바 조정 됩니다.-->
+                    <span class="gague"></span>
+                </div>
+                <div class="time_wrap">
+                    <div class="current_time">00:00:00</div> /
+                    <div class="total_time">00:00:00</div>
+                </div>
+                <button class="cc"></button>
+                <button class="fullscreen"></button>
+            </div>
+
+            <button class="close" onclick="navigate('back')"></button>
+        </div>
+    </div>
+</body>
+</html>

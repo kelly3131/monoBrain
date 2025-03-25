@@ -1,0 +1,155 @@
+@charset "utf-8";
+.ema521_00_su_0001#app_wrap{
+    background: url(../img/EMA521_00_SU/0001_bg.png) no-repeat left bottom / 857px #91c14a;
+}
+.contents {
+    display: flex;
+}
+.input_area label.img, .input_area label::after{
+    background-color: #008834;
+}
+.contents .text_box{
+    color: #008834;
+    margin: 10px 0 0 60px;
+    width: 857px;
+}
+.input_wrap{
+    width: 797px;
+}
+.input_area{
+    margin-bottom: 20px;
+}
+.leftside{
+    width: 797px;
+}
+.example_area{
+    width: 797px;
+    min-height: 160px;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    border: 1px solid var(--stroke-default);
+    border-radius: 20px;
+    background: var(--bg-input);
+    resize: none;
+    color: var(--primary-blue-800);
+    display: flex;
+    gap: 35px;
+}
+.example_title{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: var(--btn-default);
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+.example_area li{
+    list-style: disc;
+    margin: 0 0 4px 0;
+}
+
+/* EMA521_00_SU_0003 */
+.letCheck li{
+    width: calc((100% - 24px) / 3);
+}
+.contents .letCheck{
+    width: 1272px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 140px;
+}
+.help{
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+.help img{
+    width: 240px;
+    height: 240px;
+}
+
+/* EMA521_00_SU_0004 */
+.video_wrap{
+    background: url(../img/EMA521_00_SU/0004_video.png) no-repeat left top /100%;
+    width: 857px;
+    height: 457px;
+}
+.ema521_00_su_0004 .contents > div{
+    display: flex;
+    gap: 20px;
+}
+.ema521_00_su_0004 .input_wrap{
+    width: 797px;
+}
+.ema521_00_su_0004 .input_wrap textarea{
+    padding: 20px;
+    min-height: 322px;
+}
+.ema521_00_su_0004 .input_wrap input:hover, .ema521_00_su_0004 .input_wrap textarea:hover, .ema521_00_su_0004 .input_wrap textarea:focus{
+    padding: 20px;
+}
+.ema521_00_su_0004 .input_area{
+    margin-bottom: 20px;
+}
+.ema521_00_su_0004 .leftside{
+    width: 797px;
+}
+.ema521_00_su_0004 .example_area{
+    width: 797px;
+    min-height: 160px;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    border: none;
+    border-radius: 20px;
+    background: var(--bg-input);
+    resize: none;
+    color: var(--primary-blue-800);
+    display: flex;
+    gap: 35px;
+    background-color: #EEF9FF;
+}
+.ema521_00_su_0004 .example_title{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: var(--btn-default);
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+.ema521_00_su_0004 .example_area li{
+    list-style: disc;
+    margin: 0 0 4px 0;
+}
+.ema521_00_su_0004 .btn_area > button.btnReset, .ema521_00_su_0004 .btn_area > button.btnSubmit{
+    background-color: var(--btn-default);
+}
+
+/* EMA521_00_SU_0006 */
+.ema521_00_su_0006 .contents > div{
+    display: flex;
+    gap: 20px;
+}
+.ema521_00_su_0006 .picture_wrap{
+    width: 812px;
+    height: 428px;
+}
+.ema521_00_su_0006 .input_wrap textarea{
+    padding: 20px;
+    min-height: 366px;
+}
+.ema521_00_su_0006 .input_wrap input:hover, .ema521_00_su_0006 .input_wrap textarea:hover, .ema521_00_su_0006 .input_wrap textarea:focus{
+    padding: 20px;
+}
+.ema521_00_su_0006 .input_area{
+    margin-bottom: 12px;
+}
+.ema521_00_su_0006 .example_area{
+    border: none;
+    background-color: rgba(238, 249, 255, 1);
+}

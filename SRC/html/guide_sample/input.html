@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="../../common_contents/common/css/app.css">
+</head>
+<body>
+    <div id="app_wrap" class="input">
+        <section class="contents">
+            <!-- input_wrap에 부여되는 상태 클래스는 btnCheck 기능에 포함되어 있음. 별도로 부여할 필요 x-->
+        <div class="flex gap_12 mb_40">
+            
+            <!-- 단답형 -->
+            <div class="input_wrap">
+                <input type="text" placeholder="'정답'이 정답" data-answer-single="정답"/>
+            </div>
+         
+            <!-- 미설정 -->
+            <div class="input_wrap error">
+                <input type="text" value="" placeholder="입력하세요"/>
+            </div>
+            
+            <div class="input_wrap hint">
+                <input type="text" value="" placeholder="입력하세요"/>
+                <p class="text_hint">힌트</p>
+            </div>
+           
+            <div class="input_wrap">
+                <input type="text" value="" disabled/>
+            </div>
+        </div>
+        <div class="flex gap_12">
+            <!-- data-answer-single과 option의 value 값을 동일하게 하면 정답 처리됩니다. -->
+            <!-- 선택된 데이터 값에 따라 택스트 색상을 바꿔야하는 상황에서 css를 변경하고 싶다면 .select_trigger[data-sel-num="숫자"](첫번째 선택지부터 숫자 1부터 시작)로 선택할 수 있습니다. 예를들어 5번째 옵션값 선택했을때 css선택자는 .select_trigger[data-sel-num="5"]가 되는 형식입니다. -->
+            <!-- 옵션 리스트별로 css수정은 .select_options > li:nth-child(숫자)로 제어하세요.-->
+            <div class="dropdown_wrap">
+                <select class="custom_dropdown" data-answer-single="정답">
+                    <option></option><!--최초선택데이터 생성 방지용-->
+                    <option value="정답"></option>
+                    <option value="오답"></option>
+                </select>
+            </div>
+            <div class="dropdown_wrap">
+                <select class="custom_dropdown" data-answer-single="정답입니다.">
+                    <option></option>
+                    <option value="이건오답입니다."></option>
+                    <option value="정답입니다."></option>
+                </select>
+            </div>
+            <div class="dropdown_wrap">
+                <select class="custom_dropdown math_symbol" data-answer-single="÷">
+                    <option></option>
+                    <option value="×">×</option>
+                    <option value="÷">÷</option>
+                    <option value=">">></option>
+                    <option value="=">=</option>
+                    <option value="<"><</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex mt_40">
+            <div class="input_wrap">
+                <textarea placeholder="'정답'이 정답 / placeholder는 필요한 경우 직접 입력합니다" data-answer-single="정답"></textarea>
+            </div>
+        </div>
+        <div class="flex mt_40">
+            <div class="input_wrap">
+                <textarea placeholder="예시 버튼을 눌러보세요"></textarea>
+                <ol class="example_box">
+                    <li>예시 및 힌트 필드는 position:absolute 되어있으므로 높이 값 설정 필수</li>
+                </ol>
+                <div class="example_box">
+                    <p>헤딩 포인트 스타일 없는 케이스</p>
+                    <p>줄바꿈시 p태그를 추가합니다.</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="btn_area">
+            <!-- 불필요한 태그 제외 후 사용 -->
+            <button class="btnType key">입력타입토글</button>
+            <button class="btnType formula">입력타입토글</button>
+            <button class="btnReset">리셋</button>
+            <button class="btnCheck">확인</button>
+            <button class="btnSubmit">확인</button>
+            <button class="btnSample">예시</button>
+        </div>
+        </section>
+    </div>
+</body> 
+</html>

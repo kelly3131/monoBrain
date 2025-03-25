@@ -1,0 +1,27 @@
+.ema531_01_su_0002 .video_wrap { 
+    background: url(../img/EMA531_01_SU/b2eafa585d1a4ae41c882a695b17c90b.png) no-repeat center right / 100%;
+}
+
+.ema531_01_su_0002 .contents>.flex{
+    gap: 26px;
+}
+
+.ema531_01_su_0002 .input_wrap {
+    min-width: 750px;
+}
+
+/* EMA531_01_SU_0003 */
+
+.ema531_01_su_0003 .paging_layout {
+    padding: 0px 40px;
+}
+
+.ema531_01_su_0003 .input_wrap {
+    flex-direction: row;
+    top: 40px;
+    left: 80%;
+}
+
+.ema531_01_su_0003 .input_wrap>h2 {
+    margin-left: 15px;
+}                                                                                                                                               

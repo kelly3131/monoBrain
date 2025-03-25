@@ -1,0 +1,52 @@
+
+@import url(./_reset.css);
+@import url(./_font.css);
+@import url(./_preset.css);
+@import url(./_inset.css);
+
+:root{
+    --primary-blue-800: #1454B9;
+    --primary-blue: #3B71FE;
+    --primary-blue-300: #8CD6FF;
+    --primary-blue-200: #BBE5FF;
+    --primary-blue-100: #D9F0FF;
+    --primary-blue-50: #EEF9FF;
+
+    --secondary-green: #07BBA9;
+    --secondary-red: #EE4F24;
+    --secondary-red-800: #CC360E;
+    --secondary-coral: #FF8C78; 
+    --secondary-coral-300: #FFCBC2; 
+    --secondary-yellow: #FFDE6A;
+
+    --common-grey-100: #F7F7F7;
+
+    --bg-outside: #F5F5F5;
+    --bg-default: #FFFFFF;
+    --bg-disabled:#F2F4F7;
+    --bg-input: #FFFFFF;
+
+    --btn-default:#3B71FE;
+    --btn-hover:#1454B9;
+    --btn-disabled:#808080;
+    --btn-select:#59A5FF;
+
+    --font-main:#222222;
+    --font-main-800:#444444;
+    --font-main-700:#6A6A6A;
+    --font-main-500:#9E9E9E;
+    --font-main-300:#D2D2D2;
+    --font-main-100:#F7F7F7;
+    --font-disable:#808080;
+    --font-main-reverse:#FFFFFF;
+    --font-placeholder:#9E9E9E;
+    --font-disabled:#9E9E9E;
+    --font-negative:#FF0000;
+
+    --stroke-default:#D2D2D2;
+    --stroke-hover:#3B71FE;
+    --stroke-focus:#3B71FE;
+    --stroke-error:#EE4F24;
+    --stroke-completion:#222222;
+    --stroke-dropdown-open:#000000;
+}

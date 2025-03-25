@@ -1,0 +1,88 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* HTML 전체 기본 폰트 설정 */
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    color: var(--font-main);
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본 제목 태그 스타일링 */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1, .f44b, .f44r {
+    font-size: 44px;
+    /* line-height: 64px; */
+    letter-spacing: -1px;
+}
+
+h2, .f32b, .f32r {
+    font-size: 32px;
+    /* line-height: 48px; */
+    letter-spacing: -1px;
+}
+
+h3, .f28b, .f28r{
+    font-size: 28px;
+    /* line-height: 38px; */
+    letter-spacing: -0.5px;
+} 
+
+.f24b, .f24r {
+    font-size: 24px;
+    /* line-height: 36px; */
+    letter-spacing: -0.5px;
+}
+
+/* 폰트사이즈 44 */
+.f44b { font-weight: 700; }
+.f44r { font-weight: 400; }
+
+/* 폰트사이즈 32 */
+.f32b { font-weight: 700; }
+.f32r { font-weight: 400; }
+
+/* 폰트사이즈 28 */
+.f28b { font-weight: 700; }
+.f28r { font-weight: 400; }
+
+/* 폰트사이즈 24 */
+.f24b { font-weight: 700; }
+.f24r { font-weight: 400; }
+
+/* 폰트사이즈 20 */
+.f20b, .f20r {
+    font-size: 20px;
+    /* line-height: 32px; */
+    letter-spacing: -0.5px;
+}
+
+.f20b { font-weight: 700; }
+.f20r { font-weight: 400; }
+
+/* 폰트사이즈 16 */
+.f16b, .f16r {
+    font-size: 16px;
+    /* line-height: 24px; */
+    letter-spacing: -0.5px;
+}
+
+.f16b { font-weight: 700; }
+.f16r { font-weight: 400; }
+
+/* 폰트사이즈 14 */
+.f14b, .f14r {
+    font-size: 14px;
+    /* line-height: 20px; */
+    letter-spacing: -0.5px;
+}
+
+.f14b { font-weight: 700; }
+.f14r { font-weight: 400; }
+

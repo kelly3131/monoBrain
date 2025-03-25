@@ -1,0 +1,42 @@
+/*EMA511_00_SU_0001_s*/
+.ema511_00_su_0001#app_wrap{
+    background: url(../img/EMA511_00_SU/0001_bg.png) no-repeat left bottom / 857px, #5CC2EE;
+}
+
+.ema511_00_su_0001 .text_box{
+    color: #1454B9;
+    position: absolute;
+    top: 152px;
+    left: 136px;
+}
+
+.ema511_00_su_0001 .input_area{
+    width: 797px;
+    margin-left: auto;
+}
+
+/*EMA511_00_SU_0004_s*/
+.ema511_00_su_0004 .contents > .flex{
+    gap: 26px;
+}
+.ema511_00_su_0004 .input_area{
+    width: 817px;
+}
+.ema511_00_su_0004 .input_wrap > textarea{
+    height: 250px;
+}
+
+/*EMA511_00_SU_0005_s*/
+.ema511_00_su_0005 .contents > .flex{
+    gap: 26px;
+}
+.ema511_00_su_0005 .picture_wrap img{
+    height: 100%;
+    object-fit: cover;
+}
+.ema511_00_su_0005 .input_wrap{
+    width: 817px;
+}
+.ema511_00_su_0005 .input_wrap > textarea{
+    height: 250px;
+}

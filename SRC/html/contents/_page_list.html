@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>파일 목록</title>
+
+    <!-- DataTables CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
+    />
+
+    <style>
+      table.dataTable tbody th,
+      table.dataTable tbody td {
+        padding: 2px;
+        font-size: 12px;
+        text-align: center;
+      }
+      table.dataTable tbody tr:nth-child(odd) {
+        background: #efefef;
+      }
+      .open-btn {
+        padding: 3px 10px;
+        background-color: #f5f5f5;
+        border: 1px solid #efefef;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .open-btn:hover {
+        background-color: white;
+      }
+      table.dataTable thead th {
+        text-align: center;
+      }
+      table.dataTable tbody td:nth-child(3),
+      table.dataTable tbody td:nth-child(11) {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>수학 56 산출물 목록</h2>
+    <table id="file-table">
+      <thead>
+        <tr>
+          <th style="width: 40px">No</th>
+          <th style="width: 40px">링크</th>
+          <th style="width: 200px">ID</th>
+          <th style="width: 40px">학년</th>
+          <!-- <th>과목</th> -->
+          <th style="width: 40px">단원</th>
+          <th style="width: 40px">학기</th>
+          <th style="width: 40px">차시</th>
+          <th style="width: 100px">메뉴</th>
+          <th style="width: 80px">세부 메뉴</th>
+          <th style="width: 60px">화면 번호</th>
+          <th style="width: 600px">비고</th>
+        </tr>
+      </thead>
+      <tbody id="file-table-body"></tbody>
+    </table>
+
+    <!-- DataTables & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <script>
+      // const htmlFiles = [
+      //     "EMA511_00_SU_0001_s.html",
+      //     "EMA511_00_AJP_0002_s.html",
+      //     "EMA511_00_AIYS_0003_t.html",
+      //     "EMA511_01_SU_0004_s.html",
+      //     "EMA511_01_GJ_0005_s.html",
+      //     "EEN411_02_WS_0012_s.html"
+      // ];
+
+      const htmlFiles = [
+        /*김용현*/
+        "../guide_sample/header.html",
+        "../guide_sample/input.html",
+        "../guide_sample/cardflip.html",
+        "../guide_sample/dragndrop_eraser.html",
+        "../guide_sample/drawline_calc.html",
+        "../guide_sample/paging.html|페이징",
+        "../guide_sample/reveal.html",
+        "../guide_sample/zoomimage.html",
+        "../guide_sample/boolean.html|참,거짓 선택 토글",
+        "EMA511_00_SU_0001_s.html|단원 시작",
+        "EMA511_00_SU_0002_s.html|지우개 드래그",
+        "EMA511_00_SU_0003_s.html|카드 플립",
+        "EMA511_00_SU_0004_s.html",
+        "EMA511_00_SU_0005_s.html|이미지 확대",
+        "EMA511_00_SU_0006_s.html",
+
+        "EMA511_01_SU_0001_s.html",
+        "EMA511_01_SU_0002_s.html",
+        "EMA511_01_SU_0003_s.html",
+        "EMA511_01_SU_0004_s.html|숨김버튼",
+        "EMA511_01_SU_0005_s.html|수식순서선잇기",
+        "EMA511_01_SU_0006_s.html",
+        "EMA511_01_SU_0007_s.html",
+
+        "EMA511_02_SU_0001_s.html",
+        "EMA511_02_SU_0002_s.html",
+        "EMA511_02_SU_0003_s.html",
+        "EMA511_02_SU_0004_s.html",
+        "EMA511_02_SU_0005_s.html",
+        "EMA511_02_SU_0006_s.html",
+        "EMA511_02_SU_0007_s.html",
+
+        "EMA511_03_SU_0001_s.html",
+        "EMA511_03_SU_0002_s.html",
+        "EMA511_03_SU_0003_s.html",
+        "EMA511_03_SU_0004_s.html",
+        "EMA511_03_SU_0005_s.html",
+        "EMA511_03_SU_0006_s.html",
+        "EMA511_03_SU_0007_s.html",
+
+        "EMA511_04_SU_0001_s.html",
+        "EMA511_04_SU_0002_s.html",
+        "EMA511_04_SU_0003_s.html",
+        "EMA511_04_SU_0004_s.html",
+        "EMA511_04_SU_0005_s.html",
+        "EMA511_04_SU_0006_s.html|참,거짓 선택 토글",
+        "EMA511_04_SU_0007_s.html",
+
+        /* 임수희 */
+        "EMA511_05_SU_0001_s.html",
+        "EMA511_05_SU_0002_s.html",
+        "EMA511_05_SU_0003_s.html",
+        "EMA511_05_SU_0004_s.html",
+        "EMA511_05_SU_0006_s.html",
+        
+        "EMA511_05_SU_0001_s.html",
+        // 본인 파트의 화면을 만들어서
+        // 이런 형태로 변수를 넣으시면
+        // 화면리스트에 목록이 추가가 될거에요.
+        // 그래서 매일 만드신 분량 만큼 추가하시면 따로 보고 해주실 필요없이 산출물 관리가 될수 있을것 같아요.
+
+        /* 박나율 */
+        "EMA561_00_SU_0001_s.html",
+        "EMA561_00_SU_0002_s.html",
+        "EMA561_00_SU_0003_s.html",
+        "EMA561_00_SU_0004_s.html",
+        "EMA561_00_SU_0006_s.html",
+        "EMA561_00_SU_0007_s.html",
+      ];
+
+      function parseFileName(fileData, index) {
+        let splitData = fileData.split("|");
+        let filePath = splitData[0]; // 원본 파일 경로 (또는 파일명)
+        let remarks = splitData[1] || ""; // 비고 (없으면 빈 값)
+
+        if (filePath.startsWith("../")) {
+          // 🔹 경로가 있는 파일 -> 경로 유지하고 테이블에는 파일명만 표시
+          let extractedName = filePath.split("/").pop().replace(".html", "");
+
+          return {
+            Index: index + 1,
+            ID: extractedName, // 🔹 테이블에 표시될 ID (파일명만)
+            비고: remarks,
+            파일명: filePath, // 🔹 실제 링크는 경로 포함
+            isSimpleLink: true,
+          };
+        } else {
+          // 🔹 일반 파일 처리
+          const rawName = filePath.replace(".html", "");
+
+          const 과목코드 = rawName.substring(1, 3);
+          const 과목명 =
+            과목코드 === "MA" ? "수학" : 과목코드 === "EN" ? "영어" : "기타";
+
+          let fileTypeStartIndex = 10;
+          let fileTypeEndIndex = rawName.indexOf("_", fileTypeStartIndex);
+          const 파일종류 = rawName.substring(
+            fileTypeStartIndex,
+            fileTypeEndIndex
+          );
+
+          let screenNumberStart = fileTypeEndIndex + 1;
+          let screenNumberEnd = screenNumberStart + 4;
+          let userIndex = screenNumberEnd + 1;
+
+          const 화면번호 = rawName.substring(
+            screenNumberStart,
+            screenNumberEnd
+          );
+          const 사용자 =
+            rawName.substring(userIndex, userIndex + 1) === "t"
+              ? "선생님"
+              : "학생";
+
+          return {
+            Index: index + 1,
+            isSimpleLink: false,
+            ID: rawName,
+            학년: rawName.substring(3, 4),
+            과목: 과목명,
+            단원: rawName.substring(4, 5),
+            학기: rawName.substring(5, 6),
+            차시: rawName.substring(7, 9),
+            메뉴: "진도학습",
+            세부메뉴: "수업",
+            화면번호: 화면번호,
+            사용자: 사용자,
+            비고: remarks,
+            파일명: filePath,
+          };
+        }
+      }
+
+      function populateTable() {
+        const tbody = document.getElementById("file-table-body");
+        tbody.innerHTML = "";
+
+        htmlFiles.forEach((file, index) => {
+          const data = parseFileName(file, index);
+          if (!data) return;
+
+          let row = document.createElement("tr");
+
+          if (data.isSimpleLink) {
+            // 🔹 링크만 있는 경우 (ID, 비고, 파일 열기만 표시, 나머지는 빈 칸)
+            row.innerHTML = `
+                        <td>${data.Index}</td>
+                        <td>
+                            <button class="open-btn" onclick="openFile('${data.파일명}')">📂</button>
+                        </td>
+                        <td>${data.ID}</td>
+                        <td>-</td>  <!-- 학년 -->
+                        
+                        <td>-</td>  <!-- 단원 -->
+                        <td>-</td>  <!-- 학기 -->
+                        <td>-</td>  <!-- 차시 -->
+                        <td>화면 양산 가이드</td>  <!-- 메뉴 -->
+                        <td>-</td>  <!-- 세부 메뉴 -->
+                        <td>-</td>  <!-- 화면 번호 -->
+                        <td>${data.비고}</td>
+                    `;
+          } else {
+            // 🔹 일반 파일 (모든 열 표시)
+            row.innerHTML = `
+                        <td>${data.Index}</td>
+                        <td>
+                            <button class="open-btn" onclick="openFile('${data.파일명}')">📂</button>
+                        </td>
+                        <td>${data.ID}</td>
+                        <td>${data.학년}</td>
+
+                        <td>${data.단원}</td>
+                        <td>${data.학기}</td>
+                        <td>${data.차시}</td>
+                        <td>${data.메뉴}</td>
+                        <td>${data.세부메뉴}</td>
+                        <td>${data.화면번호}</td>
+                        <td>${data.비고}</td>
+                    `;
+          }
+          tbody.appendChild(row);
+        });
+
+        // DataTables 적용
+        $("#file-table").DataTable({
+          destroy: true, // 기존 테이블 제거 후 다시 초기화
+          order: [[0, "asc"]],
+          pageLength: 25,
+          lengthMenu: [10, 25, 50, 100],
+          language: {
+            search: "검색:",
+            lengthMenu: "_MENU_ 개씩 보기",
+            info: "총 _TOTAL_ 개 중 _START_ - _END_ 표시",
+            paginate: {
+              first: "처음",
+              last: "마지막",
+              next: "다음",
+              previous: "이전",
+            },
+          },
+        });
+      }
+
+      function openFile(fileName) {
+        // 파일 경로가 "../"로 시작하는 경우, 현재 디렉토리 기준으로 접근
+        let filePath = fileName.startsWith("../") ? fileName : `./${fileName}`;
+        window.open(filePath, "_blank");
+      }
+
+      populateTable();
+    </script>
+  </body>
+</html>

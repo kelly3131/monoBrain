@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paging 1</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+
+    <style>
+        /* 인라인 스타일은 쓰지마세요. 이거는 예시를 위한 예외 사용입니다. */
+        article{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app_wrap" class="paging">
+        <section class="title type2">
+            <h2 data-head="1">페이징 기능 샘플 페이지</h2>
+        </section>
+
+        <!-- section.contents 에 pagine_layout 클래스를 추가하고 article.page.page_n 태그를 추가하면 슬라이드 페이지 개수에 맞는 페이징컨트롤러가 동적으로 생성됩니다. -->
+        <section class="contents paging_layout">
+            <!-- 아티클 태그 묶음은 위치에 상관없이 내부 컨텐츠가 전환 됩니다.(다른 태그로 감싸도 괜찮음) -->
+            <article class="page page_1" style="background-color: orange;">1</article>
+            <article class="page page_2">2</article>
+            <article class="page page_3">3</article>
+            <article class="page page_4">4</article>
+            <article class="page page_5">5</article>
+            <article class="page page_6">5</article>
+        </section>
+
+    </div>
+</body>
+</html>
