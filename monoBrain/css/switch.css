@@ -1,0 +1,78 @@
+.switch {
+  --width: 100px;
+  --height: 40px;
+  --padding: 2px;
+  --borderColor: gray;
+  --offColor: silver;
+  --offBgColor: rgba(0, 0, 0, 0.05);
+  --onColor: lightgreen;
+  --onBgColor: green;
+  --textColor: #000;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    &:checked {
+      + label {
+        background-color: var(--onBgColor);
+        justify-content: start;
+
+        &::before {
+          left: 100%;
+          translate: calc(-100% - 2px) -50%;
+          background-color: var(--onColor);
+        }
+        &::after {
+          content: attr(data-on);
+        }
+      }
+    }
+    &:focus {
+      + label {
+        outline: 2px solid #000;
+      }
+    }
+  }
+  label {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    border-radius: var(--width);
+    width: var(--width);
+    height: var(--height);
+    padding: var(--padding) calc(var(--padding) * 4);
+    border: 1px solid var(--borderColor);
+    align-items: center;
+    justify-content: end;
+    transition: 0.4s;
+    background-color: var(--offBgColor);
+    box-sizing: border-box;
+    &::before {
+      --left: var(--padding);
+      --cricle: calc(var(--height) - (var(--left) * 3));
+
+      content: '';
+      position: absolute;
+      left: var(--left);
+      top: 50%;
+      translate: 0 -50%;
+      width: var(--cricle);
+      height: var(--cricle);
+      border-radius: 100%;
+      background-color: var(--offColor);
+      transition: 0.4s;
+    }
+    &::after {
+      content: attr(data-off);
+      text-align: center;
+      white-space: nowrap;
+      line-height: 1;
+      transition: 0.4s;
+      color: var(--textColor);
+    }
+  }
+}

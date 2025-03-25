@@ -1,0 +1,63 @@
+/* 유틸리티 클래스 단독사용 방지용 */
+[class]:not([class*=' ']) {
+  &.xxxs,
+  &.xxs,
+  &.xs,
+  &.sm,
+  &.base,
+  &.md,
+  &.lg,
+  &.xl,
+  &.xxl,
+  &.xxxl {
+    &::after {
+      content: attr(class) '(은)는 단독으로 사용할 수 없습니다.';
+      display: block;
+      color: tomato;
+    }
+  }
+}
+
+/* 영역 확인용 */
+.debug {
+  * {
+    outline: 2px solid red !important;
+    * {
+      outline: 2px solid seagreen !important;
+      * {
+        outline: 2px solid slateblue !important;
+        * {
+          outline: 2px solid orange !important;
+          * {
+            outline: 2px solid salmon !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.debug2 {
+  * {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+  }
+}
+
+/* 대체텍스트 점검 */
+.alt {
+  * {
+    &:has(img:not([alt])),
+    &:has(img[alt='']) {
+      &::after {
+        content: '대체텍스트를 넣어주세요';
+        position: absolute;
+        left: 0;
+        top: -1.5rem;
+        white-space: nowrap;
+        font-size: 1.2rem;
+        color: red;
+        background-color: var(--white);
+      }
+    }
+  }
+}

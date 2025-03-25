@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spacing</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script type="module" src="./js/spacing.js"></script>
+</head>
+
+<body>
+  <h2 class="point"><strong>4</strong> Point 간격으로 총 <span>10</span>개의 값으로 디자인시스템을 구성합니다.</h2>
+  <br />
+  <div class="spacing"></div>
+  <br />
+  <br />
+  <br />
+  <h2 class="each">예외 값으로는 <span>10, 2, 1, 50</span> 등이 있습니다.</h2>
+  <br />
+  <div class="exception"></div>
+
+  <style>
+    h2 {
+      font-weight: 300;
+      color: #555;
+
+      strong {
+        font-weight: 900;
+        color: salmon;
+      }
+
+      span {
+        font-weight: 900;
+        color: seagreen;
+      }
+    }
+
+    .exception,
+    .spacing {
+      --bgColor: #d0f3ff;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+      gap: 2rem;
+
+      >div {
+        width: 100%;
+        align-content: center;
+        font-size: 2rem;
+        background: linear-gradient(to right, var(--bgColor) var(--spacing), transparent var(--spacing));
+      }
+    }
+  </style>
+
+</body>
+
+</html>

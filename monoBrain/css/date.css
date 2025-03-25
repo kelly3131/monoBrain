@@ -1,0 +1,45 @@
+input[type='date'] {
+  --bg: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>');
+  --paddingRight: 1.5rem;
+  --paddingLeft: 0.5rem;
+  --height: 4rem;
+  --rounded: 0.3rem;
+  --borderColor: var(--gray400);
+
+  position: relative;
+  padding-inline: var(--paddingLeft) var(--paddingRight);
+  border: 1px solid var(--borderColor);
+  height: var(--height);
+  border-radius: var(--rounded);
+
+  &::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    background: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &::after {
+    content: attr(data-placeholder);
+    position: absolute;
+    left: var(--paddingLeft);
+    top: 50%;
+    translate: 0 -50%;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: no-repeat right 0.2rem center / 2.5rem auto #fff;
+    background-image: var(--bg);
+  }
+  &:valid {
+    &::after {
+      display: none;
+    }
+    &::before {
+      background-color: transparent;
+    }
+  }
+}

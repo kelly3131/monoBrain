@@ -1,0 +1,77 @@
+/* -------------------------------------------------------------------------- */
+/*                                    전역CSS                                 */
+/* -------------------------------------------------------------------------- */
+:root {
+  --white: #ffffff;
+  --black: #000;
+
+  --gray900: #2d2d2d;
+  --gray800: #555555;
+  --gray700: #717171;
+  --gray600: #8e8e8e;
+  --gray500: #c6c6c6;
+  --gray400: #d8d8d8;
+  --gray300: #e4e4e4;
+  --gray200: #f0f0f0;
+  --gray100: #f8f8f8;
+
+  --red900: #2e0507;
+  --red800: #5c0a0f;
+  --red700: #8b0e16;
+  --red600: #b9131e;
+  --red500: #e71825;
+  --red400: #ec4651;
+  --red300: #f1747c;
+  --red200: #f5a3a8;
+  --red100: #fbd6d8;
+
+  --yellow900: #4d370b;
+  --yellow800: #66490e;
+  --yellow700: #98690a;
+  --yellow600: #ffb724;
+  --yellow500: #ffc550;
+  --yellow400: #ffd47c;
+  --yellow300: #ffe2a7;
+  --yellow200: #ffeac1;
+  --yellow100: #fff8e9;
+
+  --green900: #00370c;
+  --green800: #005312;
+  --green700: #006e18;
+  --green600: #008a1e;
+  --green500: #33a14b;
+  --green400: #8cca99;
+  --green300: #b2dcbb;
+  --green200: #cee9d4;
+  --green100: #eef7f0;
+
+  --blue900: #07152f;
+  --blue800: #0e2b5e;
+  --blue700: #16408d;
+  --blue600: #1d56bc;
+  --blue500: #246beb;
+  --blue400: #5089ef;
+  --blue300: #7ca6f3;
+  --blue200: #a7c4f7;
+  --blue100: #d3e1fb;
+
+  --primary: var(--blue600);
+  --secondary: var(--gray600);
+  --danger: var(--red600);
+  --success: var(--green600);
+
+  --font-xs: 1.2rem;
+  --font-sm: 1.4rem;
+  --font-base: 1.6rem;
+  --font-md: 1.8rem;
+  --font-lg: 2rem;
+  --font-xl: 2.2rem;
+
+  --lh-sm: 1.2;
+  --lh-base: 1.5;
+  --lh-md: 1.8;
+
+  --ls-sm: -0.02rem;
+  --ls-base: 0;
+  --ls-md: 0.01rem;
+}

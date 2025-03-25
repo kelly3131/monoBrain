@@ -1,0 +1,22 @@
+.pipe {
+  --width: 1px;
+  --height: 10px;
+  --marginX: 1rem;
+  --bg: var(--gray600);
+
+  display: flex;
+  align-items: center;
+  > * {
+    display: flex;
+    align-items: center;
+    + * {
+      &::before {
+        content: '';
+        width: var(--width);
+        height: var(--height);
+        margin-inline: var(--marginX);
+        background: var(--bg);
+      }
+    }
+  }
+}

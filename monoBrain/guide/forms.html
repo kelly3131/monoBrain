@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script type="module" src="./js/clipBoard.js"></script>
+</head>
+
+<body>
+  <h2>Input Field</h2>
+  <div class="copy">
+    <input type="text" class="text-field" value="입력된 상태">
+    <input type="text" class="text-field" placeholder="placeholder">
+    <input type="text" class="text-field" disabled>
+    <input type="text" class="text-field error" value="오류메세지">
+  </div>
+  <h2>Select</h2>
+  <div class="copy">
+    <select class="select">
+      <option>선택하세요.</option>
+    </select>
+  </div>
+  <h2>Textarea</h2>
+  <div class="copy">
+    <textarea class="text-field"></textarea>
+  </div>
+  <h2>Checkbox</h2>
+  <div class="copy">
+    <div class="checkbox"><input type="checkbox" checked id="check1" /><label for="check1">선택1</label><br /></div>
+    <div class="checkbox"><input type="checkbox" id="check2" /><label for="check2">선택2</label></div>
+  </div>
+  <div class="copy">
+    <div class="checkbox"><input type="checkbox" checked id="check3" /><label for="check3"></label><br /></div>
+    <div class="checkbox"><input type="checkbox" id="check4" /><label for="check4"></label></div>
+  </div>
+  <h2>Radio</h2>
+  <div class="copy">
+    <div class="radio"><input type="radio" name="radio-group" checked id="radio1" /><label for="radio1">선택1</label>
+    </div>
+    <div class="radio"><input type="radio" name="radio-group" id="radio2" /><label for="radio2">선택2</label></div>
+  </div>
+  <div class="copy">
+    <div class="radio"><input type="radio" name="radio-group" checked id="radio3" /><label for="radio3"></label>
+    </div>
+    <div class="radio"><input type="radio" name="radio-group" id="radio4" /><label for="radio4"></label></div>
+  </div>
+  <h2>Switch</h2>
+  <div class="copy">
+    <div class="switch">
+      <input type="checkbox" id="switch1" />
+      <label for="switch1" data-on="활성" data-off="비활성"></label>
+    </div>
+  </div>
+  <h2>Chip</h2>
+  <div class="copy">
+    <div class="chip">
+      <input type="radio" id="chip1" name="chip" checked><label for="chip1">선택1</label>
+      <input type="radio" id="chip2" name="chip"><label for="chip2">선택2</label>
+      <input type="radio" id="chip3" name="chip"><label for="chip3">선택3</label>
+      <input type="radio" id="chip4" name="chip"><label for="chip4">선택4</label>
+    </div>
+  </div>
+  <h2>Floating Label</h2>
+  <div class="copy">
+    <div class="floating-label">
+      <input type="text" id="name" placeholder=" " required>
+      <label for="name">이름</label>
+    </div>
+  </div>
+  <h2>Input Date</h2>
+  <div class="copy">
+    <input type="date" data-placeholder="시작일" required />
+  </div>
+</body>
+
+</html>
