@@ -1,0 +1,11 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="ic-play">
+<path id="Rectangle 39591138" d="M30.2836 18.5407L15.4139 8.38496C13.9693 7.39835 12 8.4224 12 10.1602L12 30.4717C12 32.2095 13.9693 33.2335 15.4139 32.2469L30.2836 22.0912C31.5386 21.234 31.5386 19.3979 30.2836 18.5407Z" fill="url(#paint0_linear_5792_20671)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_5792_20671" x1="21.6124" y1="8" x2="21.6124" y2="32.6319" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3B71FE"/>
+<stop offset="1" stop-color="#07BBA9"/>
+</linearGradient>
+</defs>
+</svg>

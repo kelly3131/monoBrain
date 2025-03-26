@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA511_03_SU_0002_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema511_03.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema511_03_su_0002">
+        <section class="title type2">
+            <h2 data-type="2" data-text="생각 깨우기">안전한 학교생활 안내 자료를 만들기 위해 급식실에서 찍은 사진은 9장, 특별실 3곳에서 찍은 사진은 4장씩 필요합니다. 지금까지 7장을 찍었다면 앞으로 찍어야 하는 사진은 몇 장인지 알아봅시다.</h2>
+        </section>
+
+        <section class="contents">
+            <div class="flex align_start">
+                <div class="video_wrap">
+                    <button class="play" onclick="navigate('../guide_sample/vedio_player')"></button>
+                </div>
+
+                <div class="input_area">
+                    <h3>영상을 보고, 앞으로 찍어야 하는 사진의 수를 어떻게 구할 수 있을<br>지 이야기해 보세요</h3>
+                    <div class="input_wrap">
+                        <textarea type="text"></textarea>
+                        <div class="example_box">
+                            <p>전체 필요한 사진의 수에서 지금까지 찍은 사진의 수를 빼면 될 것 같습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <!-- 예시 필드에서 사용 -->
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnSubmit">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

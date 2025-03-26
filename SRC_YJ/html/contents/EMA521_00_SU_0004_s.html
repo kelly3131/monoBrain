@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA521_00_SU_0004_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema521_00.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema521_00_su_0004">
+        <section class="title type2">
+            <h2 data-icon="speech">영상을 보고 어떤 상황을 나타내고 있는지 이야기해 봅시다.</h2>
+        </section>
+
+        <section class="contents">
+            <div class="flex align-start">
+                <div class="video_wrap">
+                    <button class="play" onclick="navigate('../guide_sample/vedio_player')"></button>
+                </div>
+
+                <div class="leftside">
+                    <div class="input_area">
+                        <div class="input_wrap">
+                            <textarea id="inputElement01" type="text"></textarea>
+                        </div>
+                    </div>
+
+
+                    <div class="example_area">
+                        <div class="example_title">예</div>
+                        <div class="example_contents">
+                            <ul>
+                                <li>윤우가 할머니께 영양제를 챙겨드리고 있습니다.</li>
+                                <li>윤우와 할머니가 함께 운동을 하고 있습니다.</li>
+                                <li>윤우가 할머니의 생신 기념 선물을 준비하고 있습니다.</li> 
+                                <li>윤우가 꽃병에 꽃을 나누어 꽂기 위해 준비하고 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="input_area">
+                        <div class="input_wrap">
+                            <textarea id="inputElement01" type="text"></textarea>
+                            <ol class="example_box">
+                                <li>학생들이 운동장 대여함에 있는 줄넘기 중에서 2개를 빌려 사용하고 있습니다.</li>
+                                <li>학급 임원들이 모여 회의를 하고 있습니다.</li>
+                                <li>자치회에서 안전한 학교생활 안내 자료를 만들기 위해 급식실 사진을 찍고
+                                    있습니다.</li>
+                                <li>자치회에서 관리하는 텃밭 상자에 모종을 심고 있습니다.</li>
+                            </ol>
+                        </div>
+            
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <!-- 예시 필드에서 사용 -->
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnSubmit">제출</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

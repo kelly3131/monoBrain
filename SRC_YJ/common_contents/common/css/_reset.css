@@ -1,0 +1,61 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* 기본적인 요소 스타일 초기화 */
+h1, h2, h3, h4, h5, h6, p, blockquote, figure {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+i, em {
+    font-style: italic;
+}

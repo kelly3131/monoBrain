@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+</head>
+<body>
+    <!-- 화면명 클래스로 구분 -->
+    <div id="app_wrap" class="header">
+        <section class="title type1">
+            <!-- data-number로 common/img폴더 내 title_heading_**.svg 형태 이미지 호출 **에 호출할 파일명 기입 시 해당 이미지 호출 가능-->
+            <!-- 아직1만 있음 -->
+            <h1 data-number="1">자연수의 혼합계산</h1>
+            <div class="title_right">
+                <button class="goal" onclick="openPop('.pop_goal_wrap')">학습목표</button>
+            </div>
+        </section>
+        
+        <div class="pop_goal_wrap">
+            <div class="pop_goal">
+                <button class="close" onclick="closePop('.pop_goal_wrap')">닫기</button>
+                <div class="pop_goal_inner">
+                    <label>이번 시간에 공부할 내용</label>
+                    <p>우리 주변에서 볼 수 있는 자연수의 혼합 계산이 필요한 상황들을 이야기해 보고, 이 단원에서 배울 내용을 생각해 봅시다.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="title type2 mt_20">
+            <!-- data-type로 common/img폴더 내 title_mid_**.svg 형태 이미지 호출 **에 호출할 파일명 기입 시 해당 이미지 호출 가능-->
+            <!-- 1자기주도 이미지, 2생각깨우기 이미지 -->
+             <!-- 타이틀 이미지 택스트화 요청으로 data-text(택스트 영역) 추가, 글귀 직접 써주세요.-->
+            <h2 data-type="1" data-text="자기주도 1">지우개를 선택하여 이 단원에서 어떤 내용을 공부할지 알아봅시다.</h2>
+        </section>
+
+        <section class="title type2 mt_20">
+            <!-- data-icon로 common/img폴더 내 icon_**.svg 형태 이미지 호출 **에 호출할 파일명 기입 시 해당 이미지 호출 가능-->
+            <h2 data-icon="speech">영상을 보고 어떤 상황을 나타내고 있는지 이야기해 봅시다.</h2>
+        </section>
+
+        <section class="title type2 mt_20">
+            <!-- data-head 로 헤딩 택스트 지정 숫자 및 택스트 가능 -->
+            <h2 data-head="2">학급 임원 선거를 하는 날에 서아네 반 여학생은 14명 중에서 2명이 결석했고 남학생은 10명 모두 출석했습니다.<br/>출석한 학생이 모두 선거에 참여했다면 선거에 참여한 학생은 모두 몇 명인지 알아봅시다.
+            </h2>
+        </section>
+        
+        <section class="contents">
+            
+        </section>
+    </div>
+</body>
+</html>

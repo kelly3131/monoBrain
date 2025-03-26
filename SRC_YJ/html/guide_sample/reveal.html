@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reveal</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/EMA511_01_SU/style.css">
+</head>
+<body>
+    <div id="app_wrap" class="ema511_01_su_0007 bg_summarize">
+        <section class="contents paging_layout">
+            <div class="summarize_wrap">
+                <div class="summarize">
+                    <label>정리해 볼까요</label>
+
+                    <div>
+                        <span>14-2+10=</span>
+                        <!-- 하나의 버튼 태그로 숨김 들어내기 기능 구현했습니다. .on 부여 형식 -->
+                        <!-- data-pair 값이 똑같은 태그를 만들면 버튼 클릭시 함께 .on 부여-->
+                        <!-- data-pair에 부여된 숫자 순서대로 클릭 가능 최초 1 고정-->
+                        <!-- 태그내 택스트로 입력 후 스타일은 개별 처리 하면 됩니다.-->
+                        <button class="reveal_btn" data-pair="1">12</button>
+                        <span>+10=</span>
+                        <button class="reveal_btn" data-pair="2">22</button>
+                    </div>
+                    <div>
+                        <div class="hidden_obj" data-pair="1">
+                            <img src="../../common_contents/img/EMA511_01_SU/0007_obj1.png" alt="연결선">
+                        </div>
+                        <div class="hidden_obj" data-pair="2">
+                            <img src="../../common_contents/img/EMA511_01_SU/0007_obj2.png" alt="연결선">
+                        </div>
+                    </div>
+                    <div>
+                        <span>덧셈과 뺄셈이 섞여 있는 식은</span>
+                        <button class="reveal_btn" data-pair="3">앞에서부터</button>
+                        <span>차례대로 계산합니다.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/*EMA513_00_SU_0001_s*/
+.ema513_00_su_0001#app_wrap{
+    background: url(../img/EMA513_00_SU/Intersect.png) no-repeat left bottom / 857px, #F4a0a1;
+}
+
+
+.ema513_00_su_0001 .text_box{
+    color: #9C1006;
+    position: absolute;
+    top: 152px;
+    left: 136px;
+}
+
+.ema513_00_su_0001 .input_area{
+    width: 797px;
+    margin-left: auto;
+}
+
+.input_area label.img {
+    background-color: #DA515D;
+}
+
+.input_area label::after {
+    background-color: #DA515D;
+}
+
+/* .ema513_00_su_0001 .title h1 .number_images>img{
+    background-image: url(..);
+} */
+
+/* EMA513_00_SU_0003_s */
+
+.ema513_00_su_0003>.contents .letCheck {
+    position: relative;
+    top: 150px;
+}
+
+
+.ema513_00_su_0003 .imo>li:nth-child(1) {
+    position: relative;
+    transform: translate(1500px,40%);
+    background-image: url(../common/img/charactor_math_01.svg);
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+    z-index: 99;
+    width: 150px;
+    height: 150px;
+}
+
+.letCheck .back>.f32b {
+    text-align: right;
+}
+
+/*EMA513_00_SU_0004_s*/
+.ema513_00_su_0004 .contents > .flex{
+    gap: 26px;
+}
+.ema513_00_su_0004 .input_area{
+    width: 817px;
+}
+.ema513_00_su_0004 .input_wrap > textarea{
+    height: 250px;
+}
+
+.ema513_00_su_0004 .video_wrap { 
+    background: url(../img/EMA513_00_SU/img\ box.png) no-repeat center right / 100%;
+}
+
+/*EMA513_00_SU_0006_s*/
+
+.ema513_00_su_0006 .video_wrap { 
+    background: url(../img/EMA513_00_SU/img\ box2.png) no-repeat center right / 100%;
+}
+
+.ema513_00_su_0006 .video_wrap button.play {
+    display: none;
+}
+
+/*EMA513_00_SU_0007_s*/
+
+.ema513_00_su_0007 .title h2[data-icon="speech"] img  {
+    display: none;
+}
+
+.ema513_00_su_0007 .picture_wrap button.zoom {
+    display: none;
+}

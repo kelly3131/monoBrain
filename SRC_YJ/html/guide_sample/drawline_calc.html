@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drawline calc</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <style>
+        .drawing_area{
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app_wrap" class="drawline">
+        <section class="title type2">
+            <h2 data-head="3">두 식의 계산 순서를 각각 나타내어 계산하고, 계산 결과를 비교해 봅시다.</h2>
+        </section>
+
+        <section class="contents">
+            <div class="compair">
+                <div class="compair_inwrap">
+                    <div class="input_area dir_col">
+                        <div class="question_box">
+                            <span>42-17+8=</span>
+                            <div class="input_wrap answer1">
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <!-- data-dot-count로 최초 점 생성 개수를 정합니다. -->
+                        <!-- data-answer-connectline로 정답을 입력합니다. -->
+                        <!-- 새로 생성되는점은 두점을 작은수부터 순서대로 나열한 수로 채번됩니다. -->
+                        <!-- []는 연결될 두 점을 나타냅니다. 순서와 상관없이 []를 입력합니다. -->
+                        <!-- 정답이될 배열을 잘 모르겠다면 우선 점 요소 data-dot-count 값을 지정해두고 화면에 생성이 된다면 정답이되는 배열을 클릭해 그래프를 그려두면 콘솔창에 현재 그려진 그래프의 배열이 나옵니다. 그 배열을 정답 요소 data-answer-connectline에 입력해두면 해당 배열이 정답처리 됩니다. -->
+                        <div class="drawing_area area1" data-dot-count="3" data-answer-connectline='[[1,2],[12,3]]'>
+                            <svg class="connection_lines"></svg> <!-- 선을 그릴 SVG -->
+                        </div>
+                    </div>
+                    <div class="input_area dir_col">
+                        <div class="question_box">
+                            <span>42-(17+8)=</span>
+                            <div class="input_wrap answer2">
+                                <input type="text"/>
+                            </div>
+                        </div>
+                        <div class="drawing_area area2" data-dot-count="5" data-answer-connectline="[[1,2],[3,4],[12,5],[125,34]]">
+                            <svg class="connection_lines"></svg> <!-- 선을 그릴 SVG -->
+                        </div>
+                    </div>
+                </div>
+                <div class="question_box mt_20">
+                    <span>두 식의 계산 결과는</span>
+                    
+                    <div class="dropdown_wrap">
+                        <select class="custom_dropdown" >
+                            <option value="" disabled selected> </option>
+                            <option value="같습니다.">같습니다.</option>
+                            <option value="다릅니다.">다릅니다.</option>
+                        </select>
+                    </div>
+                </div>
+            </div> 
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

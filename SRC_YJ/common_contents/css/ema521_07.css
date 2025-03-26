@@ -1,0 +1,61 @@
+@charset "utf-8";
+.video_wrap{
+    background: url(../img/EMA521_00_SU/0004_video.png) no-repeat left top / 857px ;
+    border: none;
+}
+.video_wrap button.play{
+    top:41.5%;
+    left: 52.5%;
+}
+.contents > div{
+    display: flex;
+    gap: 20px;
+}
+.input_wrap{
+    width: 797px;
+}
+.input_wrap textarea{
+    padding: 20px;
+    min-height: 322px;
+}
+.input_wrap input:hover, .input_wrap textarea:hover, .input_wrap textarea:focus{
+    padding: 20px;
+}
+.input_area{
+    margin-bottom: 20px;
+}
+.leftside{
+    width: 797px;
+}
+.example_area{
+    width: 797px;
+    min-height: 160px;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    border: none;
+    border-radius: 20px;
+    background: var(--bg-input);
+    resize: none;
+    color: var(--primary-blue-800);
+    display: flex;
+    gap: 35px;
+    background-color: #EEF9FF;
+}
+.example_title{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: var(--btn-default);
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+.example_area li{
+    list-style: disc;
+    margin: 4px 0;
+}
+.btn_area > button.btnReset, .btn_area > button.btnSubmit{
+    background-color: var(--btn-default);
+}

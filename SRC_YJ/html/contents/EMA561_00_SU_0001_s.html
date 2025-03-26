@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMA561_00_SU_0001_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css" />
+
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema561_00.css" />
+  </head>
+  <body>
+    <div id="app_wrap" class="ema561_00_su_0001">
+      <section class="title type1">
+        <h1 data-number="6">다각형의 둘레와 넓이</h1>
+        <button class="goal" onclick="openPop('.pop_goal_wrap')">
+          학습 목표
+        </button>
+      </section>
+
+      <div class="pop_goal_wrap">
+        <div class="pop_goal">
+          <button class="close" onclick="closePop('.pop_goal_wrap')">
+            닫기
+          </button>
+          <div class="pop_goal_inner">
+            <label>이번 시간에 공부할 내용</label>
+            <p>
+              우리 주변에서 볼 수 있는 자연수의 혼합 계산이 필요한 상황들을
+              이야기해 보고, 이 단원에서 배울 내용을 생각해 봅시다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section class="contents">
+        <div class="text_box">
+          <p class="f20b">야구장에서 본루, 1루, 2루, 3루를 연결한</p>
+          <p class="f20b">선으로 둘러싸인 곳을 내야라고 하는데</p>
+          <p class="f20b">내야는 정사각형 모양이야.</p>
+          <p class="f20b">내야의 둘레와 넓이는 어떻게 구할 수 있을까?</p>
+        </div>
+        <div class="input_area">
+          <label for="inputElement01" class="img"
+            >그림은 어떤 상황을 나타내고 있나요?</label
+          >
+          <div class="input_wrap">
+            <textarea id="inputElement01" type="text"></textarea>
+            <ol class="example_box">
+              <li>야구장의 모습입니다.</li>
+              <li>본루, 1루, 2루, 3루가 표시되어 있습니다.</li>
+              <li>내야는 정사각형 모양이라고 합니다.</li>
+              <li>
+                내야의 둘레와 넓이를 어떻게 구할 수 있는지 궁금해하고 있습니다.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="btn_area">
+          <!-- 예시 필드에서 사용 -->
+          <button class="btnType key">입력타입토글</button>
+          <button class="btnReset">리셋</button>
+          <button class="btnSample">예시</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
