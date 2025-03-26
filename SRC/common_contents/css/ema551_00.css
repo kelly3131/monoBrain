@@ -1,0 +1,143 @@
+/* ==============================================
+   📌 공통 - 5단원
+   ============================================== */
+/* 분수 연산 */
+.operations {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    gap: 4px;
+}
+
+/* 분수 whole */
+.f32b {
+    display: flex;
+    align-items: center;
+}
+
+/* 분수 문장 */
+.fraction-text-align {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.fraction-text-align>.f32b {
+    padding: 0px 14px;
+}
+
+.fraction-text-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 분수 힌트 위치 수정정 */
+.input_wrap.hint .text_hint {
+    font-size: 24px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    background: none;
+    backdrop-filter: unset;
+}
+
+/* ==============================================
+   🎨 차시 스타일
+   ============================================== */
+/* 0001 */
+.ema551_00_su_0001#app_wrap {
+    background: url(../img/EMA551_00_SU/0001_bg.png) no-repeat left bottom / 857px, #B7A5CF;
+}
+
+.ema551_00_su_0001 .text_box {
+    color: #7030A0;
+    position: absolute;
+    top: 222px;
+    left: 106px;
+}
+
+.ema551_00_su_0001 .input_area {
+    width: 797px;
+    margin-left: auto;
+}
+
+.input_area label.img {
+    padding: 8px 24px;
+    background-color: #7030A0;
+}
+
+.input_area label::after {
+    background-color: #7030A0;
+}
+
+.ema551_00_su_0001 .text_box {
+    text-align: center;
+}
+
+.ema551_00_su_0001 .text_box .fraction-text-column {
+    align-items: center;
+}
+
+.ema551_00_su_0001 .text_box .fraction-text-align>.f32b {
+    padding: 0px 6px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    gap: 4px;
+}
+
+.ema551_00_su_0001 .text_box .fraction-text-align {
+    font-size: 20px;
+    display: flex;
+    align-items: baseline;
+}
+
+.ema551_00_su_0001 .fraction_box {
+    gap: 8px;
+}
+
+
+.ema551_00_su_0001 .fraction-text-align {
+    display: flex;
+    align-items: baseline;
+}
+
+.ema551_00_su_0001 .fraction-text-align>.f32b {
+    padding: 0px 6px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    gap: 4px;
+    font-size: 20px;
+}
+
+/* 0004 */
+.ema551_00_su_0004 .contents>.flex {
+    gap: 26px;
+}
+
+.ema551_00_su_0004 .input_area {
+    width: 817px;
+}
+
+.ema551_00_su_0004 .input_wrap>textarea {
+    height: 250px;
+}
+
+/* 0005 */
+.ema551_00_su_0005 .contents>.flex {
+    gap: 26px;
+}
+
+.ema551_00_su_0005 .picture_wrap img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.ema551_00_su_0005 .input_wrap {
+    width: 817px;
+}
+
+.ema551_00_su_0005 .input_wrap>textarea {
+    height: 250px;
+}

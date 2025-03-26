@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA531_01_SU_0011_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema531_01.css">
+</head>
+<body>
+    <div id="app_wrap" class="ema531_01_su_0011">
+        <section class="contents paging_layout">
+            <div class="summarize_wrap">
+                <div class="summarize">
+                    <label>정리해 볼까요</label>
+
+                    <div>
+                        <span>식탁의 수와 식탁 다리의 수와 같이 <br> 두 양이 짝을 이루는 것을</span>
+                        <!-- 하나의 버튼 태그로 숨김 들어내기 기능 구현했습니다. .on 부여 형식 -->
+                        <!-- data-pair 값이 똑같은 태그를 만들면 버튼 클릭시 함께 .on 부여-->
+                        <!-- data-pair에 부여된 숫자 순서대로 클릭 가능 최초 1 고정-->
+                        <!-- 태그내 택스트로 입력 후 스타일은 개별 처리 하면 됩니다.-->
+                        <button class="reveal_btn" data-pair="1">대응</button>
+                        <span>한다고 하고,</span>
+                        
+                    </div>
+
+                    <div>
+                        <span>한 양이 변할 때 다른 양이 그에 따라 변하는 규칙을 </span> <br>
+                        <button class="reveal_btn" data-pair="3">대응 관계</button>
+                        <span>라고 합니다.</span>
+                    </div>
+
+    
+                </div>
+            </div>
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

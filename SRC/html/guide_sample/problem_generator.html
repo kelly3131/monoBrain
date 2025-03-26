@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem_generator</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="../../common_contents/common/css/app.css">
+
+    <style>
+        .input_wrap .text_input{
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app_wrap" class="problem_generator">
+        <section class="title type2">
+            <h2 data-type="3" lang="y">
+                <div class="flex align_center gap_4">조건을 골라<span class="ico_round"></span>표 하여 문제를 만들고, 해결해 봅시다.</div>
+            </h2>
+        </section>
+
+        <section class="contents">
+            <div class="question_box">
+                <!-- radio 버튼의 value 값의 조합이 아래 .combo_map 태그의 data-combo와 쌍을 이룹니다. -->
+                <!-- radio 버튼(조건)의 수는 유동적으로 추가시킬수 있으며 그에 맞는 조합결과 입력되야할 데이터는 식 input란에 data-text 값으로, 답 input란에 data-formula값으로 반영됩니다. -->
+                <div class="problem_generator">
+                    <!-- 선택 그룹 1: 과일 -->
+                    <div class="option_group">
+                        <input type="radio" name="fruit" id="fruit1" value="1"><label for="fruit1">방울토마토</label>
+                        <input type="radio" name="fruit" id="fruit2" value="2"><label for="fruit2">체리</label>
+                    </div>
+                  
+                    <!-- 선택 그룹 2: 간식 -->
+                    <div class="option_group">
+                        <input type="radio" name="snack" id="snack1" value="1"><label for="snack1">과자</label>
+                        <input type="radio" name="snack" id="snack2" value="2"><label for="snack2">초콜릿</label>
+                    </div>
+                  
+                    <!-- 정답 반영되는 input -->
+                    <div class="input_wrap">
+                        <input type="text" class="text_input" data-answer-single="" />
+                    </div>
+                    <div class="input_wrap">
+                        <input type="text" class="formula_input" data-answer-single="" />
+                    </div>
+                  
+                    <!-- 조합에 따른 정답/식 정의 -->
+                    <div class="combo_map" hidden>
+                        <!-- value 조합: fruit-snack -->
+                        <div data-combo="1-1" data-text="10000-(1500+4200÷3×2)" data-formula="5700"></div> <!-- 방울토마토 + 과자 -->
+                        <div data-combo="1-2" data-text="10000-(1500+6000÷3×2)" data-formula="6000"></div> <!-- 방울토마토 + 초콜릿 -->
+                        <div data-combo="2-1" data-text="10000-(3500+4200÷3×2)" data-formula="7700"></div> <!-- 체리 + 과자 -->
+                        <div data-combo="2-2" data-text="10000-(3500+6000÷3×2)" data-formula="8000"></div> <!-- 체리 + 초콜릿 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+            </div>
+        </section>
+    </div>
+</body> 
+</html>

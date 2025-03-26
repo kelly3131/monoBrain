@@ -1,0 +1,80 @@
+.input_wrap .text_hint,
+.dropdown_wrap .text_hint {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.drawing_area.hint {
+    background-color: transparent;
+}
+
+/*ema541_02_SU_0002_s*/
+.ema541_02_su_0002 .contents > .flex{
+    gap: 26px;
+}
+.ema541_02_su_0002 .input_wrap{
+    width: 817px;
+}
+.ema541_02_su_0002 .input_wrap > textarea{
+    height: 250px;
+}
+
+.ema541_02_su_0002 .title h2[data-type="2"] .title_head {
+    margin-top: 20px;
+}
+.ema541_02_su_0002 .fraction_row {
+    line-height: 1;
+}
+.ema541_02_su_0002 .fraction_inn {
+    display: flex; 
+    align-items: center;
+}
+.ema541_02_su_0002 .fraction_inn .fraction_box {
+    padding: 0 4px;
+    margin: 0 8px;
+}
+
+.ema541_02_su_0002 .video_wrap {
+    background: url(../img/EMA541_02_SU/0002_content.png) no-repeat center / 101%;
+    height: 428px;
+}
+
+/* .ema541_02_su_0003 */
+.ema541_02_su_0003 .page_1 .question_box {
+    gap: 100px;
+}
+
+.ema541_02_su_0003 .question_box span {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+
+.ema541_02_su_0003 .page_1 .question_box .fraction_col {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.ema541_02_su_0003 .page_1 .question_box .fraction_col:first-child {
+    gap: 40px;
+}
+
+.ema541_02_su_0003 .page_1 .fraction_col:first-child .fraction_box {
+    width: 42px;
+}
+.ema541_02_su_0003 .page_1 .fraction_col:nth-of-type(2) .fraction_box::before,
+.ema541_02_su_0003 .page_1 .fraction_col:nth-of-type(3) .fraction_box::before,
+.ema541_02_su_0003 .page_1 .input_wrap,
+.ema541_02_su_0003 .page_1 .input_wrap input {
+    min-width: 80px;
+    width: 80px;
+    text-align: center;
+}
+
+.ema541_02_su_0003 .page_1 .fraction_col .input_wrap .text_hint {
+    top: 12px;
+    left: 81px;
+    width: 60%;
+}

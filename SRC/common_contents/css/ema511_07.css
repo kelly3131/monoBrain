@@ -1,0 +1,143 @@
+.input_wrap .text_hint,
+.dropdown_wrap .text_hint {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+}
+
+#app_wrap > .title.type2 + .title.type2 {
+    margin-top: 12px;
+}
+
+/*ema511_07_su_0003_s*/
+.ema511_07_su_0003 .contents > .flex{
+    gap: 120px;
+}
+.ema511_07_su_0003 .question_box > span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+.ema511_07_su_0003 .drawing_area{
+    min-width: 135px;
+    width: 135px;
+    height: 160px;
+}
+.ema511_07_su_0003 .drawing_area.area1 {
+    min-width: 150px;
+    width: 150px;
+}
+.ema511_07_su_0003 .drawing_area.area1 .dot_1{
+    left: 11px;
+}
+.ema511_07_su_0003 .drawing_area.area1 .dot_2{
+    left: 66px;
+}
+.ema511_07_su_0003 .drawing_area.area1 .dot_3{
+    left: 113px;
+}
+.ema511_07_su_0003 .drawing_area.area2 .dot_1{
+    left: 22px;
+}
+.ema511_07_su_0003 .drawing_area.area2 .dot_2{
+    left: 70px;
+}
+.ema511_07_su_0003 .drawing_area.area2 .dot_3{
+    left: 107px;
+}
+
+/*ema511_07_su_0005_s*/
+.ema511_07_su_0005 .question_box {
+    display: inline-flex;
+    padding: 0 20px;
+    background-color: rgba(238, 240, 244, 1);
+    border-radius: 34px;
+    white-space: nowrap;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.ema511_07_su_0005 .question_box > span {
+    display: inline-block;
+    min-width: 280px;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+.ema511_07_su_0005 .circle_blank {
+    display: inline-block;
+    width: 64px;
+    aspect-ratio: 1/1;
+    background-color: rgba(238, 249, 255, 1);
+    border: 2px solid rgba(59, 113, 254, 1);
+    border-radius: 50%;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);
+}
+
+/*ema511_07_su_0006_s*/
+.ema511_07_su_0006 .input_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.ema511_07_su_0006 .input_area > div > span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+
+.ema511_07_su_0006 .input_area .input_wrap.answer1 input {
+    width: 232px;
+}
+
+/* ema511_07_su_0008_s */
+.ema511_07_su_0008 .circle {
+    width: 44px;
+    height: 44px;
+    border: 2px solid rgba(34, 34, 34, 1);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ema511_07_su_0008 .contents {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 43px;
+}
+
+.ema511_07_su_0008 .picture_wrap {
+    width: 800px;
+    max-width: unset;
+    max-height: unset;
+    aspect-ratio: 800/511;
+    flex: unset;
+    border-radius: 0;
+}
+
+.ema511_07_su_0008 .input_area {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.ema511_07_su_0008 .input_area > div > span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+
+.ema511_07_su_0008 .input_area .input_wrap.answer1 input {
+    width: 232px;
+}

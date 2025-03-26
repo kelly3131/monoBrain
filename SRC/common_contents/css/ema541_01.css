@@ -1,0 +1,134 @@
+/*EMA541_01_SU_0002_s*/
+.input_wrap .text_hint, .dropdown_wrap .text_hint {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+.ema541_01_su_0002 .contents > .flex{
+    gap: 26px;
+}
+.ema541_01_su_0002 .input_wrap{
+    width: 817px;
+}
+.ema541_01_su_0002 .input_wrap > textarea{
+    height: 220px;
+}
+.ema541_01_su_0002 .title h2[data-type="2"] .title_head {
+    margin-top: 20px;
+}
+.ema541_01_su_0002 .fraction_row {
+    line-height: 1;
+}
+.ema541_01_su_0002 .fraction_inn {
+    display: flex; 
+    align-items: center;
+}
+.ema541_01_su_0002 .fraction_inn .fraction_box {
+    padding: 0 4px;
+    margin: 0 8px;
+}
+.ema541_01_su_0002 .video_wrap {
+    background: url(../img/EMA541_01_SU/0002_content.png) no-repeat center / 101%;
+    height: 428px;
+}
+
+/*EMA541_01_SU_0003_s*/
+.ema541_01_su_0003 .paging_layout,
+.ema541_01_su_0004 .paging_layout {
+    padding-left: 40px;
+}
+
+.ema541_01_su_0003 .page_2 h3 {
+    align-items: center;
+}
+.ema541_01_su_0003 .page_3 .custom_select {
+    width: 204px;
+}
+
+.ema541_01_su_0003 .page h3 .fraction_box {
+    padding: 0 6px;
+    margin: 0 8px;
+}
+
+.ema541_01_su_0003 .question_box,
+.ema541_01_su_0004 .question_box {
+    gap: 40px;
+}
+.ema541_01_su_0003 .group_box,
+.ema541_01_su_0004 .group_box {
+    height: 152px;
+    width: 132px;
+    justify-content: center;
+    padding: 10px 5px;
+    background-color: #eef0f4;
+    border-radius: 100px;
+}
+.ema541_01_su_0003 .group_box .fraction_box,
+.ema541_01_su_0004 .group_box .fraction_box {
+    margin-top: -28px;
+}
+.ema541_01_su_0003 .group_box span,
+.ema541_01_su_0004 .group_box span {
+    font-size: 32px;
+    letter-spacing: -1px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+/*EMA541_01_SU_0004_s*/
+.ema541_01_su_0004[data-current-page="page_3"] section.title {
+    display: none;
+}
+.ema541_01_su_0004 .contents h3 {
+    align-items: center;
+}
+.ema541_01_su_0004 .fraction_box {
+    padding: 0 12px;
+    margin: 0 10px;
+}
+.ema541_01_su_0004 .row {
+    font-size: 32px;
+    letter-spacing: -1px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.ema541_01_su_0004 .page_3 .row1 {
+    width: calc(100% - 388px);
+    background: url(../img/EMA541_01_SU/0004_bg.png) no-repeat center;
+    height: 150px;
+    margin-bottom: 20px;
+}
+.ema541_01_su_0004 .page_3 .row1 .fraction_box {position: absolute;}
+.ema541_01_su_0004 .page_3 .row1 .fraction_box:first-child {
+    top: 20px;
+    left: -62px;
+}
+.ema541_01_su_0004 .page_3 .row1 .fraction_box:nth-of-type(2) {
+    top: 20px;
+    left: 182px;
+    
+}
+.ema541_01_su_0004 .page_3 .row1 .fraction_box:nth-of-type(3) {
+    top: 20px;
+    left: 426px;
+}
+.ema541_01_su_0004 .page_3 .row1 .fraction_box:nth-of-type(4) {
+    top: 20px;
+    left: 656px;
+}
+
+.ema541_01_su_0004 .page_3 .row2 > div {
+    display: flex;
+    align-items: center;
+}
+.ema541_01_su_0004 .page_3 .reveal_btn {
+    font-size: 32px    ;
+}
+
+.ema541_01_su_0004 .fraction_box,
+.ema541_01_su_0005 .fraction_box {
+    padding: 0 12px;
+    margin: 0 10px;
+}
+/* .ema541_01_su_0005 */
