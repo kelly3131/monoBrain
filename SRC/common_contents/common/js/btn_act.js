@@ -35,6 +35,7 @@ document.querySelectorAll(".btn_area button").forEach(button => {
             resetInputFields();
             resetRevealSystem();
             resetBooleanBtn();
+            resetBooleanCount();
         } else if (button.classList.contains("btnCheck")) {
             if(button.classList.contains("close")) {
                 resetRevealSystem()
@@ -44,6 +45,7 @@ document.querySelectorAll(".btn_area button").forEach(button => {
             checkAnswers(onCorrect, onIncorrect, onIncorrectTwice, onEmpty);
         } else if (button.classList.contains("btnSample")) {
             showExampleFields();
+            button.classList.contains("close") ? restoreBooleanCountSelection() : applyBooleanCountSimplified();
         }
     });
 });
@@ -56,7 +58,8 @@ function checkAnswers(onCorrect, onIncorrect, onIncorrectTwice, onEmpty) {
         ".input_wrap textarea[data-answer-single]",
         ".custom_dropdown[data-answer-single]",
         ".drawing_area[data-answer-connectline]",
-        ".boolean_wrap button[data-answer-single]"
+        ".boolean_wrap button[data-answer-single]",
+        ".boolean_count_wrap[data-answer-single]",
     ];
 
     const targets = pagenation.activePage.querySelectorAll(correctionSelectors.join(","));
@@ -140,13 +143,14 @@ function onIncorrectTwice() {
 
     // ✅ boolean 버튼 처리
     page.querySelectorAll(".boolean_wrap > button").forEach(button => {
-        const isIncorrect = button.dataset.correction === "false";
         const isTrueAnswer = button.dataset.answerSingle === "true";
 
-        if (isIncorrect && isTrueAnswer) {
+        if (isTrueAnswer) {
             button.classList.add("hint");
         }
     });
+
+    page.querySelector(".boolean_count_wrap") ? applyBooleanCountSimplified() : null
 
     toastCheckMsg("정답을 확인해 보세요.", 3, false);
 }
@@ -311,6 +315,10 @@ watchWithCustomTest([
         selector: ".boolean_wrap button",
         test: el => el.classList.contains("selected") == true
     },
+    {
+        selector: ".boolean_count_wrap button",
+        test: el => el.classList.contains("selected") === true
+    },
 ], (selectors) => {
     const activeBtn = document.querySelectorAll(".btn_area button:not(.btnType, .btnSample)");
     if(activeBtn) activeBtn.forEach(btn => btn.classList.add('active'));
@@ -318,6 +326,10 @@ watchWithCustomTest([
     if (selectors.includes("textarea_with_example")) {
         document.querySelector(".btn_area .btnSample")?.classList.add("active");
         // console.log("💡 textarea + example_box 조건 만족");
+    }
+
+    if (selectors.some(key => key.includes(".boolean_count_wrap"))) {
+        document.querySelector(".btn_area .btnSample")?.classList.add("active");
     }
 },()=>{
     const activeBtn = document.querySelectorAll(".btn_area button:not(.btnType)")
@@ -341,6 +353,10 @@ watchWithCustomTest([
     {
         selector: ".reveal_btn",
         test: el => el.classList.contains("on") == true
+    },
+    {
+        selector: ".boolean_count_wrap",
+        test: el => el.hasAttribute("data-prev-selected")
     },
 ], (selector) => {
     const btn = document.querySelector(".btn_area .btnSample");
@@ -405,7 +421,11 @@ function bindAnswerCheck(configs) {
     const updateCorrection = (el, getValue, getAnswer, onUpdate) => {
         const userValue = getValue(el);
         const answerValue = getAnswer(el);
-        const isCorrect = userValue === answerValue;
+        const isCorrect = answerValue === "empty_answer"
+        ? userValue === "" // ⬅️ 선택되지 않은 상태가 정답
+        : userValue === answerValue;
+
+
         el.dataset.correction = isCorrect ? "true" : "false";
         if (onUpdate) onUpdate(el, isCorrect);
     };
@@ -424,6 +444,22 @@ function bindAnswerCheck(configs) {
         document.querySelectorAll(selector).forEach(el => {
             updateCorrection(el, getValue, getAnswer, onUpdate);
         });
+
+        // ✅ 특별 처리: .custom_dropdown 요소의 select_trigger 초기 상태 검사
+        if (selector === ".custom_dropdown") {
+            document.querySelectorAll(".select_trigger").forEach(trigger => {
+                const select = trigger.closest(".dropdown_wrap")?.querySelector(".custom_dropdown");
+                if (!select) return;
+
+                const userValue = trigger.dataset.value || "";
+                const answerValue = select.dataset.answerSingle;
+                const isCorrect = answerValue === "empty_answer"
+                    ? userValue === ""
+                    : userValue === answerValue;
+
+                select.dataset.correction = isCorrect ? "true" : "false";
+            });
+        }
     });
 }
 
@@ -470,7 +506,10 @@ bindAnswerCheck([
     {
         selector: ".custom_dropdown",
         getValue: el => el.parentElement.querySelector(".select_trigger")?.dataset.value || "",
-        getAnswer: el => el.dataset.answerSingle
+        getAnswer: el => el.dataset.answerSingle,
+        onUpdate: (el, isCorrect) => {
+            el.dataset.correction = isCorrect ? "true" : "false";
+        }
     },
     {
         selector: ".drawing_area",
@@ -495,6 +534,16 @@ bindAnswerCheck([
         getValue: el => el.classList.contains("selected") ? "true" : "false",
         getAnswer: el => el.dataset.answerSingle
     },
+    {
+        selector: ".boolean_count_wrap",
+        getValue: el => {
+          return el.querySelectorAll("button.selected").length;
+        },
+        getAnswer: el => parseInt(el.dataset.answerSingle, 10),
+        onUpdate: (el, isCorrect) => {
+          el.dataset.correction = isCorrect ? "true" : "false";
+        }
+      },
 ]);
 
 // 드롭다운 상태 변경 감지
@@ -545,8 +594,20 @@ observeAttributeChange(".boolean_wrap button", "class", (button) => {
     button.dataset.correction = isCorrect ? "true" : "false";
 });
 
+observeAttributeChange(".boolean_count_wrap button", "class", (button) => {
+    const wrapper = button.closest(".boolean_count_wrap");
+    if (!wrapper) return;
+
+    const selectedCount = wrapper.querySelectorAll("button.selected").length;
+    const correctCount = parseInt(wrapper.dataset.answerSingle, 10);
+    const isCorrect = selectedCount === correctCount;
+
+    wrapper.dataset.correction = isCorrect ? "true" : "false";
+});
+
 /**
  * boolean 체크 선택 기능
+ * 칸 선택 수 체크 기능
  */
 document.querySelectorAll(".boolean_wrap > button").forEach(button => {
     button.addEventListener("click", () => {
@@ -569,5 +630,70 @@ function resetBooleanBtn() {
     // 현재 활성 페이지의 모든 버튼에서 "selected" 클래스 제거
     pagenation.activePage.querySelectorAll(".boolean_wrap > button").forEach(button => {
         button.classList.remove("selected");
+    });
+}
+/** 칸 선택 수 체크 기능 */
+document.querySelectorAll(".boolean_count_wrap > button").forEach(button => {
+    button.addEventListener("click", () => {
+        // 현재 활성 페이지의 모든 버튼에서 "hint" 클래스 제거
+        pagenation.activePage.querySelectorAll(".boolean_wrap > button").forEach(btn => {
+            btn.classList.remove("hint");
+        });
+
+        // 클릭한 버튼의 "selected" 클래스 토글
+        button.classList.toggle("selected");
+    });
+});
+
+function resetBooleanCount() {
+    pagenation.activePage.querySelectorAll(".boolean_count_wrap").forEach(wrapper => {
+        wrapper.querySelectorAll("button").forEach(btn => btn.classList.remove("selected"));
+        wrapper.dataset.correction = "false";
+
+        delete wrapper.dataset.prevSelected;
+    });
+}
+
+function applyBooleanCountSimplified() {
+    pagenation.activePage.querySelectorAll(".boolean_count_wrap").forEach(wrapper => {
+        const allButtons = Array.from(wrapper.querySelectorAll("button"));
+
+        // 현재 선택 상태 저장
+        const selectedIndexes = allButtons
+            .map((btn, index) => btn.classList.contains("selected") ? index : -1)
+            .filter(i => i !== -1);
+
+        wrapper.dataset.prevSelected = JSON.stringify(selectedIndexes);
+
+        // 기존 selected 모두 제거
+        allButtons.forEach(btn => btn.classList.remove("selected"));
+
+        // 정답 수만큼만 앞에서부터 selected 부여
+        const count = parseInt(wrapper.dataset.answerSingle, 10);
+        for (let i = 0; i < count && i < allButtons.length; i++) {
+            allButtons[i].classList.add("selected");
+        }
+    });
+}
+
+function restoreBooleanCountSelection() {
+    pagenation.activePage.querySelectorAll(".boolean_count_wrap").forEach(wrapper => {
+        const allButtons = Array.from(wrapper.querySelectorAll("button"));
+
+        // 복원할 인덱스 불러오기
+        const selectedIndexes = JSON.parse(wrapper.dataset.prevSelected || "[]");
+
+        // 전체 초기화
+        allButtons.forEach(btn => btn.classList.remove("selected"));
+
+        // 이전 선택 상태 복원
+        selectedIndexes.forEach(index => {
+            if (allButtons[index]) {
+                allButtons[index].classList.add("selected");
+            }
+        });
+
+        // 저장 상태 제거 (선택사항)
+        delete wrapper.dataset.prevSelected;
     });
 }

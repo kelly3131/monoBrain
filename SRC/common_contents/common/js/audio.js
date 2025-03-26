@@ -57,14 +57,22 @@ class AudioManager {
 const audioManager = new AudioManager();
 
 /** 각종 효과음 설치 기능 */
-// 버튼 및 .select_options li 클릭 시 클릭음 재생
+// 버튼, .select_options li, 라디오 + label 클릭 시 클릭음 재생
 document.body.addEventListener("click", (event) => {
     const excludedClasses = ["on"];
+    const target = event.target;
+
+    const isButton = target.tagName === "BUTTON";
+    const isSelectOption = target.closest(".select_options li");
+    const isRadioLabel = (
+        target.tagName === "LABEL" &&
+        target.previousElementSibling?.matches("input[type='radio']")
+    );
 
     if (
-        (event.target.tagName === "BUTTON" || event.target.closest(".select_options li")) &&
-        !excludedClasses.some(cls => event.target.classList.contains(cls))
+        (isButton || isSelectOption || isRadioLabel) &&
+        !excludedClasses.some(cls => target.classList.contains(cls))
     ) {
         audioManager.playSound("click");
     }
-}, true /* 캡처링 단계에서 실행 (이벤트 버블링보다 먼저 실행됨) */);
+}, true); // 캡처링 단계에서 실행

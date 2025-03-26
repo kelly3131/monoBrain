@@ -1,0 +1,152 @@
+.paging_layout {
+  padding: 0 45px;
+}
+
+/*EMA561_02_SU_0002_s*/
+.video_wrap {
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  border: 2px solid #f4f4f4;
+  overflow: hidden;
+  position: relative;
+  background: url(../../common_contents/img/EMA561_02_SU/03_002img.png)
+    no-repeat center right 0 / 100%;
+}
+.ema561_03_su_0002 .contents > .flex {
+  gap: 26px;
+}
+.ema561_03_su_0002 .input_wrap {
+  width: 817px;
+}
+.ema561_03_su_0002 .input_wrap > textarea {
+  height: 250px;
+}
+
+.bubble1,
+.bubble2 p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.bubble1 {
+  position: absolute;
+  top: 240px;
+  left: 75px;
+}
+.bubble2 {
+  position: absolute;
+  top: 258px;
+  left: 616px;
+}
+/* EMA561_03_SU_0003_s */
+
+h3 span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b71fe;
+  text-align: center;
+}
+
+h3 span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid #3b71fe;
+  box-sizing: border-box;
+}
+
+.ractangleWrap {
+  width: 350px;
+  height: 314px;
+  display: flex;
+  align-items: flex-end;
+  gap: 100px;
+}
+
+.ractangleBox1 {
+  position: relative;
+  width: 100px;
+  height: 250px;
+  background-color: #d9f0ff;
+  border: 1px solid #8cd6ff;
+}
+.ractangleBox2 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #d9f0ff;
+  border: 1px solid #8cd6ff;
+}
+
+/* .txt span::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 12px;
+  border: 2px solid #3b71fe;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ractangleBox2 {
+  width: 150px;
+  height: 150px;
+  background-color: #d9f0ff;
+  border: 1px solid #8cd6ff;
+}
+ */
+
+.txt {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.txt span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b71fe;
+  text-align: center;
+}
+
+.txt span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid #3b71fe;
+  box-sizing: border-box;
+}
+
+.page_2 .input_wrap textarea {
+  width: 1168px;
+  height: 210px;
+}
+
+.page_2 .input_wrap {
+  margin-top: 20px;
+}

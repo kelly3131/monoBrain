@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA531_00_SU_0001_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema531_00.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema531_00_su_0001">
+        <section class="title type1">
+            <h1 data-number="3">대응 관계</h1>
+            <button class="goal" onclick="openPop('.pop_goal_wrap')">학습 목표</button>
+        </section>
+
+        <div class="pop_goal_wrap">
+            <div class="pop_goal">
+                <button class="close" onclick="closePop('.pop_goal_wrap')">닫기</button>
+                <div class="pop_goal_inner">
+                    <label>이번 시간에 공부할 내용</label>
+                    <p lang="y">우리 주변에서 볼 수 있는 자연수의 혼합 계산이 필요한 상황들을 이야기해 보고, 이 단원에서 배울 내용을 생각해 봅시다.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="contents">
+            <div class="input_area">
+                <label for="inputElement01" class="img">그림은 어떤 상황을 나타내고 있나요?</label>
+                <div class="input_wrap">
+                    <textarea id="inputElement01" type="text"></textarea>
+                    <ol class="example_box">
+                        <li lang="y">에펠 탑이 있습니다.</li>
+                        <li lang="y">에펠 탑은 주기적으로 새로 칠한다고 이야기하고 있습니다.</li>
+                        <li lang="y">에펠 탑을 1번 칠할 때마다 페인트 54 t을 사용한다고 이야기하고 있습니다.</li>
+                        <li lang="y">에펠 탑을 칠하는 횟수와 사용한 페인트의 양 사이엥는 어떤 관계가 있을지 궁금해하고 있습니다.</li>
+                    </ol>
+                </div>
+    
+            </div>
+
+            <div class="btn_area">
+                <!-- 예시 필드에서 사용 -->
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnSample">예시</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

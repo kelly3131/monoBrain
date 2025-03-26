@@ -151,10 +151,10 @@
 }
 .ema511_04_su_0004 .drawing_area{
     height: 230px;
+    left: 44px;
 }
 .ema511_04_su_0004 .drawing_area.area1{
-    width: 239px;
-    left: 44px;
+    width: 199px;
 }
 .ema511_04_su_0004 .drawing_area.area1 .dot_1{
     left: 36px;
@@ -169,8 +169,7 @@
     left: 172px;
 }
 .ema511_04_su_0004 .drawing_area.area2{
-    width: 261px;
-    left: 44px;
+    width: 226px;
 }
 .ema511_04_su_0004 .drawing_area.area2 .dot_1{
     left: 46px;
@@ -218,10 +217,11 @@
 }
 .ema511_04_su_0005 .drawing_area{
     height: 230px;
+    left: 44px;
 }
 .ema511_04_su_0005 .drawing_area.area1{
-    width: 239px;
-    left: 44px;
+    min-width: 195px;
+    width: 195px;
 }
 .ema511_04_su_0005 .drawing_area.area1 .dot_1{
     left: 24px;
@@ -236,8 +236,7 @@
     left: 157px;
 }
 .ema511_04_su_0005 .drawing_area.area2{
-    width: 261px;
-    left: 44px;
+    width: 217px;
 }
 .ema511_04_su_0005 .drawing_area.area2 .dot_1{
     left: 24px;

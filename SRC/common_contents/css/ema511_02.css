@@ -5,10 +5,6 @@
     line-height: 36px;
 }
 
-.drawing_area.hint {
-    background-color: transparent;
-}
-
 /*EMA511_02_SU_0002_s*/
 .ema511_02_su_0002 .contents > .flex{
     gap: 26px;
@@ -168,33 +164,33 @@
     line-height: 48px;
     letter-spacing: -1px;
 }
-.ema511_02_su_0005 .drawing_area{
-    width: 200px;
-}
 .ema511_02_su_0005 .drawing_area.area1 .dot_1{
-    left: 63px;   
+    left: 23px;   
 }
 .ema511_02_su_0005 .drawing_area.area1 .dot_2{
-    left: 111px;   
+    left: 71px;   
 }
 .ema511_02_su_0005 .drawing_area.area1 .dot_3{
-    left: 150px;   
+    left: 110px;   
 }
 .ema511_02_su_0005 .drawing_area.area2 .dot_1{
-    left: 63px;   
+    left: 21px;   
 }
 .ema511_02_su_0005 .drawing_area.area2 .dot_2{
-    left: 123px;   
+    left: 81px;   
 }
 .ema511_02_su_0005 .drawing_area.area2 .dot_3{
-    left: 161px;   
+    left: 120px;   
 }
 .ema511_02_su_0005 .drawing_area.area1{
-    transform: translateX(-77px);
+    min-width: 140px;
+    width: 140px;
+    transform: translateX(-67px);
 }
 .ema511_02_su_0005 .drawing_area.area2{
-    width: 220px;
-    transform: translateX(-78px);
+    min-width: 160px;
+    width: 160px;
+    transform: translateX(-65px);
 }
 .ema511_02_su_0005 .label_1 {
     color: #E4007F;

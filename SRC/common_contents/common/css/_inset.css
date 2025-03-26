@@ -738,6 +738,8 @@ button:hover{
 .title h2[data-type="1"] .title_head, .title h2[data-type="2"] .title_head{
     margin-top: 5px;
 }
+.title h2[data-type]{
+}
 /* 공통 버튼 스타일 */
 .btn_area {
     display: flex;
@@ -2048,6 +2050,76 @@ i.ex1{
     border-width: 6px;
     border-color: var(--secondary-red);
 }
+
+.boolean_count_wrap{
+    display: inline-flex;
+    gap: 1px;
+    border: 2px solid var(--font-main);
+}
+.boolean_count_wrap button{
+    min-width: 40px;
+    background: var(--font-main-reverse);
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+}
+.boolean_count_wrap button:not(:first-child)::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        var(--font-main),
+        var(--font-main) 4px,
+        transparent 4px,
+        transparent 8px
+    );
+    position: absolute;
+    top: 0;
+    left: -1px;
+}
+.boolean_count_wrap button.selected{
+    background-color: var(--font-main);
+}
+.boolean_count_wrap.col{
+    flex-direction: column-reverse;
+}
+.boolean_count_wrap.col button:not(:first-child)::before{
+    width: 100%;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+        to right,
+        var(--font-main),
+        var(--font-main) 4px,
+        transparent 4px,
+        transparent 8px
+    );
+    top: unset;
+    bottom: -1px;
+    left: 0;
+}
+/**************************************/
+/* 문제만들기 */
+.problem_generator .option_group input[type="radio"]{
+    display: none;
+}
+.problem_generator .option_group input[type="radio"]:checked  + label::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--secondary-red);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.problem_generator .option_group label{
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+}
+
 /**************************************/
 /* 기타 */
 .empty_box{

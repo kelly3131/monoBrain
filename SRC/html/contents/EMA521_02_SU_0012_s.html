@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA521_02_SU_0012_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema521_00.css">
+    <link rel="stylesheet" href="./../../common_contents/css/ema521_01.css">
+    <link rel="stylesheet" href="./../../common_contents/css/ema521_02.css">
+</head>
+
+<body>
+    <div id="app_wrap" class="ema521_02_su_0012">
+        <section class="title type2 mt_20">
+            <!-- data-icon로 common/img폴더 내 icon_**.svg 형태 이미지 호출 **에 호출할 파일명 기입 시 해당 이미지 호출 가능-->
+            <h2 data-icon="speech">18을 여러 수의 곱으로 나타낸 식을 보고 약수와 배수에 대해 이야기해 봅시다.</h2>
+        </section>
+
+        <section class="contents">
+            <div class="example_number">
+                <span>18=1&times;18</span>
+                <span>18=2&times;9</span>
+                <span>18=3&times;6</span>
+                <span>18=2&times;3&times;3</span>
+            </div>
+            <div>
+                그림+글
+            </div>
+            <div>
+                <div class="flex mt_40">
+                    <div class="input_wrap">
+                        <textarea placeholder="&nbsp;"></textarea>
+                        <div class="example_box">
+                            <p>18의 약수는 1, 2, 3, 6, 9, 18이고, 18은 1, 2, 3, 6, 9, 18의 배수입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset btnBgDefault">리셋</button>
+                <!-- <button class="btnCheck btnBgDefault">확인</button> -->
+                <button class="btnSubmit btnBgDefault">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

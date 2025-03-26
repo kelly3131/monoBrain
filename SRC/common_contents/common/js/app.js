@@ -43,6 +43,7 @@ const scriptPaths = [
     "../../common_contents/common/js/drawline.js",//연결선 그리기 관련 기능
     "../../common_contents/common/js/drag_drop.js",//드래그 앤 드랍 관련 기능
     "../../common_contents/common/js/image_zoom.js",//이미지 확대하기 기능
+    "../../common_contents/common/js/problem_generator.js",//문제만들기 기능
     "../../common_contents/common/js/badwords.js",//금칙어 기능(기존 기능 이식)
 ];
 
@@ -109,7 +110,9 @@ function handleCardClick(card) {
         cover.classList.add("removed"); // 커버 제거 플래그 추가
         cover.remove(); // 첫 클릭 시 cover 제거
     } else {
-        card.classList.toggle("flip"); // 두 번째 클릭부터 카드 뒤집기
+        if(card.querySelector(".back")){
+            card.classList.toggle("flip"); // 두 번째 클릭부터 카드 뒤집기
+        }
     }
     
     audioManager.playSound("click");

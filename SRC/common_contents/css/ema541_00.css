@@ -1,14 +1,16 @@
 /* .ema541_00_su_0001 */
+.ema541_00_su_0001 section.contents {
+  margin-top:20px;
+}
 .ema541_00_su_0001#app_wrap {
-    background: url(../img/EMA541_00_SU/0001_bg.png) no-repeat left bottom / 857px,
-      #91c14a;
+    background: url(../img/EMA541_00_SU/0001_bg.png) no-repeat left 102% / 824px,#91c14a;
   }
   
   .text_box {
     color: #008834;
     position: absolute;
-    top: 164px;
-    left: 302px;
+    top: 200px;
+    left: 282px;
   }
   
   .text_box img {
@@ -88,15 +90,15 @@
   
   .ema541_00_su_0004 .video_wrap {
     background: url(../img/EMA541_00_SU/0004_content.png)
-      no-repeat center right -35px / 100%;
+      no-repeat center / 100%;
     height: 428px;
   }
   
   .ema541_00_su_0004 .contents > .flex{
     gap: 26px;
   } 
-  .ema541_00_su_0004 .input_area{
-      width: 817px;
+  .ema541_00_su_0004 .input_wrap{
+      width: 100%;
   }
   .ema541_00_su_0004 .input_wrap > textarea{
       height: 250px;
@@ -109,9 +111,6 @@
   .ema541_00_su_0005 .picture_wrap img{
     height: 100%;
     object-fit: cover;
-  }
-  .ema541_00_su_0005 .input_wrap{
-    width: 817px;
   }
   .ema541_00_su_0005 .input_wrap > textarea{
     height: 250px;

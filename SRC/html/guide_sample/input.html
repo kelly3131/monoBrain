@@ -28,8 +28,7 @@
             </div>
             
             <div class="input_wrap hint">
-                <input type="text" value="" placeholder="입력하세요"/>
-                <p class="text_hint">힌트</p>
+                <input type="text" value="" placeholder="입력하세요" data-answer-single="정답"/>
             </div>
            
             <div class="input_wrap">
@@ -55,7 +54,17 @@
                 </select>
             </div>
             <div class="dropdown_wrap">
-                <select class="custom_dropdown math_symbol" data-answer-single="÷">
+                <select class="custom_dropdown math_symbol" data-answer-single="×">
+                    <option></option>
+                    <option value="×">×</option>
+                    <option value="÷">÷</option>
+                    <option value=">">></option>
+                    <option value="=">=</option>
+                    <option value="<"><</option>
+                </select>
+            </div>
+            <div class="dropdown_wrap">
+                <select class="custom_dropdown math_symbol" data-answer-single="empty_answer"><!-- 비선택시 정답인경우 값을 empty_answer 로 설정-->
                     <option></option>
                     <option value="×">×</option>
                     <option value="÷">÷</option>

@@ -1,8 +1,23 @@
+.ema541_02_su_0003:not([data-current-page="page_4"]) .btn_area .btnSubmit,
+.ema541_02_su_0003[data-current-page="page_4"] .btn_area .btnCheck,
+.ema541_02_su_0003[data-current-page="page_5"] .btn_area .btnType,
+.ema541_02_su_0003[data-current-page="page_5"] .title
+{
+    display: none;
+}
+
 .input_wrap .text_hint,
 .dropdown_wrap .text_hint {
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
+}
+
+.ema541_02_su_0003 span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -1px;
 }
 
 .drawing_area.hint {
@@ -45,13 +60,6 @@
     gap: 100px;
 }
 
-.ema541_02_su_0003 .question_box span {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: -1px;
-}
-
 .ema541_02_su_0003 .page_1 .question_box .fraction_col {
     display: flex;
     align-items: center;
@@ -77,4 +85,72 @@
     top: 12px;
     left: 81px;
     width: 60%;
+}
+
+.ema541_02_su_0003 .page_2 h3 {
+    align-items: center;
+}
+.ema541_02_su_0003 .page_2 h3 .fraction_box {
+    width: 20px;
+}
+.ema541_02_su_0003 .page_2 .question_box {
+    gap: 165px;
+}
+.ema541_02_su_0003 .page_2 .fraction_col {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.ema541_02_su_0003 .page_2 .fraction_col.col2 .fraction_box:nth-of-type(2) span:first-child {
+    margin-top: -12px
+}
+.ema541_02_su_0003 .page_2 .input_wrap,
+.ema541_02_su_0003 .page_2 .input_wrap input,
+.ema541_02_su_0003 .page_3 .input_wrap,
+.ema541_02_su_0003 .page_3 .input_wrap input {
+    min-width: 80px;
+    width: 80px;
+    text-align: center;
+}
+.ema541_02_su_0003 .page_2 .input_wrap .text_hint {
+    top: -42px;
+}
+.ema541_02_su_0003 .page_3 .question_box {
+    gap: 100px;
+}
+.ema541_02_su_0003 .page_3 .fraction_col {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ema541_02_su_0003 .page_3 .input_wrap .text_hint {
+    top: 10px;
+    left: 80px;
+}
+
+.ema541_02_su_0003 .page_4 .input_wrap {
+    display: block;
+    margin: 0 auto;
+}
+.ema541_02_su_0003 .page_4 .input_wrap textarea {
+    height: 330px;
+}
+
+
+
+.ema541_02_su_0003 .page_5 .col1 {
+    width: 606px;
+}
+
+.ema541_02_su_0003 .page_5 .col2 .text-overlay {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+    clip: rect(0 0 0 0);
 }

@@ -5,10 +5,6 @@
     line-height: 36px;
 }
 
-.drawing_area.hint {
-    background-color: transparent;
-}
-
 /*EMA511_01_SU_0002_s*/
 .ema511_01_su_0002 .contents > .flex{
     gap: 26px;
@@ -21,6 +17,11 @@
 }
 
 /*EMA511_01_SU_0003_s*/
+.ema511_01_su_0003 .picture_wrap .txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .ema511_01_su_0003 .question_box > div > span {
     font-size: 32px;
     font-weight: 700;
@@ -156,33 +157,33 @@
     line-height: 48px;
     letter-spacing: -1px;
 }
-.ema511_01_su_0005 .drawing_area{
-    width: 200px;
-}
 .ema511_01_su_0005 .drawing_area.area1 .dot_1{
-    left: 62px;   
+    left: 27px;   
 }
 .ema511_01_su_0005 .drawing_area.area1 .dot_2{
-    left: 111px;   
-}
-.ema511_01_su_0005 .drawing_area.area1 .dot_3{
-    left: 155px;   
-}
-.ema511_01_su_0005 .drawing_area.area2 .dot_1{
     left: 72px;   
 }
+.ema511_01_su_0005 .drawing_area.area1 .dot_3{
+    left: 118px;   
+}
+.ema511_01_su_0005 .drawing_area.area2 .dot_1{
+    left: 30px;   
+}
 .ema511_01_su_0005 .drawing_area.area2 .dot_2{
-    left: 121px;   
+    left: 76px;   
 }
 .ema511_01_su_0005 .drawing_area.area2 .dot_3{
-    left: 165px;   
+    left: 119px;   
 }
 .ema511_01_su_0005 .drawing_area.area1{
-    transform: translateX(-79px);
+    min-width: 150px;
+    width: 150px;
+    transform: translateX(-69px);
 }
 .ema511_01_su_0005 .drawing_area.area2{
-    width: 220px;
-    transform: translateX(-78px);
+    min-width: 150px;
+    width: 150px;
+    transform: translateX(-69px);
 }
 .ema511_01_su_0005 .custom_select{
     width: 169px;

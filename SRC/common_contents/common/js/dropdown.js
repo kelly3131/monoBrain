@@ -90,13 +90,6 @@ function handleSelectOption(select, trigger, optionsList, option) {
     // ✅ 강제 change 이벤트 발생 (일부 브라우저에서 필요)
     select.dispatchEvent(new Event("change"));
 
-    // ✅ 디버깅 (콘솔에서 확인)
-    // console.log("선택된 값:", select.value);
-    // console.log("변경된 option들:", Array.from(select.options).map(opt => ({
-    //     value: opt.value,
-    //     selected: opt.selected
-    // })));
-
     trigger.dataset.selNum = selectedOption.index + 1;
     trigger.dataset.value = selectedOption.value;
 }

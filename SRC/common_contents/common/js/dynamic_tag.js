@@ -98,8 +98,11 @@ function createHint(element) {
     const answerText = element.dataset.answerSingle?.trim() || "";
     hint.textContent = answerText;
 
-    // ✅ 텍스트가 숫자가 아닌 경우 lang="y" 부여
-    if (answerText && isNaN(Number(answerText))) {
+    const isPureNumber = /^[\d.]+$/.test(answerText);
+    const looksLikeFormula = /[\d]+[\+\-\*\/xX]{1,}[\d\{\}]+/.test(answerText);
+
+    // ✅ 텍스트이며 수식이 아닌 경우만 lang="y" 부여
+    if (answerText && !isPureNumber && !looksLikeFormula) {
         hint.setAttribute("lang", "y");
     }
 
@@ -116,6 +119,28 @@ function createHint(element) {
         element.parentNode.insertBefore(hint, element.nextSibling);
     }
 }
+
+/**
+ * 정답 힌트값 변경 감지
+ */
+function observeAnswerChange(selector) {
+    document.querySelectorAll(selector).forEach(el => {
+        const observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.type === "attributes" && mutation.attributeName === "data-answer-single") {
+                    createHint(mutation.target); // 변경 감지 시 힌트 다시 생성
+                }
+            });
+        });
+
+        observer.observe(el, {
+            attributes: true,
+            attributeFilter: ["data-answer-single"]
+        });
+    });
+}
+
+observeAnswerChange(".input_wrap input[data-answer-single], .input_wrap textarea[data-answer-single], .custom_dropdown[data-answer-single]");
 
 /* 힌트 제거 */
 function removeHint(element) {

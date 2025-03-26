@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA521_00_SU_0006_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema521_00.css">
+    <style>
+        .picture_wrap {
+            height: 428px;
+        }
+        .picture_wrap img{
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+        }
+    </style>
+</head>
+<body>
+    <div id="app_wrap" class="ema521_00_su_0006">
+        <section class="title type2">
+            <h2 data-icon="speech">그림을 보고 물건을 똑같이 나누어 보거나 물건을 묶음으로 산 경험을 이야기해 봅시다.</h2>
+        </section>
+
+        <section class="contents">
+            <div class="flex align-start">
+                <div class="picture_wrap" data-head="" data-tit="그림을 보고 물건을 똑같이 나누어 보거나 물건을 묶음으로 산 경험을 이야기해 봅시다.">
+                    <img src="../../common_contents/img/EMA521_00_SU/0006_img.png" alt="물건 구매 활동 이미지">
+                    <button class="zoom"></button>
+                </div>
+
+                <div class="leftside">
+                    <div class="input_area">
+                        <div class="input_wrap">
+                            <textarea id="inputElement01" type="text"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="example_area">
+                        <div class="example_title">예</div>
+                        <div class="example_contents">
+                            <ul>
+                                <li>귤 10개를 접시 2개에 남김없이 똑같이 나누어 담은 적이 있습니다.</li>
+                                <li>엽서 8장을 4명이 남김없이 똑같이 나누어 가진 적이 있습니다.</li>
+                                <li>한 묶음에 6개인 음료수를 2묶음 산 적이 있습니다.</li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <!-- 예시 필드에서 사용 -->
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnSubmit">제출</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
