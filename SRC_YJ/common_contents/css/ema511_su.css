@@ -104,6 +104,10 @@
                     background: url('../img/EMA511_SU/0011_bingo.png') center / contain no-repeat;
                 }
             }
+            li:has(.num) {
+                border-width: 2px;
+                border-color: var(--btn-default);
+            }
             .reveal_btn {
                 padding: initial;
                 border: initial;
