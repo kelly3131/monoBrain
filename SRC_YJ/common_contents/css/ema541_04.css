@@ -1,0 +1,151 @@
+/* .ema541_04_su_0002 */
+span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+.input_wrap .text_hint {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.ema541_04_su_0002 .title h2[data-type="2"] .title_head {
+    margin-top: 20px;
+}
+.ema541_04_su_0002 .fraction_row {
+    line-height: 1;
+}
+.ema541_04_su_0002 .fraction_inn {
+    display: flex; 
+    align-items: center;
+}
+.ema541_04_su_0002 .fraction_inn .fraction_box {
+    padding: 0 4px;
+    margin: 0 8px;
+}
+.ema541_04_su_0002 .contents > .flex{
+    gap: 26px;
+}
+.ema541_04_su_0002 .input_wrap{
+    width: 817px;
+}
+.ema541_04_su_0002 .input_wrap > textarea{
+    height: 240px;
+}
+.ema541_04_su_0002 .video_wrap {
+    background: url(../img/EMA541_04_SU/0002_bg.png) no-repeat 100% 60% / 135%
+}
+
+.ema541_04_su_0003 .page_1 .count_wrap {
+    display: flex;
+    position:relative;
+    width: 100%;
+    height: 360px;    
+    background: url(../img/EMA541_04_SU/0003_bg.png) no-repeat center;
+}
+.ema541_04_su_0003 .page_1 .count_wrap .nm{
+    position: absolute;
+    top: -68px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 300;
+    transform:rotate(4deg);
+}
+.ema541_04_su_0003 .page_1 .count_wrap .count_col:nth-of-type(2) .nm{
+    left: -10px;
+    transform:rotate(-4deg);
+}
+
+.boolean_count_wrap button.selected {
+    background-color: var(--font-main-800);
+}
+.ema541_04_su_0003 .page_1 .count_col {
+    display: flex;
+    align-items: center;
+    gap: 88px;
+    position: absolute;
+    height: 204px;
+}
+.ema541_04_su_0003 .page_1 .count_col:first-child {
+    top: 109px;
+    left: 233px;
+}
+.ema541_04_su_0003 .page_1 .count_col:nth-of-type(2) {
+    top: 109px;
+    left: 889px;
+}
+
+.ema541_04_su_0003 .page_1 .count_col .fraction_box {
+    width: 42px;
+    margin-top: 2px;
+}
+
+.ema541_04_su_0003 .page_1 .count_col button {
+    width: 170px;
+    height: 34.5px;
+}
+.ema541_04_su_0003 .input_wrap,
+.ema541_04_su_0003 .input_wrap input {
+    min-width: 80px;
+    width: 80px;
+}
+
+.ema541_04_su_0003 .page_1 .count_col .fraction_ipt {
+    position: absolute;
+    right: -120px;
+    top: 0;
+    width: 80px;
+    margin-top: 0;
+}
+.ema541_04_su_0003 .page_1 .count_col .fraction_ipt:before {
+    top: calc(50% - -12px);
+}
+
+.ema541_04_su_0003 .page_1 .input_wrap .text_hint {
+    top: calc(100% + -97px);
+}
+
+/* .ema541_04_su_0003 */
+.ema541_04_su_0003 h3 {
+    align-items: center;
+}
+.ema541_04_su_0003 .page_2 .question_box {
+    gap: 100px;
+    margin-top: 60px;
+}
+.ema541_04_su_0003 .page_2 .fraction_col {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.ema541_04_su_0003 .page_2 .input_wrap .text_hint {
+    top: calc(50% - 68px);
+    left: 0;
+}
+
+.ema541_04_su_0003 .page_2 .speech_bubble {
+    background: url(../img/EMA541_04_SU/0003_bg2.png) no-repeat 0 0;
+    background-size: contain;
+    height: 227px;
+    width: 207px;
+    position: absolute;
+    top: 150px;
+    right: 166px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 16px;
+}
+
+/* ema541_04_su_0004 */
+
+.ema541_04_su_0004 .contents h3 {
+    align-items: center;
+}
+.ema541_04_su_0004 .count_wrap {
+    background: url(../img/EMA541_04_SU/0004_bg.png) no-repeat center 0;
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+}

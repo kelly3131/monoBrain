@@ -1,0 +1,121 @@
+@charset "utf-8";
+#app_wrap .btn_area .btnBgDefault{
+    background-color: var(--btn-default);
+}
+
+.ema521_00_su_0001#app_wrap{
+    background: url(../img/EMA521_00_SU/0001_bg.png) no-repeat left bottom / 857px #91c14a;
+}
+.ema521_00_su_0001 .contents {
+    display: flex;
+}
+.ema521_00_su_0001 .input_area label.img, .ema521_00_su_0001 .input_area label::after{
+    background-color: #008834;
+}
+.ema521_00_su_0001 .contents .text_box{
+    color: #008834;
+    margin: 10px 0 0 60px;
+    width: 857px;
+}
+.ema521_00_su_0001 .contents .text_box p{
+    width: 400px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.leftside{
+    width: 797px;
+}
+.example_box{
+    height: 252px;
+}
+
+/* EMA521_00_SU_0003 */
+.ema511_00_su_0003 .letCheck li{
+    width: calc((100% - 24px) / 3);
+}
+.ema511_00_su_0003 .contents .letCheck{
+    width: 1272px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 140px;
+}
+.ema511_00_su_0003 .help{
+    position: absolute;
+    right: 140px;
+    bottom: 30px;
+    z-index: 99;
+    display: flex;
+    align-items: end;
+}
+.ema511_00_su_0003 .help p{
+    background: url(../img/EMA521_00_SU/0003_contents.png) no-repeat left top /391px 76px;
+    font-size: 24px;
+    width: 391px;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+.ema511_00_su_0003 .help img{
+    width: 240px;
+    height: 240px;
+}
+
+/* EMA521_00_SU_0004 */
+ .ema521_00_su_0004 .video_wrap{
+    background: url(../img/EMA521_00_SU/0004_video.png) no-repeat left top /100%;
+    width: 812px;
+    height: 428px;
+}
+.ema521_00_su_0004 .contents > div{
+    display: flex;
+    gap: 20px;
+}
+.ema521_00_su_0004 .input_wrap{
+    width: 797px;
+}
+.ema521_00_su_0004 .input_wrap textarea{
+    padding: 20px;
+    height: 322px;
+}
+.ema521_00_su_0004 .input_wrap input:hover, .ema521_00_su_0004 .input_wrap textarea:hover, .ema521_00_su_0004 .input_wrap textarea:focus{
+    padding: 20px;
+}
+.ema521_00_su_0004 .input_area{
+    margin-bottom: 20px;
+}
+.ema521_00_su_0004 .btn_area > button.btnReset, .ema521_00_su_0004 .btn_area > button.btnSubmit{
+    background-color: var(--btn-default);
+}
+.ema521_00_su_0004 .input_wrap .example_box.on{
+    height: 216px;
+}
+
+/* EMA521_00_SU_0006 */
+.ema521_00_su_0006 .input_wrap{
+    width: 797px;
+}
+.ema521_00_su_0006 .contents > div{
+    display: flex;
+    gap: 20px;
+}
+.ema521_00_su_0006 .picture_wrap{
+    width: 812px;
+    height: 428px;
+}
+.ema521_00_su_0006 .picture_wrap img{
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+.ema521_00_su_0006 .input_wrap textarea{
+    padding: 20px;
+    min-height: 366px;
+}
+.ema521_00_su_0006 .input_wrap input:hover, .ema521_00_su_0006 .input_wrap textarea:hover, .ema521_00_su_0006 .input_wrap textarea:focus{
+    padding: 20px;
+}
+.ema521_00_su_0006 .input_area{
+    margin-bottom: 12px;
+}
+

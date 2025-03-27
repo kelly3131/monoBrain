@@ -1,0 +1,248 @@
+.ema531_01_su_0002 .video_wrap { 
+    background: url(../img/EMA531_01_SU/b2eafa585d1a4ae41c882a695b17c90b.png) no-repeat center right / 100%;
+}
+
+.ema531_01_su_0002 .contents>.flex{
+    gap: 26px;
+}
+
+.ema531_01_su_0002 .input_wrap {
+    min-width: 750px;
+}
+
+/* EMA531_01_SU_0003 */
+
+.ema531_01_su_0003 .paging_layout {
+    padding: 0px 40px;
+}
+
+.ema531_01_su_0003 .input_wrap {
+    flex-direction: row;
+    top: 40px;
+    left: 80%;
+}
+
+.ema531_01_su_0003 .input_wrap>h2 {
+    margin-left: 15px;
+}
+
+.ema531_01_su_0003 .table>img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ema531_01_su_0003 .mt_40 {
+    margin-top: 0px;
+}
+
+.mt_40 .input_wrap {
+    flex-direction: column;
+    top: 40px;
+    left: 10%;
+    width: 100%;
+}
+
+.ema531_01_su_0003 .input_wrap textarea {
+    min-height: 100px;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.table_box th,td {
+    width: 20%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.ema531_01_su_0003 table .input_wrap {
+    top: 0;
+    left: 0;
+}
+
+/* EMA531_01_SU_0007 */
+
+.ema531_01_su_0007 .input_wrapper>.input_wrap {
+    flex-direction: row;
+    top: 40px;
+    left: 17%;
+    margin-right: 70px;
+}
+.ema531_01_su_0007 .input_wrap>h2 {
+    margin-left: 15px;
+}
+
+.ema531_01_su_0007 .border_wrap {
+    position: relative;
+    left: 15.6%;
+    display: flex;
+}
+
+.ema531_01_su_0007 .border {
+    width: 180px;
+    height: 44px;
+    background-color: #FCE3E5;
+    border-radius: 999px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 60px;
+    font-size: 20px;
+}
+
+.table_box2 th,td {
+    width: 16.6%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.ema531_01_su_0007 .input_area {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.ema531_01_su_0007 .input_area>.input_wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.example_area{
+    width: 797px;
+    min-height: 160px;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    border-radius: 20px;
+    background: var(--primary-blue-50);
+    resize: none;
+    color: var(--primary-blue-800);
+    display: flex;
+    gap: 35px;
+}
+.example_title{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: var(--btn-default);
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.example_area {
+    width: 80%;
+    min-height: 0;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+.example_area p{
+    font-size:24px;
+    font-weight: 700;
+}
+
+.input_wrap textarea {
+    min-height: 0;
+}
+
+.input_wrapper2 {
+    position: relative;
+    top: 10px;
+    left: 150px;
+    margin-bottom: 50px;
+}
+
+.input_wrapper2>.input_wrap {
+    flex-direction: row;
+
+}
+
+.container {
+    display: flex;
+    margin-top: 60px;
+}
+
+.imgbox1,.imgbox2 {
+    display: flex;
+    align-items: center;
+}
+
+.imgbox2 {
+    position: relative;
+    left: -70px;
+}
+
+.imgbox1 img {
+    z-index: 999;
+    position: relative;
+    left: 65px;
+}
+
+.imgbox2 img {
+    z-index: 999;
+    position: relative;
+    right: -610px;
+}
+
+.box2 {
+    width: 510px;
+    height: 202px;
+    padding: 40px 80px 10px 80px;
+    border-radius: 999px;
+    border: 5px dashed #B6B6DC;
+    background: #FFF;
+    position: relative;
+    gap: 10px;
+}
+
+
+.box1 {
+    width: 505px;
+    height: 202px;
+    padding: 40px 80px 10px 80px;
+    border-radius: 999px;
+    border: 5px dashed #ACD9BA;
+    background: #FFF;
+    position: relative;
+    gap: 10px;
+}
+
+
+
+/* EMA531_01_SU_0011 */
+
+.ema531_01_su_0011 span {
+   font-size: 32px;
+   font-weight: 700;
+   
+}
+
+.ema531_01_su_0011 .summarize > div {
+    display: block;
+    text-align: center;
+}
+
+
+/* EMA531_01_SU_0012 */ 
+
+.ema531_01_su_0012 .title h2[data-icon="speech"] img {
+    display: none;
+}
+
+.ema531_01_su_0012 .input_wrap {
+    top: -520px;
+    left: 500px;
+    width: 67%;
+}
+
+

@@ -1,0 +1,421 @@
+.paging_layout {
+  padding: 0 0;
+}
+
+.contents h3 {
+  padding-left: 45px;
+}
+
+/*EMA561_02_SU_0002_s*/
+.video_wrap {
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  border: 2px solid #f4f4f4;
+  overflow: hidden;
+  position: relative;
+  background: url(../../common_contents/img/EMA561_02_SU/03_002img.png)
+    no-repeat center right 0 / 100%;
+}
+.ema561_03_su_0002 .contents > .flex {
+  gap: 26px;
+}
+.ema561_03_su_0002 .input_wrap {
+  width: 817px;
+}
+.ema561_03_su_0002 .input_wrap > textarea {
+  height: 250px;
+}
+
+.bubble1,
+.bubble2 p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.bubble1 {
+  position: absolute;
+  top: 240px;
+  left: 75px;
+}
+.bubble2 {
+  position: absolute;
+  top: 258px;
+  left: 616px;
+}
+/* EMA561_03_SU_0003_s */
+.line {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b71fe;
+  text-align: center;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid #3b71fe;
+  box-sizing: border-box;
+}
+
+.ractangleWrap {
+  width: 350px;
+  height: 314px;
+  display: flex;
+  align-items: flex-end;
+  gap: 100px;
+}
+
+.ractangleBox1 {
+  position: relative;
+  width: 100px;
+  height: 250px;
+  background-color: #d9f0ff;
+  border: 1px solid #8cd6ff;
+}
+.ractangleBox2 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #d9f0ff;
+  border: 1px solid #8cd6ff;
+}
+
+/* .txt span::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 12px;
+  border: 2px solid #3b71fe;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ractangleBox2 {
+  width: 150px;
+  height: 150px;
+  background-color: #d9f0ff;
+  border: 1px solid #8cd6ff;
+}
+ */
+
+.txt {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.txt span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b71fe;
+  text-align: center;
+}
+
+.txt span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid #3b71fe;
+  box-sizing: border-box;
+}
+
+.page2 .input_wrap textarea {
+  width: 1168px;
+  height: 210px;
+}
+
+.page_2 .input_wrap {
+  margin-top: 20px;
+}
+
+/*  */
+
+/* .title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+} */
+
+h3 span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b71fe;
+  text-align: center;
+}
+
+h3 span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid #3b71fe;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+.miniRactangle {
+  width: 83px;
+  height: 40px;
+  background-color: #fbd8dc;
+  border: 1px solid #333;
+}
+.ractangle {
+  width: 40px;
+  height: 40px;
+  background-color: #d4ead4;
+  border: 1px solid #333;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #e1dfef;
+  border: 1px solid #333;
+  border-radius: 50%;
+}
+.ractangle1 {
+  display: inline-block;
+  width: 83px;
+  height: 40px;
+  background-color: #fbd8dc;
+  border: 1px solid #333;
+}
+.ractangle2 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #d4ead4;
+  border: 1px solid #333;
+}
+.circle1 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #e1dfef;
+  border: 1px solid #333;
+  border-radius: 50%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 24px;
+}
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+th {
+  border: 1px solid #fff;
+}
+td {
+  border: 1px solid #d2d2d2;
+}
+
+td:nth-child(1) {
+  border: 1px solid #fff;
+}
+
+table .miniRactangle {
+  width: 83px;
+  height: 40px;
+  background-color: #fbd8dc;
+  border: 1px solid #333;
+}
+table .ractangle {
+  width: 40px;
+  height: 40px;
+  background-color: #d4ead4;
+  border: 1px solid #333;
+}
+table .circle {
+  width: 40px;
+  height: 40px;
+  background-color: #e1dfef;
+  border: 1px solid #333;
+  border-radius: 50%;
+}
+
+.input2 .text_hint {
+  width: 100%;
+  font-weight: 700;
+  color: var(--font-negative);
+  text-align: center;
+  /* line-height: 64px; */
+  letter-spacing: -1px;
+  border-radius: 12px;
+  background: transparent;
+  opacity: 0;
+  backdrop-filter: none !important;
+  position: absolute;
+  top: calc(100% + -48px);
+  left: 83px;
+  z-index: 10;
+  pointer-events: none;
+  font-size: 24px;
+}
+
+.Area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomBox {
+  display: flex;
+  gap: 30px;
+  margin-top: 90px;
+}
+
+.flexList {
+  height: 310px;
+  gap: 100px;
+}
+
+.input_wrap textarea {
+  min-width: 1208px;
+  min-height: 80px;
+}
+
+.flex {
+  justify-content: center;
+}
+
+/* EMA561_03_SU_0005_s */
+.dotted {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+  color: #1454b9;
+  text-align: center;
+  z-index: 1;
+}
+
+.dotted::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #00a0e9;
+  border-radius: 3px;
+  background: #eef9ff;
+  z-index: -1;
+}
+
+.page_1 .flex span {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+}
+
+.input_wrap textarea {
+  min-width: 1208px;
+  min-height: 80px;
+}
+
+.flex {
+  justify-content: center;
+}
+
+.flex span {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.answer1,
+.answer2 .text_hint {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.box1 {
+  position: relative;
+  margin-top: 95px;
+}
+
+.txt1, .txt2, .txt3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.txt1 {
+  position: absolute;
+  top:37px;
+  left:109px;
+}
+
+
+.txt2 {
+  position: absolute;
+  top:45px;
+  left:500px;
+}
+
+.txt3 {
+  position: absolute;
+  top:38px;
+  left:783px;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+}
+
+.inputBox textarea {
+  min-width: 1208px;
+  min-height: 80px;
+}
+
+.page_4:is(:target, .active) ~ .title.type2 {
+  display: none;
+}

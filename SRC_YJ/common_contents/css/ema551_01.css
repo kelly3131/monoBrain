@@ -1,0 +1,97 @@
+/* ==============================================
+   📌 공통 - 5단원
+   ============================================== */
+/* 분수 연산 */
+.operations {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    gap: 4px;
+}
+
+/* 분수 whole */
+.f32b {
+    display: flex;
+    align-items: center;
+}
+
+/* 분수 문장 */
+.fraction-text-align {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.fraction-text-align>.f32b {
+    padding: 0px 14px;
+}
+
+.fraction-text-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 분수 힌트 위치 수정정 */
+.input_wrap.hint .text_hint {
+    font-size: 24px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    background: none;
+    backdrop-filter: unset;
+}
+
+/* 분수 패딩 수정 */
+.fraction_box {
+    padding: 0 4px;
+}
+
+.video_wrap {
+    background: unset;
+}
+/* ==============================================
+   🎨 차시 스타일
+   ============================================== */
+.ema551_01_su_0002 .contents>.flex {
+    gap: 26px;
+}
+
+.ema551_01_su_0004 .page.page_1 .text_hint {
+    font-size: 24px;
+    position: absolute;
+    top: -40px;
+    background: none;
+    backdrop-filter: unset;
+}
+.ema551_01_su_0004 .page.page_2 .container {
+    display: flex;
+    justify-content: space-between;
+}
+.ema551_01_su_0004 .page.page_2 .right_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.ema551_01_su_0004 .page.page_2 .texts {
+    font-size: 24px;
+}
+
+.ema551_01_su_0004 .page.page_2 .text1 {
+    position: absolute;
+    top: 50px;
+    left: 373px;
+    background-color: #FEF0EF;
+}
+
+.ema551_01_su_0004 .page.page_2 .text2 {
+    position: absolute;
+    bottom: 30px;
+    left: 273px;
+    background-color: #FEF0EF;
+}
+
+.ema551_01_su_0004 .page.page_3 .input_wrap textarea {
+    min-height: auto;
+}

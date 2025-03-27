@@ -1,0 +1,94 @@
+.ema561_00_su_0001#app_wrap {
+  background: url(../img/EMA561_00_SU/01image.png) no-repeat left bottom / 857px,
+    #f5a960;
+}
+
+.text_box {
+  color: #dc4f03;
+  position: absolute;
+  top: 152px;
+  left: 136px;
+}
+
+.text_box img {
+  position: absolute;
+  top: 5px;
+  left: 472px;
+}
+
+.text_box img {
+  position: absolute;
+}
+
+.input_area label.img {
+  padding: 8px 24px;
+  background-color: #dc4f03;
+}
+
+.input_area label::after {
+  background-color: #dc4f03;
+}
+
+.input_area {
+  width: 797px;
+  margin-left: auto;
+}
+
+/* ema561_00_su_0002 */
+section.title.type2 + section.contents {
+  padding-top: 119px;
+}
+
+/* EMA511_00_SU_0003_s */
+
+section.title.type2 + section.contents {
+  padding-top: 30px;
+}
+
+.letCheck {
+  width: 1272px;
+  flex-wrap: nowrap;
+  margin-top: 223px;
+}
+/*EMA511_00_SU_0004_s*/
+.ema561_00_su_0004 .contents > .flex {
+  gap: 26px;
+}
+
+.ema561_00_su_0004 .video_wrap {
+  background: url(../../common_contents/img/EMA561_04_SU/004img.png.png)
+    no-repeat center right -35px / 100%;
+  height: 428px;
+}
+
+.ema561_00_su_0004 .input_wrap {
+  width: 100%;
+}
+.ema561_00_su_0004 .input_area {
+  width: 817px;
+  margin-top: 108px;
+}
+.ema561_00_su_0004 .input_wrap > textarea {
+  height: 250px;
+}
+
+/*EMA561_00_SU_0005_s*/
+.ema561_00_su_0005 .contents > .flex {
+  gap: 26px;
+}
+.ema561_00_su_0005 .picture_wrap img {
+  height: 100%;
+  object-fit: cover;
+}
+.ema561_00_su_0005 .input_wrap {
+  width: 817px;
+}
+.ema561_00_su_0005 .input_wrap > textarea {
+  height: 250px;
+}
+
+/* EMA561_00_SU_0007_s */
+
+.EMA561_00_SU_0007_s .to_be .inwrap {
+  background-color: #f7dad5;
+}

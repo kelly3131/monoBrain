@@ -1,0 +1,266 @@
+.paging_layout {
+  padding: 0 0;
+}
+.contents h3 {
+  padding-left: 45px;
+}
+.input_area h3 {
+  padding-left: 0;
+}
+
+.ema561_04_su_0004 .input_wrap textarea {
+  min-width: 1208px;
+  min-height: 80px;
+}
+
+.dashed {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 36px;
+  font-size: 16px;
+  color: #1454b9;
+  text-align: center;
+  z-index: 1;
+}
+
+.dashed::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #00a0e9;
+  border-radius: 3px;
+  background: #eef9ff;
+  z-index: -1;
+}
+
+.dotted {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+  color: #1454b9;
+  text-align: center;
+  z-index: 1;
+}
+
+.dotted::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #00a0e9;
+  border-radius: 3px;
+  background: #eef9ff;
+  z-index: -1;
+}
+
+/* EMA561_04_SU_0002_s  */
+.video_wrap {
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  border: 2px solid #f4f4f4;
+  overflow: hidden;
+  position: relative;
+  background: url(../../common_contents/img/EMA561_02_SU/004_002img.png)
+    no-repeat center right 0 / 100%;
+}
+
+.ema561_04_su_0002 .input_wrap {
+  width: 817px;
+}
+
+.ema561_04_su_0002 .contents > .flex {
+  gap: 26px;
+}
+.ema561_04_su_0002 .input_wrap > textarea {
+  height: 250px;
+}
+
+.ema561_04_su_0002 .input_wrap .example_box > p {
+  display: inline-block;
+  line-height: 1.7;
+}
+
+/* grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 400px;
+  height: 298px;
+  background-color: #eef9ff;
+  border: 2px dashed #00a0e9;
+  position: relative;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1454b9;
+  border: 1px dashed #00a0e9;
+}
+
+.container .highlight {
+  background-color: #e6e0f8;
+  color: black;
+  font-size: 32px;
+  border: 3px solid #673ab7;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.align_center {
+  align-items: flex-start;
+}
+
+.gap_12 {
+  gap: 100px;
+}
+
+.gap_13 {
+  gap: 12px;
+}
+
+.answer2 span {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.answered {
+  font-size: 32px;
+  font-weight: 700;
+  background-color: #eef9ff; /* 연한 보라색 */
+  color: #000; /* 글자 색 변경 */
+}
+
+.gridArea {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 400px;
+  height: 298px;
+  background-color: #eef9ff;
+  position: relative;
+}
+
+.item {
+  display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+}
+
+.gridArea .item:nth-child(1) {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  background-color: #eef9ff !important;
+  border-top: 2px dashed #00a0e9;
+  border-left: 2px dashed #00a0e9;
+  border-right: 4px solid #673ab7;
+  border-bottom: 4px solid #673ab7;
+}
+
+.gridArea .item:not(:first-child) {
+  border: 4px solid #673ab7;
+  background-color: #e6e0f8; /* 연보라색 배경 */
+}
+
+.input_wrap.hint .text_hint {
+  font-size: 24px;
+}
+
+/* EMA561_04_SU_0004_s */
+.imgWrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.img1,
+.img3 {
+  position: relative;
+}
+
+.gap_15 {
+  gap: 40px;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.num1,
+.num2 span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.num1 p {
+  font-size: 20px;
+  color: #1a5fa1;
+}
+
+/* .input2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+} */
+.answer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.answer p {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.rowArea {
+  width: 800px;
+  height: 320px;
+  background: url(../../common_contents/img/EMA561_05_SU/row.png) no-repeat
+    center right 5px / 100%;
+}
+
+.modification {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.gap_16 {
+  justify-content: center;
+  margin-top: 152px;
+}
+
+.imgBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.rowBox {
+  width: 900px;
+  height: 320px;
+  background: url(../../common_contents/img/EMA561_05_SU/row1.png) no-repeat
+    center right 5px / 100%;
+}
