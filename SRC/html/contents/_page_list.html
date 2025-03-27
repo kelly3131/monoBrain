@@ -79,15 +79,19 @@
 
       const htmlFiles = [
         /*김용현*/
-        "../guide_sample/header.html",
-        "../guide_sample/input.html",
-        "../guide_sample/cardflip.html",
-        "../guide_sample/dragndrop_eraser.html",
-        "../guide_sample/drawline_calc.html",
+        "../guide_sample/header.html|타이틀 헤딩",
+        "../guide_sample/input.html|input,dropdown,textarea 들과 정오답 체크",
+        "../guide_sample/cardflip.html|2,3단 토글",
+        "../guide_sample/dragndrop_eraser.html|드래그시 지우개 효과",
+        "../guide_sample/dragndrop_limit.html|드래그와 콜백 그리고 정오답 체크",
+        "../guide_sample/drawline_calc.html|수식순서선잇기",
         "../guide_sample/paging.html|페이징",
-        "../guide_sample/reveal.html",
-        "../guide_sample/zoomimage.html",
+        "../guide_sample/reveal.html|숨김버튼",
+        "../guide_sample/zoomimage.html|이미지 줌 팝업창",
         "../guide_sample/boolean.html|참,거짓 선택 토글",
+        "../guide_sample/context.html|분수식 태그구조",
+        "../guide_sample/self_check.html|자기 점검 체크",
+
         "EMA511_00_SU_0001_s.html|단원 시작",
         "EMA511_00_SU_0002_s.html|지우개 드래그",
         "EMA511_00_SU_0003_s.html|카드 플립",
@@ -126,19 +130,132 @@
         "EMA511_04_SU_0005_s.html",
         "EMA511_04_SU_0006_s.html|참,거짓 선택 토글",
         "EMA511_04_SU_0007_s.html",
-
-        /* 임수희 */
-        "EMA511_05_SU_0001_s.html",
-        "EMA511_05_SU_0002_s.html",
-        "EMA511_05_SU_0003_s.html",
-        "EMA511_05_SU_0004_s.html",
-        "EMA511_05_SU_0006_s.html",
         
-        "EMA511_05_SU_0001_s.html",
+        // "EMA511_05_SU_0001_s.html",
         // 본인 파트의 화면을 만들어서
         // 이런 형태로 변수를 넣으시면
         // 화면리스트에 목록이 추가가 될거에요.
         // 그래서 매일 만드신 분량 만큼 추가하시면 따로 보고 해주실 필요없이 산출물 관리가 될수 있을것 같아요.
+        // 날짜 기입도 부탁드립니다.
+
+        /* 임수희 */
+        /* 03/25 */
+        "EMA511_05_SU_0001_s.html",
+        "EMA511_05_SU_0002_s.html",
+        "EMA511_05_SU_0003_s.html",
+        "EMA511_05_SU_0004_s.html",
+        "EMA511_05_SU_0005_s.html", // 03/26
+        "EMA511_05_SU_0006_s.html",
+
+        "EMA511_06_SU_0001_s.html",
+        "EMA511_06_SU_0002_s.html",
+        "EMA511_06_SU_0003_s.html",
+        // "EMA511_06_SU_0004_s.html",
+        "EMA511_06_SU_0005_s.html",
+
+        /* 03/26 */
+        "EMA511_07_SU_0001_s.html",
+        // "EMA511_07_SU_0002_s.html",
+        "EMA511_07_SU_0003_s.html",
+        // "EMA511_07_SU_0004_s.html",
+        "EMA511_07_SU_0005_s.html",
+        "EMA511_07_SU_0006_s.html",
+        "EMA511_07_SU_0007_s.html",
+        "EMA511_07_SU_0008_s.html",
+        "EMA511_07_SU_0009_s.html",
+        // "EMA511_07_SU_0010_s.html",
+        // 날짜 구분도 부탁드립니다. ex) 03/26 
+
+        /* 김수민 */
+        "EMA521_00_SU_0001_s.html", // 3/24
+        "EMA521_00_SU_0002_s.html", // 3/24
+        "EMA521_00_SU_0003_s.html", // 3/24
+        "EMA521_00_SU_0004_s.html", // 3/24
+        "EMA521_00_SU_0006_s.html", // 3/24
+        "EMA521_00_SU_0008_s.html", // 3/25
+
+        "EMA521_01_SU_0001_s.html", // 3/25
+        "EMA521_01_SU_0002_s.html", // 3/25
+        "EMA521_01_SU_0003_s.html|드래그드롭-사물", // 3/25
+        "EMA521_01_SU_0007_s.html", // 3/25
+        "EMA521_01_SU_0010_s.html", // 3/25
+        "EMA521_01_SU_0012_s.html", // 3/26
+        "EMA521_01_SU_0013_s.html", // 3/26
+
+        "EMA521_02_SU_0001_s.html", // 3/26
+        "EMA521_02_SU_0002_s.html", // 3/26
+        "EMA521_02_SU_0003_s.html", // 3/26
+        "EMA521_02_SU_0008_s.html", // 3/26
+        "EMA521_02_SU_0011_s.html", // 3/26
+        "EMA521_02_SU_0012_s.html", // 3/26
+        "EMA521_02_SU_0013_s.html", // 3/26
+        // 날짜 구분도 부탁드립니다. ex) 03/26 
+
+        /* 김아린 */
+        "EMA531_00_SU_0001_s.html",
+        "EMA531_00_SU_0002_s.html",
+        "EMA531_00_SU_0003_s.html",
+        "EMA531_00_SU_0004_s.html",
+        "EMA531_00_SU_0006_s.html",
+        "EMA531_00_SU_0008_s.html",
+        "EMA531_01_SU_0001_s.html",
+        "EMA531_01_SU_0002_s.html",
+        "EMA531_01_SU_0003_s.html",
+        "EMA531_01_SU_0007_s.html",
+        "EMA531_01_SU_0011_s.html",
+        "EMA531_01_SU_0012_s.html",
+        "EMA531_02_SU_0001_s.html",
+        "EMA531_02_SU_0002_s.html",
+        "EMA531_02_SU_0003_s.html",
+        "EMA531_02_SU_0007_s.html",
+        "EMA531_02_SU_00011_s.html",
+        "EMA531_02_SU_00014_s.html",
+      //  03/26
+
+
+        // 날짜 구분도 부탁드립니다. ex) 03/26 
+
+        /* 이수연 */
+        //0325
+        "EMA541_00_SU_0001_s.html",
+        "EMA541_00_SU_0002_s.html",
+        "EMA541_00_SU_0003_s.html",
+        "EMA541_00_SU_0004_s.html",
+        "EMA541_00_SU_0005_s.html",
+        "EMA541_00_SU_0006_s.html",
+
+        "EMA541_01_SU_0001_s.html",
+        "EMA541_01_SU_0002_s.html",
+        //0326
+        "EMA541_01_SU_0003_s.html", 
+        "EMA541_01_SU_0004_s.html", 
+        "EMA541_01_SU_0005_s.html", 
+        "EMA541_01_SU_0005_s.html", 
+
+        "EMA541_02_SU_0001_s.html",
+        "EMA541_02_SU_0002_s.html",
+        "EMA541_02_SU_0003_s.html",
+        // 날짜 구분도 부탁드립니다. ex) 03/26 
+
+        /* 정희원 */
+        /* 0325 */
+        "EMA551_00_SU_0001_s.html",
+        "EMA551_00_SU_0002_s.html",
+        "EMA551_00_SU_0003_s.html",
+        "EMA551_00_SU_0004_s.html",
+        "EMA551_00_SU_0005_s.html",
+        "EMA551_00_SU_0006_s.html",
+        "EMA551_01_SU_0001_s.html",
+        "EMA551_01_SU_0002_s.html",
+        "EMA551_01_SU_0003_s.html",
+        "EMA551_01_SU_0004_s.html",
+        "EMA551_01_SU_0005_s.html",
+        "EMA551_01_SU_0006_s.html",
+        "EMA551_01_SU_0007_s.html",
+        /* 0326 */
+        "EMA551_02_SU_0001_s.html",
+        "EMA551_02_SU_0002_s.html",
+        "EMA551_02_SU_0003_s.html",
 
         /* 박나율 */
         "EMA561_00_SU_0001_s.html",
@@ -147,6 +264,19 @@
         "EMA561_00_SU_0004_s.html",
         "EMA561_00_SU_0006_s.html",
         "EMA561_00_SU_0007_s.html",
+        "EMA561_01_SU_0001_s.html",
+        "EMA561_01_SU_0002_s.html",
+        "EMA561_01_SU_0003_s.html",
+        "EMA561_01_SU_0004_s.html | 테이블 제작",
+        "EMA561_01_SU_0005_s.html",
+        "EMA561_01_SU_0006_s.html",
+        "EMA561_02_SU_0001_s.html",
+        "EMA561_02_SU_0002_s.html",
+        "EMA561_02_SU_0003_s.html",
+        "EMA561_02_SU_0004_s.html",
+        "EMA561_02_SU_0005_s.html",
+        "EMA561_02_SU_0006_s.html",
+        // 날짜 구분도 부탁드립니다. ex) 03/26 
       ];
 
       function parseFileName(fileData, index) {

@@ -36,6 +36,27 @@
     text-align: right;
 }
 
+.ema531_00_su_0003 .help{
+    position: absolute;
+    right: 140px;
+    bottom: 30px;
+    z-index: 99;
+    display: flex;
+    align-items: end;
+}
+.ema531_00_su_0003 .help p{
+    background: url(../img/EMA521_00_SU/0003_contents.png) no-repeat left top /391px 76px;
+    font-size: 24px;
+    width: 391px;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+.ema531_00_su_0003 .help img{
+    width: 240px;
+    height: 240px;
+}
+
 /*EMA531_00_SU_0004_s*/
 .ema531_00_su_0004 .contents>.flex{
     gap: 26px;

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ema511_05_su_0005_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema511_05.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema511_05_su_0005">
+        <section class="title type2">
+            <h2 data-type="3" lang="y">
+                <div class="flex align_center gap_4">조건을 골라<span class="ico_round"></span>표 하여 문제를 만들고, 해결해 봅시다.</div>
+            </h2>
+        </section>
+
+        <section class="contents">
+            <div class="picture_wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 840 397" fill="none">
+                    <text transform="translate(186.61 216.831) rotate(-8)" fill="#6A6A6A" xml:space="preserve" style="white-space: pre" font-family="Pretendard" font-size="14" font-weight="bold" letter-spacing="-0.5px" lang="y">
+                        <tspan x="28.6504" y="14.9766">체리</tspan>
+                        <tspan x="0.203125" y="34.9766">100g 3500원</tspan>
+                    </text>
+                    <text fill="#6A6A6A" xml:space="preserve" style="white-space: pre" font-family="Pretendard" font-size="14" font-weight="bold" letter-spacing="-0.5px" lang="y">
+                        <tspan x="428.267" y="41.9766">과자 3개</tspan>
+                        <tspan x="428.335" y="61.9766">4200원</tspan>
+                    </text>
+                    <text fill="#6A6A6A" xml:space="preserve" style="white-space: pre" font-family="Pretendard" font-size="14" font-weight="bold" letter-spacing="-0.5px" lang="y">
+                        <tspan x="655.467" y="41.9766">초콜릿 3개</tspan>
+                        <tspan x="661.089" y="61.9766">6000원</tspan>
+                    </text>
+                    <text transform="translate(66.5674 197) rotate(8)" fill="#6A6A6A" xml:space="preserve" style="white-space: pre" font-family="Pretendard" font-size="14" font-weight="bold" letter-spacing="-0.5px" lang="y">
+                        <tspan x="10.251" y="14.9766">방물토마토</tspan>
+                        <tspan x="0.392578" y="34.9766">100g 1500원</tspan>
+                    </text>
+                </svg>
+                <img src="../../common_contents/img/EMA511_05_SU/0005_content.png" alt="">
+                <!-- <button class="zoom"></button> -->
+            </div>
+
+            <div class="question_box">
+                <div class="title" lang="y">문제 만들기</div>
+                <div class="problem_generator">
+                    <div class="select_area">
+                        <div class="flex align_center">
+                            <span lang="y">지훈이는 (</span>
+                            <div class="option_group">
+                                <input type="radio" name="fruit" id="fruit1" value="1"><label for="fruit1" lang="y">방울토마토</label>
+                                <span>,</span>
+                                <input type="radio" name="fruit" id="fruit2" value="2"><label for="fruit2" lang="y">체리</label>
+                            </div>
+                            <span lang="y">) 100g과 (</span>
+                            <div class="option_group">
+                                <input type="radio" name="snack" id="snack1" value="1"><label for="snack1" lang="y">과자</label>
+                                <span>,</span>
+                                <input type="radio" name="snack" id="snack2" value="2"><label for="snack2" lang="y">초콜릿</label>
+                            </div>
+                            <span lang="y">) 2개를 사고 10000원을 냈습니다.</span>
+                        </div>
+                        <div>
+                            <span lang="y">지훈이가 받아야 하는 거스름돈은 얼마인지 하나의 식으로 나타내어 구해 보세요.</span>
+                        </div>
+                    </div>
+
+                    <div class="input_area">
+                        <div class="quiz quiz1">
+                            <div class="title">식</div>
+                            <div class="input_wrap">
+                                <input type="text" class="text_input" data-answer-single="" />
+                            </div>
+                        </div>
+
+                        <div class="quiz quiz2">
+                            <div class="title">답</div>
+                            <div class="input_wrap">
+                                <input type="text" class="formula_input" data-answer-single="" />
+                            </div>
+                            <span>원</span>
+                        </div>
+
+                      
+                        <div class="combo_map" hidden>
+                            <div data-combo="1-1" data-text="10000-(1500+4200÷3×2)" data-formula="5700"></div> <!-- 방울토마토 + 과자 -->
+                            <div data-combo="1-2" data-text="10000-(1500+6000÷3×2)" data-formula="6000"></div> <!-- 방울토마토 + 초콜릿 -->
+                            <div data-combo="2-1" data-text="10000-(3500+4200÷3×2)" data-formula="7700"></div> <!-- 체리 + 과자 -->
+                            <div data-combo="2-2" data-text="10000-(3500+6000÷3×2)" data-formula="8000"></div> <!-- 체리 + 초콜릿 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

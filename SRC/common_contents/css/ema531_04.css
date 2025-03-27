@@ -1,0 +1,47 @@
+.ema531_04_su_0002 .video_wrap { 
+    background: url(../img/EMA531_04_SU/eeda44cc280fd3afc7f004ad38e6cfa2.png) no-repeat center right / 100%;
+}
+
+
+.ema531_04_su_0002 .contents>.flex{
+    gap: 26px;
+}
+
+.ema531_04_su_0002 .input_wrap {
+    width: 757px;
+    margin-bottom: 12px;
+}
+
+.ema531_04_su_0002 .input_wrap textarea {
+    min-height: 210px;
+}
+
+.ema531_04_su_0002 .example_area{
+    width: 757px;
+    padding: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    border-radius: 20px;
+    background: var(--primary-blue-50);
+    resize: none;
+    color: var(--primary-blue-800);
+    display: flex;                       
+    align-items: center;
+    gap: 10px;
+}
+.ema531_04_su_0002 .example_title{
+    width: 40px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: var(--btn-default);
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.ema531_04_su_0002 .example_area li{
+   font-size: 24px;
+   font-weight: 700;
+   list-style:disc;
+}

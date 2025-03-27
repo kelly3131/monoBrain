@@ -1,0 +1,104 @@
+ 
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA561_05_SU_0004_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema561_03.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema561_05_su_0004">
+        <section class="contents paging_layout">
+            <article class="page page_1">
+                <section class="title type2 page-1-title">
+                    <h2 lang="y" data-head="1">직사각형 모양의 거실바닥을 만들었습니다. 거실 바닥의 넓이를 나타내는 데 알맞은 단위를 알아봅시다.</h2>
+                </section> 
+                <section class="title type2">
+                </section>
+                    <h3 lang="y">거실 바닥의 넓이는 몇 cm²인지 구해 보세요.</h3>
+                    <div class="input_area po_absolute">     
+                            <div class="flex align_center gap_12">
+                                <div class="ractangleWrap">
+                                    <div class="ractangleBox1">
+                                        <div class="txt" style="position: absolute; top: -158px; left: 0;">
+                                            <span>가</span>   
+                                        </div>
+                                    </div>
+                                    <div class="ractangleBox2">
+                                        <div class="txt" style="position: absolute; top: -108px; left: 0;">
+                                            <span>나</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            </article><!-- 1page -->
+            
+            <article class="page page_2 page2">
+                <section class="title type2 page-1-title">
+                    <h2 lang="y" data-head="1">직접 대어 벽돌의 넓이를 비교해 봅시다.</h2>
+                </section>
+                    <h3 lang="y">거실 바닥의 넓이를 cm²로 나타낼 때 불편한 점을 이야기해 보세요.</h3>
+                    <div class="input_area po_absolute"> 
+                        <div class="flex mt_40"> 
+                            <div class="input_wrap">
+                                <textarea placeholder=" "></textarea>
+                                <ol class="example_box ">  
+                                    <li lang="y">모양이 달라서 비교하기 어렵습니다.</li>
+                                    <li lang="y">어느 것이 얼마나 더 넓은지 정확하게 비교하기 어렵습니다.</li>
+                                    <li lang="y">서로 부족하거나 넘치는 부분이 있어 비교하기 어렵습니다.</li>
+                                </ol> 
+                            </div>
+                        </div>
+            </article><!-- 2page -->
+            <article class="page page_3">
+                <section class="title type2 page-1-title">
+                    <h2 lang="y" data-head="1">직접 대어 벽돌의 넓이를 비교해 봅시다.</h2>
+                </section> 
+                    <h3 lang="y">1 cm²보다 더 큰 넓이의 단위를 어떻게 나타내면 좋을지 이야기해 보세요.</h3>
+                    <div class="input_area po_absolute"> 
+                        <div class="flex mt_40"> 
+                            <div class="input_wrap">
+                                <textarea placeholder=" "></textarea>
+                                <ol class="example_box ">  
+                                    <li lang="y">모양이 달라서 비교하기 어렵습니다.</li>
+                                    <li lang="y">어느 것이 얼마나 더 넓은지 정확하게 비교하기 어렵습니다.</li>
+                                    <li lang="y">서로 부족하거나 넘치는 부분이 있어 비교하기 어렵습니다.</li>
+                                </ol> 
+                            </div>
+                        </div>
+            </article><!-- 3page -->
+            <article class="page page_4">
+                약속해볼까요            
+            </article><!-- 4page -->
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+                <button class="btnSubmit">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    function checkPage() {
+        let isPage4Visible = document.querySelector(".page_4")?.offsetParent !== null;
+        document.querySelector(".title.type2").style.display = isPage4Visible ? "none" : "block";
+    }
+
+    // 페이지 변경 이벤트가 있을 때마다 실행 (예: 버튼 클릭)
+    document.addEventListener("click", checkPage);
+});
+</script>

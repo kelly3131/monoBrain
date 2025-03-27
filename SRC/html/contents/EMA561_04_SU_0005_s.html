@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMA561_04_SU_0005_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css" />
+
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema561_04.css" />
+  </head>
+  <body>
+    <div id="app_wrap" class="ema561_04_su_0005">
+      <section class="title type3 page-1-title">
+        <h2 lang="y" data-head="2">직사각형의 넓이를 구해 봅시다.</h2>
+      </section>
+      <section class="contents paging_layout">
+        <article class="page page_1">
+          <section class="title type2"></section>
+          <h3 lang="y">
+            가와 나의 넓이는 각각 몇 cm²인지 구해 보세요.
+          </h3>
+          <div class="input_area po_absolute" style="width: 100%">
+            <div class="flex align_center gap_15">
+              <div class="imgBox">
+                <div class="img1">
+                  <img
+                    src="../../common_contents/img/EMA561_05_SU/ractangle2.png"
+                    alt="사각형 이미지"
+                  />
+                  <div class="num1">
+                    <span style="position: absolute; top: -15px; left: 82px"
+                      >1cm</span
+                    >
+                    <span style="position: absolute; top: 135px; left: -16px"
+                      >1cm</span
+                    >
+                  </div>
+                </div>
+                <div class="input_wrap input1">
+                  <input type="text" placeholder="" data-answer-single="28" />
+                </div> 
+                <span style="font-size: 32px; font-weight: 700" s>cm²</span>
+              </div>
+              <div class="img3">
+                <img
+                  src="../../common_contents/img/EMA561_05_SU/ractangle1.png"
+                  alt="사각형 이미지"
+                />
+                <div class="num2">
+                  <span style="position: absolute; top: -17px; right: 105px"
+                    >1cm</span
+                  >
+                  <span style="position: absolute; top: 128px; right: 259px"
+                    >1cm</span
+                  >
+                </div>
+              </div>
+              <div class="input_wrap input2">
+                <input type="text" placeholder="" data-answer-single="64" />
+              </div>
+              <span style="font-size: 32px; font-weight: 700">cm²</span>
+            </div>
+          </div>
+        </article>
+        <!-- 1page -->
+
+        <article class="page page_2">
+          <h3 lang="y">
+            직사각형의 넓이를 이용하여 정사각형의 넓이를 구하는 방법을 식으로
+            나타내어 보세요. 
+          </h3>
+          <div class="input_area po_absolute" style="margin-top: 20px;">
+            <div class="question_box dir_col align_start">
+                <div class="rowBox" style="position: relative;">
+                    <div class="line">
+                        <div class="modification" style="position: absolute; top: 128px; left: 96px;">
+                            <div>
+                                <span lang="y">(정사각형의 넓이)&nbsp;=&nbsp;</span>
+                                <button class="reveal_btn" data-pair="1">한 변의 길이 길이</button>
+                                <span>&nbsp;×&nbsp;</span>
+                                <button class="reveal_btn" data-pair="1">한 변의 길이 길이</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </article>
+        <!-- 2page -->
+        <div class="btn_area">
+          <button class="btnType key">입력타입토글</button>
+          <button class="btnReset">리셋</button>
+          <button class="btnCheck">확인</button>
+          <button class="btnSubmit">확인</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

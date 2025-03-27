@@ -1,26 +1,8 @@
-const btnAct = {
-    isAct: false,
-}
-
-const btnHandler = {
-    set(target, key, value) {
-        if (key === "isAct") {
-            if (value === true) {
-                resetBtnActive();
-            } else {
-                resetBtnUnactive();
-            }
-        }
-        target[key] = value;
-        return true;
-    }
-};
-
-const btnActProxy = new Proxy(btnAct, btnHandler);
-
 /** 정오답 체크 및 힌트 기능 실행 */
 // 모든 버튼 요소를 가져와 이벤트 리스너 추가
 document.querySelectorAll(".btn_area button").forEach(button => {
+    const btn = document.querySelectorAll(".paging_controller button");
+
     button.addEventListener("click", () => {
         // 버튼의 클래스를 확인하여 기능 실행
         if (button.classList.contains("btnType")) {
@@ -36,6 +18,14 @@ document.querySelectorAll(".btn_area button").forEach(button => {
             resetRevealSystem();
             resetBooleanBtn();
             resetBooleanCount();
+            resetDragGroupValue();
+            resetSelfCheckRadioGroups();
+            
+            btn.forEach(btn => {
+                btn.removeAttribute("disabled");
+            });
+            
+            typeof resetCustom === "function" && resetCustom();
         } else if (button.classList.contains("btnCheck")) {
             if(button.classList.contains("close")) {
                 resetRevealSystem()
@@ -50,6 +40,7 @@ document.querySelectorAll(".btn_area button").forEach(button => {
     });
 });
 
+/****************************************************************************************************************/
 /** input, textarea, select, drawline의 정오답 체크 및 힌트 기능 */
 function checkAnswers(onCorrect, onIncorrect, onIncorrectTwice, onEmpty) {
     // 정답 비교 대상 셀렉터 목록 (확장 가능)
@@ -60,6 +51,7 @@ function checkAnswers(onCorrect, onIncorrect, onIncorrectTwice, onEmpty) {
         ".drawing_area[data-answer-connectline]",
         ".boolean_wrap button[data-answer-single]",
         ".boolean_count_wrap[data-answer-single]",
+        ".drag_share .drag_group[data-answer-single]",
     ];
 
     const targets = pagenation.activePage.querySelectorAll(correctionSelectors.join(","));
@@ -79,6 +71,7 @@ function checkAnswers(onCorrect, onIncorrect, onIncorrectTwice, onEmpty) {
         }
     });
 
+    // console.log(emptyOccurred, incorrectOccurred)
     if (emptyOccurred) {
         onEmpty();
         return;
@@ -112,18 +105,30 @@ function compareConnectionArrays(correct, user) {
 
 // 정답 처리 콜백
 function onCorrect() {
+    typeof onCorrectCustom === "function" && onCorrectCustom();
     pagenation.activePage.querySelectorAll(".input_wrap, .dropdown_wrap, .drawing_area").forEach(wrapper => wrapper.classList.remove("hint")); // 모든 hint 제거
     toastCheckMsg("정답이에요!", 4, false);
 }
 
 // 첫 번째 오답 처리 콜백
 function onIncorrect() {
+    typeof onIncorrectCustom === "function" && onIncorrectCustom();
     toastCheckMsg("한 번 더 생각해 보세요.", 2, false);
 }
 
 // 두 번째 이상 오답 처리 콜백
 function onIncorrectTwice() {
+    typeof onIncorrectTwiceCustom === "function" && onIncorrectTwiceCustom();
     const page = pagenation.activePage;
+    const btn = document.querySelectorAll(".btn_area button:not(.btnReset), .paging_controller button")
+
+    btn.forEach(btn => {
+        if(btn && btn.classList.contains("active")){
+            btn.classList.remove("active")
+        }else{
+            btn.setAttribute("disabled", true);
+        }
+    })
 
     // input_wrap, dropdown_wrap, drawing_area 처리
     page.querySelectorAll(".input_wrap, .dropdown_wrap, .drawing_area").forEach(wrapper => {
@@ -152,11 +157,32 @@ function onIncorrectTwice() {
 
     page.querySelector(".boolean_count_wrap") ? applyBooleanCountSimplified() : null
 
+    // ✅ drag_group 정답 힌트 처리
+    page.querySelectorAll(".drag_group[data-answer-single]").forEach(group => {
+        let answerArray;
+        try {
+            answerArray = JSON.parse(group.dataset.answerSingle || "[]");
+        } catch {
+            answerArray = [];
+        }
+
+        const droppables = group.querySelectorAll(".droppable");
+
+        answerArray.forEach((val, i) => {
+            if (droppables[i]) {
+                droppables[i].dataset.value = val;
+            }
+        });
+
+
+    });
+
     toastCheckMsg("정답을 확인해 보세요.", 3, false);
 }
 
 // 빈 값 처리 콜백
 function onEmpty() {
+    typeof onEmptyCustom === "function" && onEmptyCustom();
     toastCheckMsg("문제를 풀어보세요!", 1, false);
 }
 
@@ -206,7 +232,6 @@ document.addEventListener("click", (event) => {
     }
 });
 
-
 /** 전체 답안 공개 */
 function revealAllAnswers() {
     pagenation.activePage.querySelectorAll(".reveal_btn").forEach(hidden => hidden.classList.add("on"));
@@ -219,15 +244,7 @@ function resetRevealSystem() {
     pagenation.activePage.querySelectorAll(".hidden_obj").forEach(hidden => hidden.classList.remove("on"));
 }
 
-
-function resetBtnActive(){
-    console.log('활성화')
-}
-function resetBtnUnactive(){
-    console.log('비활성화')
-}
-
-
+/****************************************************************************************************************/
 /**
  * 활성 페이지 내부 요소들 중 조건을 만족하면 콜백 실행
  * 각 rule은 { selector, test(el) } 형식
@@ -249,14 +266,21 @@ function watchWithCustomTest(rules, callback, callbackNot) {
             if (isMatched) matchedNow.add(key || selector);
         });
 
-        const changed = matchedNow.size !== lastMatchedKeys.size || [...matchedNow].some(key => !lastMatchedKeys.has(key));
+        // 🔍 변경 감지
+        const added = [...matchedNow].filter(k => !lastMatchedKeys.has(k));
+        const removed = [...lastMatchedKeys].filter(k => !matchedNow.has(k));
+
+        const changed = added.length > 0 || removed.length > 0;
 
         if (changed) {
             lastMatchedKeys = matchedNow;
+
             if (matchedNow.size > 0) {
-                callback([...matchedNow]); // ← 배열로 넘김
-            } else {
-                callbackNot();
+                callback([...matchedNow]); // 여전히 만족하는 전체 목록
+            }
+
+            if (removed.length > 0) {
+                callbackNot(removed, matchedNow.size <= 0); // 사라진 조건만 전달
             }
         }
     };
@@ -313,32 +337,49 @@ watchWithCustomTest([
     },
     {
         selector: ".boolean_wrap button",
-        test: el => el.classList.contains("selected") == true
+        test: el => el.classList.contains("selected") === true
     },
     {
         selector: ".boolean_count_wrap button",
         test: el => el.classList.contains("selected") === true
     },
-], (selectors) => {
+    {
+        selector: ".drag_share .drag_group",
+        test: el => el.dataset.groupValue !== undefined
+    },
+    {
+        selector: ".self_check .state_wrap",
+        test: group => {
+          return group.querySelector("input[type='radio']:checked") !== null;
+        }
+    }
+], (selector) => {
     const activeBtn = document.querySelectorAll(".btn_area button:not(.btnType, .btnSample)");
     if(activeBtn) activeBtn.forEach(btn => btn.classList.add('active'));
 
-    if (selectors.includes("textarea_with_example")) {
-        document.querySelector(".btn_area .btnSample")?.classList.add("active");
-        // console.log("💡 textarea + example_box 조건 만족");
-    }
-
-    if (selectors.some(key => key.includes(".boolean_count_wrap"))) {
+    if (
+        selector.includes("textarea_with_example") ||
+        selector.some(key => key.includes(".boolean_count_wrap"))
+    ) {
         document.querySelector(".btn_area .btnSample")?.classList.add("active");
     }
-},()=>{
-    const activeBtn = document.querySelectorAll(".btn_area button:not(.btnType)")
+},(removedSelector, isEmpty)=>{
+    const activeBtn = document.querySelectorAll(".btn_area button:not(.btnType, .btnSample)")
     const closeBtn = document.querySelector(".btn_area button.close");
     const exampleBox = document.querySelectorAll(".example_box");
+    const booleanCountBox = document.querySelectorAll(".boolean_count_wrap button")
 
-    if(activeBtn) activeBtn.forEach(btn => btn.classList.remove('active'));
-    if(closeBtn)  closeBtn.classList.remove('close');
-    if(exampleBox) exampleBox.forEach(box => box.classList.remove('on'));
+    if(activeBtn && isEmpty) activeBtn.forEach(btn => btn.classList.remove('active'));
+    if (
+        removedSelector.includes("textarea_with_example") ||
+        removedSelector.some(key => key.includes(".boolean_count_wrap"))
+    ) {
+        document.querySelector(".btn_area .btnSample")?.classList.remove("active");
+        if(closeBtn && isEmpty)  closeBtn.classList.remove('close');
+        if(exampleBox && isEmpty) exampleBox.forEach(box => box.classList.remove('on'));
+    }
+    if ( removedSelector.some(key => key.includes(".boolean_count_wrap")) ) resetBooleanCount();
+
 });
 
 /**
@@ -365,7 +406,7 @@ watchWithCustomTest([
         const checkBtn = document.querySelector(".btn_area .btnCheck");
         if (checkBtn) checkBtn.classList.add("close");
     }
-},()=>{
+},(removedSelector, isEmpty)=>{
     const btn = document.querySelector(".btn_area .btnSample");
     const checkBtn = document.querySelector(".btn_area .btnCheck");
     if (btn) btn.classList.remove("close");
@@ -385,9 +426,18 @@ function validateBeforeSubmit(buttonSelector, rules) {
 
         if (!pagenation.activePage) return;
 
-        const hasEmpty = rules.some(({ selector, test }) => {
+        let hasEmpty = false;
+        let isSelfCheckMissing = false;
+
+        rules.forEach(({ selector, test }) => {
             const elements = pagenation.activePage.querySelectorAll(selector);
-            return Array.from(elements).some(el => !test(el));
+            const failed = Array.from(elements).some(el => !test(el));
+            if (failed) {
+                hasEmpty = true;
+                if (selector.includes(".self_check")) {
+                    isSelfCheckMissing = true;
+                }
+            }
         });
 
         pagenation.activePage.querySelectorAll(".example_box").forEach(el => {
@@ -395,7 +445,11 @@ function validateBeforeSubmit(buttonSelector, rules) {
         });
 
         if (hasEmpty) {
-            toastCheckMsg("아직 풀지 못한 문제가 있어요.<br/>이대로 제출할까요?", 5, true);
+            if (isSelfCheckMissing) {
+                toastCheckMsg("자기 점검 항목을 선택해주세요.", 5);
+            } else {
+                toastCheckMsg("아직 풀지 못한 문제가 있어요.<br/>이대로 제출할까요?", 5, true);
+            }
         } else {
             toastCheckMsg("이대로 제출할까요?", 5, true);
         }
@@ -410,7 +464,13 @@ validateBeforeSubmit(".btnSubmit", [
     {
         selector: ".custom_dropdown",
         test: el => el.dataset.selected !== undefined && el.dataset.selected !== ""
-    }
+    },
+    {
+        selector: ".self_check .state_wrap",
+        test: group => {
+          return group.querySelector("input[type='radio']:checked") !== null;
+        }
+    },
 ]);
 
 /**
@@ -421,11 +481,29 @@ function bindAnswerCheck(configs) {
     const updateCorrection = (el, getValue, getAnswer, onUpdate) => {
         const userValue = getValue(el);
         const answerValue = getAnswer(el);
-        const isCorrect = answerValue === "empty_answer"
-        ? userValue === "" // ⬅️ 선택되지 않은 상태가 정답
-        : userValue === answerValue;
-
-
+    
+        const isEmptyInput =
+            userValue === undefined ||
+            userValue === null ||
+            (typeof userValue === "string" && userValue.trim() === "") ||
+            (Array.isArray(userValue) && userValue.length === 0);
+    
+        // ✅ empty_answer는 무조건 우선 처리
+        if (answerValue === "empty_answer") {
+            const isCorrect = isEmptyInput;
+            el.dataset.correction = isCorrect ? "true" : "false";
+            if (onUpdate) onUpdate(el, isCorrect);
+            return;
+        }
+    
+        // ✅ 사용자 입력이 없으면 correction 제거
+        if (isEmptyInput) {
+            delete el.dataset.correction;
+            return;
+        }
+    
+        // ✅ 일반 비교
+        const isCorrect = userValue === answerValue;
         el.dataset.correction = isCorrect ? "true" : "false";
         if (onUpdate) onUpdate(el, isCorrect);
     };
@@ -444,22 +522,6 @@ function bindAnswerCheck(configs) {
         document.querySelectorAll(selector).forEach(el => {
             updateCorrection(el, getValue, getAnswer, onUpdate);
         });
-
-        // ✅ 특별 처리: .custom_dropdown 요소의 select_trigger 초기 상태 검사
-        if (selector === ".custom_dropdown") {
-            document.querySelectorAll(".select_trigger").forEach(trigger => {
-                const select = trigger.closest(".dropdown_wrap")?.querySelector(".custom_dropdown");
-                if (!select) return;
-
-                const userValue = trigger.dataset.value || "";
-                const answerValue = select.dataset.answerSingle;
-                const isCorrect = answerValue === "empty_answer"
-                    ? userValue === ""
-                    : userValue === answerValue;
-
-                select.dataset.correction = isCorrect ? "true" : "false";
-            });
-        }
     });
 }
 
@@ -507,9 +569,6 @@ bindAnswerCheck([
         selector: ".custom_dropdown",
         getValue: el => el.parentElement.querySelector(".select_trigger")?.dataset.value || "",
         getAnswer: el => el.dataset.answerSingle,
-        onUpdate: (el, isCorrect) => {
-            el.dataset.correction = isCorrect ? "true" : "false";
-        }
     },
     {
         selector: ".drawing_area",
@@ -540,9 +599,23 @@ bindAnswerCheck([
           return el.querySelectorAll("button.selected").length;
         },
         getAnswer: el => parseInt(el.dataset.answerSingle, 10),
-        onUpdate: (el, isCorrect) => {
-          el.dataset.correction = isCorrect ? "true" : "false";
-        }
+      },
+      {
+        selector: ".drag_share .drag_group",
+        getValue: (el) => {
+          try {
+            return JSON.parse(el.dataset.groupValue || "[]");
+          } catch {
+            return [];
+          }
+        },
+        getAnswer: (el) => {
+          try {
+            return JSON.parse(el.dataset.answerSingle || "[]");
+          } catch {
+            return [];
+          }
+        },
       },
 ]);
 
@@ -605,6 +678,34 @@ observeAttributeChange(".boolean_count_wrap button", "class", (button) => {
     wrapper.dataset.correction = isCorrect ? "true" : "false";
 });
 
+// dragndrop limit 기능에서 드래그 그룹 값 변화 감지
+observeAttributeChange(".drag_share .drag_group", "data-group-value", (groupEl) => {
+    const groupValue = groupEl.dataset.groupValue;
+    const answerValue = groupEl.dataset.answerSingle;
+
+    let userArray = [];
+    let answerArray = [];
+
+    try {
+        userArray = JSON.parse(groupValue || "[]");
+        answerArray = JSON.parse(answerValue || "[]");
+    } catch (e) {
+        console.warn("JSON 파싱 오류:", e);
+    }
+
+    const isCorrect = (() => {
+        if (!Array.isArray(userArray) || !Array.isArray(answerArray)) return false;
+        if (userArray.length !== answerArray.length) return false;
+
+        const sortedUser = [...userArray].sort();
+        const sortedAnswer = [...answerArray].sort();
+
+        return sortedUser.every((v, i) => v === sortedAnswer[i]);
+    })();
+
+    groupEl.dataset.correction = isCorrect ? "true" : "false";
+});
+
 /**
  * boolean 체크 선택 기능
  * 칸 선택 수 체크 기능
@@ -623,12 +724,12 @@ document.querySelectorAll(".boolean_wrap > button").forEach(button => {
 
 function resetBooleanBtn() {
     // 현재 활성 페이지의 모든 버튼에서 "hint" 클래스 제거
-    pagenation.activePage.querySelectorAll(".boolean_wrap > button").forEach(button => {
+    document.querySelectorAll(".boolean_wrap > button").forEach(button => {
         button.classList.remove("hint");
     });
 
     // 현재 활성 페이지의 모든 버튼에서 "selected" 클래스 제거
-    pagenation.activePage.querySelectorAll(".boolean_wrap > button").forEach(button => {
+    document.querySelectorAll(".boolean_wrap > button").forEach(button => {
         button.classList.remove("selected");
     });
 }
@@ -653,6 +754,19 @@ function resetBooleanCount() {
         delete wrapper.dataset.prevSelected;
     });
 }
+
+function resetDragGroupValue() {
+    pagenation.activePage.querySelectorAll(".drag_share .drag_group").forEach(group => {
+        // 그룹의 드롭 상태 초기화
+        delete group.dataset.groupValue;
+
+        // 그룹 내 드롭 요소 초기화 (선택사항)
+        group.querySelectorAll(".droppable").forEach(drop => {
+            delete drop.dataset.value;
+        });
+    });
+}
+
 
 function applyBooleanCountSimplified() {
     pagenation.activePage.querySelectorAll(".boolean_count_wrap").forEach(wrapper => {
@@ -695,5 +809,16 @@ function restoreBooleanCountSelection() {
 
         // 저장 상태 제거 (선택사항)
         delete wrapper.dataset.prevSelected;
+    });
+}
+
+/****************************************************************************************************************/
+/** 셀프체크 */
+function resetSelfCheckRadioGroups() {
+    pagenation.activePage.querySelectorAll(".self_check .state_wrap").forEach(group => {
+        // 그룹 내 선택된 라디오 버튼을 찾아 체크 해제
+        group.querySelectorAll("input[type='radio']").forEach(radio => {
+            radio.checked = false;
+        });
     });
 }

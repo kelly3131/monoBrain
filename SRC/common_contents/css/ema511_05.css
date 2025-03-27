@@ -195,6 +195,111 @@
     left: 225px;
 }
 
+/*ema511_05_su_0005_s*/
+.ema511_05_su_0005 .contents {
+    margin-bottom: 0;
+}
+
+.ema511_05_su_0005 .picture_wrap {
+    width: 560px;
+    margin: 0 auto;
+}
+
+.ema511_05_su_0005 .problem_generator .option_group input[type="radio"]:checked + label::after {
+    height: 50px;
+}
+
+.ema511_05_su_0005 .question_box {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 66px;
+    padding: 20px;
+    background-color: rgba(255, 245, 237, 1);
+    border-radius: 20px;
+    position: relative;
+}
+
+.ema511_05_su_0005 .question_box > .title {
+    padding: 2px 24px;
+    background-color: rgba(255, 245, 237, 1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-weight: 700;
+    font-size: 32px;
+    color: rgba(192, 87, 61, 1);
+    line-height: 48px;
+    letter-spacing: -1px;
+    position: absolute;
+    top: -46px;
+    left: 40px;
+}
+
+.ema511_05_su_0005 .question_box .select_area {
+    padding: 20px 42px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(251, 203, 161, 1);
+    border-radius: 30px;
+}
+
+.ema511_05_su_0005 .question_box .select_area .option_group span {
+    margin-left: -5px;
+}
+
+.ema511_05_su_0005 .question_box .select_area span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+
+.ema511_05_su_0005 .question_box .select_area > div + div {
+    margin-top: -25px;
+}
+
+.ema511_05_su_0005 .question_box .input_area {
+    padding-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.ema511_05_su_0005 .question_box .input_area .quiz {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.ema511_05_su_0005 .question_box .input_area .quiz > span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: -1px;
+}
+
+.ema511_05_su_0005 .question_box .input_area .quiz .title {
+    width: 48px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 21px;
+    border-bottom-right-radius: 0px;
+    font-weight: 700;
+    font-size: 32px;
+    color: rgba(192, 87, 61, 1);
+    line-height: 48px;
+    letter-spacing: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ema511_05_su_0005 .question_box .input_area .quiz1 .input_wrap .text_input {
+    width: 583px;
+}
+
+
 /*ema511_05_su_0006_s*/
 .ema511_05_su_0006 .orange {
     color: rgba(238, 79, 36, 1);

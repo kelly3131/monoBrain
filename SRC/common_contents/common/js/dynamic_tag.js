@@ -77,7 +77,10 @@ document.querySelectorAll("h2[data-head]").forEach(h2 => {
 const elements = document.querySelectorAll(".input_wrap input[data-answer-single], .input_wrap textarea[data-answer-single], .custom_dropdown[data-answer-single]");
 if (elements.length > 0) {
     elements.forEach(element => {
-        createHint(element);
+        const answer = element.getAttribute("data-answer-single");
+        if (answer !== "empty_answer") {
+            createHint(element);
+        }
     });
 }
 
@@ -147,3 +150,14 @@ function removeHint(element) {
     const existingHint = element.parentNode.querySelector(".text_hint");
     if (existingHint) existingHint.remove();
 }
+
+/*section.contents 패딩값 동적 제어*/
+document.querySelectorAll("section.contents").forEach(section => {
+    const btnArea = section.querySelector(".btn_area");
+
+    const isHidden = !btnArea || window.getComputedStyle(btnArea).display === "none";
+
+    if (isHidden) {
+        section.style.marginBottom = "unset";
+    }
+});

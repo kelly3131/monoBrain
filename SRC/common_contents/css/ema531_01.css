@@ -239,23 +239,10 @@ table {
     display: none;
 }
 
-.ema531_01_su_0012 .input_wrap textarea {
-    min-height: 50px;
-}
-
-.ema531_01_su_0012 .input_wrap ol.example_box li {
-    padding-left: 0px;
-}
-
-.ema531_01_su_0012 .input_wrap ol.example_box li::before {
-    width: 0;
-    height: 0;
-}
-
-.ema531_01_su_0012 .input_area2>.input_wrap{
-    position: relative;
-    transform: translate(200px, 100px);
-    z-index: 999;
+.ema531_01_su_0012 .input_wrap {
+    top: -520px;
+    left: 500px;
+    width: 67%;
 }
 
 

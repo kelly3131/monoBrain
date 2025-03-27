@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA561_04_SU_0003_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+    
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema561_04.css">
+
+</head>
+<body>
+    <div id="app_wrap" class="ema561_04_su_0003">
+        <section class="title type2 page-1-title">
+            <h2 lang="y" data-head="1">
+            <span class="dotted">1cm²</span>의 개수를 세어 직사각형의 넓이를 구해 봅시다.</h2>
+        </section> 
+        <section class="contents paging_layout">
+            <article class="page page_1" id="page1">
+                <section class="title type2">
+                </section>
+                    <h3 lang="y"><span class="dotted">1cm²</span> 의 개수를 세어 직사각형의 넓이는 <span class="dotted">1cm²</span> 의 몇 배인지 알아보세요.</h3>
+                    <div class="input_area po_absolute">     
+                            <div class="flex align_center gap_12">
+                                <div class="container">
+                                    <div class="grid-item highlight">1</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                    <div class="grid-item">1cm²</div>
+                                </div>
+                                <div class="flex align_center gap_13">
+                                    <div class="input_wrap answer2">
+                                        <input class="num1" type="text" data-answer-single="12"/>
+                                    </div>
+                                    <span style="font-size: 32px; font-weight: 700;">배</span>
+                                </div>
+                            </div>
+            </article><!-- 1page -->
+            
+            <article class="page page_2 page2">
+                <h3 lang="y"><span class="dotted">1cm²</span> 의 개수를 세어 직사각형의 넓이는 <span class="dotted">1cm²</span> 의 몇 배인지 알아보세요.</h3>
+                <div class="input_area po_absolute">     
+                        <div class="flex align_center gap_12">
+                            <div class="gridArea">
+                                <div class="item">1cm²</div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                            </div>
+                            <div class="flex align_center gap_13">
+                                <div class="input_wrap answer2">
+                                    <input class="num1" type="text" data-answer-single="12"/>
+                                </div>
+                                <span style="font-size: 32px; font-weight: 700;">cm²</span>
+                            </div>
+                        </div>
+            </article><!-- 2page -->
+            <div class="btn_area">
+                <button class="btnType key">입력타입토글</button>
+                <button onclick="resetGrid('page1')" class="btnReset">리셋</button>
+                <button onclick="checkAnswer('page1')" class="btnCheck">확인</button>
+                <button class="btnSubmit">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+<script>
+    function checkAnswer(page) {
+        if (page === 'page1') {
+            console.log("checkAnswer 함수 호출됨");
+
+            const gridItems = document.querySelectorAll("#page1 .grid-item");
+            if (gridItems.length === 0) {
+                console.log("grid-item 요소를 찾을 수 없음");
+            }
+
+            gridItems.forEach((item, index) => {
+                item.textContent = index + 1;
+                item.classList.add("answered");
+                
+                // 스타일 추가 - 배경색 변경
+                item.style.backgroundColor = "#e6e0f8"; // 배경색 변경
+                item.style.border = "4px solid #673ab7"; // 실선 색 변경
+            });
+
+            const container = document.querySelector("#page1 .container");
+            container.style.border = "1px solid #673ab7"; // 보라색 실선 테두리로 변경
+            container.style.backgroundColor = "#e6e0f8"; // 배경색 변경
+        }
+    }
+
+    function resetGrid(page) {
+        if (page === 'page1') {
+            console.log("resetGrid 함수 호출됨");
+
+            const gridItems = document.querySelectorAll("#page1 .grid-item");
+
+            const container = document.querySelector("#page1 .container");
+            container.removeAttribute("style");
+            container.style.border = "2px dashed #00A0E9"; // 기본 점선 테두리 복원
+            container.style.backgroundColor = ""; // 배경색 초기화
+
+            gridItems.forEach((item) => {
+                item.textContent = "1cm²";
+                item.classList.remove("answered");
+                item.style.border = "1px dashed #00A0E9"; // 기본 점선 테두리 복원
+                item.style.backgroundColor = ""; // 배경색 초기화
+            });
+        }
+    }
+</script>

@@ -164,7 +164,6 @@ td:nth-child(1) {
 
 .input2 .text_hint {
   width: 100%;
-  font-size: 44px;
   font-weight: 700;
   color: var(--font-negative);
   text-align: center;

@@ -1,0 +1,105 @@
+/* ==============================================
+   📌 공통 - 5단원
+   ============================================== */
+/* 분수 연산 */
+.operations {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    gap: 4px;
+}
+
+/* 분수 whole */
+.f32b {
+    display: flex;
+    align-items: center;
+}
+
+/* 분수 문장 */
+.fraction-text-align {
+    display: flex;
+    align-items: center;
+}
+.fraction-text-align > .f32b {
+    padding: 0px 14px;
+}
+.fraction-text-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 분수 힌트 위치 수정정 */
+.input_wrap.hint .text_hint {
+    font-size: 24px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    background: none;
+    backdrop-filter: unset;
+}
+
+/* ==============================================
+   🎨 차시 스타일
+   ============================================== */
+/* 0002 */
+.ema551_04_su_0002 .contents > .flex {
+    gap: 26px;
+}
+
+/* 0003 */
+.ema551_04_su_0003 .page.page_2 h3::before {
+    margin-top: 40px;
+}
+
+/* 0004 */
+.ema551_03_su_0004 .page.page_2 h3::before {
+    margin-top: 40px;
+}
+
+.ema551_04_su_0004 .container {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+/* 0005 */
+.ema551_04_su_0005 .container_551 {
+    display: flex;
+    flex-direction: column;
+}
+
+.ema551_04_su_0005 .container_551 .top-551 {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.ema551_04_su_0005 .container_551 .bottom-551 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* 0006 */
+.ema551_04_su_0006 .container_551 {
+    display: flex;
+    margin-top: 20px;
+}
+
+.ema551_04_su_0006 .left-551 {
+    flex: 2;
+    /* background: pink; */
+    display: flex;
+    justify-content: right;
+}
+
+.ema551_04_su_0006 .right-551 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}

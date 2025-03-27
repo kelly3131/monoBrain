@@ -20,6 +20,7 @@
 .fraction-text-align {
     display: flex;
     align-items: center;
+    line-height: 1;
 }
 
 .fraction-text-align>.f32b {
@@ -41,6 +42,14 @@
     backdrop-filter: unset;
 }
 
+/* 분수 패딩 수정 */
+.fraction_box {
+    padding: 0 4px;
+}
+
+.video_wrap {
+    background: unset;
+}
 /* ==============================================
    🎨 차시 스타일
    ============================================== */
@@ -58,8 +67,6 @@
 .ema551_01_su_0004 .page.page_2 .container {
     display: flex;
     justify-content: space-between;
-
-
 }
 .ema551_01_su_0004 .page.page_2 .right_box {
     width: 100%;

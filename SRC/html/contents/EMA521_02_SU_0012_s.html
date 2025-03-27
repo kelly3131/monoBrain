@@ -22,7 +22,7 @@
     <div id="app_wrap" class="ema521_02_su_0012">
         <section class="title type2 mt_20">
             <!-- data-icon로 common/img폴더 내 icon_**.svg 형태 이미지 호출 **에 호출할 파일명 기입 시 해당 이미지 호출 가능-->
-            <h2 data-icon="speech">18을 여러 수의 곱으로 나타낸 식을 보고 약수와 배수에 대해 이야기해 봅시다.</h2>
+            <h2 data-icon="speech" lang="y">18을 여러 수의 곱으로 나타낸 식을 보고 약수와 배수에 대해 이야기해 봅시다.</h2>
         </section>
 
         <section class="contents">
@@ -32,25 +32,38 @@
                 <span>18=3&times;6</span>
                 <span>18=2&times;3&times;3</span>
             </div>
-            <div>
-                그림+글
+            <div class="example_img">
+                <div class="flex">
+                    <div>
+                        <p lang="y">2와 9는 18의<br> 약수야.</p>
+                        <span lang="y">서윤</span>
+                    </div>
+                    <div>
+                        <p lang="y">18은 2와 9의<br> 배수야.</p>
+                        <span lang="y">시우</span>
+                    </div>
+                    <div>
+                        <p lang="y">2&times;3도 18의<br> 약수야.</p>
+                        <span lang="y">유나</span>
+                    </div>
+                </div>
             </div>
             <div>
-                <div class="flex mt_40">
+                <div class="margin_center">
                     <div class="input_wrap">
                         <textarea placeholder="&nbsp;"></textarea>
                         <div class="example_box">
-                            <p>18의 약수는 1, 2, 3, 6, 9, 18이고, 18은 1, 2, 3, 6, 9, 18의 배수입니다.</p>
+                            <p lang="y">18의 약수는 1, 2, 3, 6, 9, 18이고, 18은 1, 2, 3, 6, 9, 18의 배수입니다.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="btn_area">
-                <button class="btnType key">입력타입토글</button>
-                <button class="btnReset btnBgDefault">리셋</button>
+                <button class="btnType key" lang="y">입력타입토글</button>
+                <button class="btnReset btnBgDefault" lang="y">리셋</button>
                 <!-- <button class="btnCheck btnBgDefault">확인</button> -->
-                <button class="btnSubmit btnBgDefault">확인</button>
+                <button class="btnSubmit btnBgDefault" lang="y">확인</button>
             </div>
         </section>
     </div>

@@ -19,7 +19,7 @@
             
             <!-- 단답형 -->
             <div class="input_wrap">
-                <input type="text" placeholder="'정답'이 정답" data-answer-single="정답"/>
+                <input type="text" placeholder="'정답'이 정답" data-answer-single="empty_answer"/>
             </div>
          
             <!-- 미설정 -->
@@ -64,7 +64,8 @@
                 </select>
             </div>
             <div class="dropdown_wrap">
-                <select class="custom_dropdown math_symbol" data-answer-single="empty_answer"><!-- 비선택시 정답인경우 값을 empty_answer 로 설정-->
+                <!-- 비선택시 정답인경우 값을 empty_answer 로 설정, 거기에 따른 상이한 디자인들은 css는 개별수정해주세요-->
+                <select class="custom_dropdown math_symbol" data-answer-single="empty_answer">
                     <option></option>
                     <option value="×">×</option>
                     <option value="÷">÷</option>
@@ -99,7 +100,7 @@
             <button class="btnType formula">입력타입토글</button>
             <button class="btnReset">리셋</button>
             <button class="btnCheck">확인</button>
-            <button class="btnSubmit">확인</button>
+            <button class="btnSubmit">제출</button>
             <button class="btnSample">예시</button>
         </div>
         </section>

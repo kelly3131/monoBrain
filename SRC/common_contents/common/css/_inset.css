@@ -504,6 +504,12 @@ button:hover{
 .custom_select.math_symbol .select_options li[data-value="<"], .custom_select.math_symbol .select_trigger.completion[data-value="<"]{
     background-image: url(../img/icon_arrow_left.svg);
 }
+.custom_select.math_symbol .select_options li[data-value="("], .custom_select.math_symbol .select_trigger.completion[data-value="("]{
+    background-image: url(../img/icon_parentheses_left.svg);
+}
+.custom_select.math_symbol .select_options li[data-value=")"], .custom_select.math_symbol .select_trigger.completion[data-value=")"]{
+    background-image: url(../img/icon_parentheses_right.svg);
+}
 
 /* 예시 박스 */
 .input_wrap .example_box{
@@ -738,7 +744,17 @@ button:hover{
 .title h2[data-type="1"] .title_head, .title h2[data-type="2"] .title_head{
     margin-top: 5px;
 }
-.title h2[data-type]{
+.title i.star {
+    position: relative;
+}
+.title i.star::before {
+    content: "";
+    width: 35px;
+    height: 41px;
+    background: url(../img/title_number_star.svg) no-repeat;
+    position: absolute;
+    top: -55px;
+    left: -90px;
 }
 /* 공통 버튼 스타일 */
 .btn_area {
@@ -825,11 +841,11 @@ button:hover{
     text-align: center;
     background-image: url(../img/icon_btn_sample.svg); 
 }
-.btn_area > button.btnSample.close, .btn_area > button.btnCheck.close{
-    background-color: var(--secondary-red)!important;
-    background-image: url(../img/icon_close_white.svg) !important;
-    font-size: 0 !important;
-    border: 2px solid var(--secondary-red-800) !important;
+.btn_area > button.btnSample.active.close, .btn_area > button.btnCheck.active.close{
+    background-color: var(--secondary-red);
+    background-image: url(../img/icon_close_white.svg);
+    font-size: 0;
+    border: 2px solid var(--secondary-red-800);
 }
 .btn_area > button.btnSample.active{
     background-color: var(--bg-default);
@@ -1575,6 +1591,9 @@ button:hover{
 .paging_controller > button:hover{
     background-color: var(--primary-blue-50);
 }
+.paging_controller > button:disabled{
+    background-color: var(--bg-disabled);
+}
 .paging_controller > button.prev{
     left: 40px;
     background-image: url(../img/icon_paging_arrow_prev.svg);
@@ -1601,6 +1620,9 @@ button:hover{
 }
 .paging_layout article.page.on{
     display: block;
+}
+.pagenation > button:disabled{
+    opacity: .6;
 }
 
 /**
@@ -2118,6 +2140,72 @@ i.ex1{
     position: relative;
     padding: 0;
     cursor: pointer;
+}
+/**************************************/
+/* 셀프체크 */
+.self_check{
+    display: flex;
+    flex-direction: column;
+    padding: 0 112px;
+}
+.self_check li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    padding: 16px 32px;
+    position: relative;
+}
+.self_check li > img{
+    margin-right: 48px;
+}
+.self_check li p{
+    font-size: 32px;
+    font-weight: 700;
+}
+.self_check .state_wrap{
+    display: flex;
+    align-self: center;
+    gap: 8px;
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.self_check .state_wrap input[type="radio"]{
+    display: none;
+}
+.self_check .state_wrap label{
+    width: 68px;
+    height: 68px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    cursor: pointer;
+}
+.self_check .state_wrap label:nth-child(2){
+    background-image: url(../img/icon_pipi_face_00.svg);
+}
+.self_check .state_wrap label:nth-child(4){
+    background-image: url(../img/icon_pipi_face_10.svg);
+}
+.self_check .state_wrap label:nth-child(6){
+    background-image: url(../img/icon_pipi_face_20.svg);
+}
+.self_check .state_wrap input[type="radio"]:checked + label:nth-child(2){
+    background-image: url(../img/icon_pipi_face_01.svg);
+}
+.self_check .state_wrap input[type="radio"]:checked + label:nth-child(4){
+    background-image: url(../img/icon_pipi_face_11.svg);
+}
+.self_check .state_wrap input[type="radio"]:checked + label:nth-child(6){
+    background-image: url(../img/icon_pipi_face_21.svg);
+}
+.self_check li > svg{
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
 }
 
 /**************************************/

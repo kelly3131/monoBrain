@@ -1,4 +1,8 @@
 @charset "utf-8";
+#app_wrap .btn_area .btnBgDefault{
+    background-color: var(--btn-default);
+}
+
 .ema521_00_su_0001#app_wrap{
     background: url(../img/EMA521_00_SU/0001_bg.png) no-repeat left bottom / 857px #91c14a;
 }
@@ -19,42 +23,11 @@
     font-size: 20px;
 }
 
-/* 서술형+예시박스 */
 .leftside{
     width: 797px;
 }
-.leftside .input_area{
-    margin-bottom: 20px;
-}
-.leftside .input_wrap{
-    width: 797px;
-}
-.example_area{
-    width: 797px;
-    min-height: 160px;
-    padding: 24px;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    border-radius: 20px;
-    background: var(--primary-blue-50);
-    resize: none;
-    color: var(--primary-blue-800);
-    display: flex;
-    gap: 35px;
-}
-.example_title{
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background-color: var(--btn-default);
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-}
-.example_area li{
-    list-style: disc;
-    margin: 0 0 4px 0;
+.example_box{
+    height: 252px;
 }
 
 /* EMA521_00_SU_0003 */
@@ -69,8 +42,19 @@
 }
 .ema511_00_su_0003 .help{
     position: absolute;
-    right:0;
-    bottom: 0;
+    right: 140px;
+    bottom: 30px;
+    z-index: 99;
+    display: flex;
+    align-items: end;
+}
+.ema511_00_su_0003 .help p{
+    background: url(../img/EMA521_00_SU/0003_contents.png) no-repeat left top /391px 76px;
+    font-size: 24px;
+    width: 391px;
+    height: 100px;
+    font-weight: bold;
+    text-align: center;
 }
 .ema511_00_su_0003 .help img{
     width: 240px;
@@ -92,7 +76,7 @@
 }
 .ema521_00_su_0004 .input_wrap textarea{
     padding: 20px;
-    min-height: 322px;
+    height: 322px;
 }
 .ema521_00_su_0004 .input_wrap input:hover, .ema521_00_su_0004 .input_wrap textarea:hover, .ema521_00_su_0004 .input_wrap textarea:focus{
     padding: 20px;
@@ -100,27 +84,17 @@
 .ema521_00_su_0004 .input_area{
     margin-bottom: 20px;
 }
-.ema521_00_su_0004 .leftside{
-    width: 797px;
-}
-.ema521_00_su_0004 .example_title{
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background-color: var(--btn-default);
-    color: white;
-    text-align: center;
-    padding-top: 5px;
-}
-.ema521_00_su_0004 .example_area li{
-    list-style: disc;
-    margin: 0 0 4px 0;
-}
 .ema521_00_su_0004 .btn_area > button.btnReset, .ema521_00_su_0004 .btn_area > button.btnSubmit{
     background-color: var(--btn-default);
 }
+.ema521_00_su_0004 .input_wrap .example_box.on{
+    height: 216px;
+}
 
 /* EMA521_00_SU_0006 */
+.ema521_00_su_0006 .input_wrap{
+    width: 797px;
+}
 .ema521_00_su_0006 .contents > div{
     display: flex;
     gap: 20px;
@@ -128,6 +102,11 @@
 .ema521_00_su_0006 .picture_wrap{
     width: 812px;
     height: 428px;
+}
+.ema521_00_su_0006 .picture_wrap img{
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
 }
 .ema521_00_su_0006 .input_wrap textarea{
     padding: 20px;

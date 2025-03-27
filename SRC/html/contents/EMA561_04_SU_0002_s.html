@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMA561_04_SU_0002_s</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css" />
+
+    <!-- 개별 -->
+    <link rel="stylesheet" href="./../../common_contents/css/ema561_04.css" />
+  </head>
+  <body>
+    <div id="app_wrap" class="ema561_04_su_0002">
+      <section class="title type2">
+        <h2 data-type="2" data-text="생각 깨우기" lang="y">
+            직사각형 모양의 문패를 만들었습니다. 문패의 넓이를 어떻게 구할 수 있을지 이야기해 봅시다.
+      </section>
+
+      <section class="contents">
+        <div class="flex align_start">
+          <div class="video_wrap">
+            <button
+              class="play"
+              onclick="navigate('../guide_sample/vedio_player')"
+            ></button>
+          </div>
+
+          <div class="input_area">
+            <h3 lang="y">
+                영상을 보고, 문패의 넓이를 어떻게 구할 수 있을지 이야기해 보세<br>요.
+            </h3>
+            <div class="input_wrap inputBox">
+              <textarea id="inputElement01" type="text"></textarea>
+              <div class="example_box">
+                <p lang="y"><span class="dashed">1cm²</span> 의 개수를 세어 문패의 넓이는 <span class="dashed">1cm²</span> 의 몇 배인지 구하면 문패의 넓이를 구할 수 있을 것 같습니다.</p>
+            </div>
+            </div>
+          </div>
+        </div>  
+
+        <div class="btn_area">
+          <!-- 예시 필드에서 사용 -->
+          <button class="btnType key">입력타입토글</button>
+          <button class="btnReset">리셋</button>
+          <button class="btnSubmit">제출</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

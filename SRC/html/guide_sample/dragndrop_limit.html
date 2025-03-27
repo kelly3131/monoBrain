@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dragndrop_limit</title>
+
+    <!-- 공통 js-->
+    <script src="../../common_contents/common/js/app.js"></script>
+    
+    <!-- 공통 css-->
+    <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
+
+    <style>
+        .drag_share{
+            display: flex;
+            gap: 100px;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+        }
+        .draggable_wrap{
+            width: 300px;
+            height: 108px;
+            padding: 10px 50px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 16px;
+            border: 0.797px solid var(--Line-Gray-300, #D2D2D2);
+            background: var(--BG-Gray-50, #F7F7F7);
+            position: relative;
+            background: url(../../common_contents/img/EMA521_01_SU/0003_obj_flower_bg.png) no-repeat center / 168px;
+        }
+        .draggable{
+            width: 16px;
+            height: 30px;
+            position: absolute;
+            top: 24px;
+            left: 120px;
+            cursor: grab;
+        }
+        .draggable::after{/*드래그영역 클릭 가능영역 확장용*/
+            content: "";
+            width: 300px;
+            height: 108px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .draggable[data-is-dragging="true"]{
+            background: url(../../common_contents/img/EMA521_01_SU/0003_explainImg.png) no-repeat center / 16px;
+        }
+        .drag_group{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 50px;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        .drag_group.g1{
+            background-image: url(../../common_contents/img/EMA521_01_SU/0003_obj_shadow02.png);
+        }
+        .drag_group.g2{
+            background-image: url(../../common_contents/img/EMA521_01_SU/0003_obj_shadow03.png);
+        }
+        .drag_group.g3{
+            background-image: url(../../common_contents/img/EMA521_01_SU/0003_obj_shadow04.png);
+        }
+        .droppable{
+            width: 110px;
+            height: 188px;
+            background-image: url(../../common_contents/img//EMA521_01_SU/0003_obj_vase.png);
+            background-size: 110px;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+        .droppable[data-value="1"]{
+            background-image: url(../../common_contents/img//EMA521_01_SU/0003_obj_vase01.png);
+        }
+        .droppable[data-value="2"]{
+            background-image: url(../../common_contents/img//EMA521_01_SU/0003_obj_vase02.png);
+        }
+        .droppable[data-value="3"]{
+            background-image: url(../../common_contents/img//EMA521_01_SU/0003_obj_vase03.png);
+        }
+        .droppable[data-value="4"]{
+            background-image: url(../../common_contents/img//EMA521_01_SU/0003_obj_vase04.png);
+        }
+        .droppable[data-value="5"]{
+            background-image: url(../../common_contents/img//EMA521_01_SU/0003_obj_vase05.png);
+        }
+    </style>
+</head>
+<body>
+    <div id="app_wrap" class="dragndrop limit">
+        <section class="title type2">
+            <h2 data-head="4">꽃 6송이를 꽃병에 남김없이 똑같이 나누어 꽂으려고 합니다.</h2>
+        </section>
+
+        <section class="contents">
+            <div class="drag_share">
+                <div class="draggable_wrap">
+                    <div class="single_draggable draggable"></div>
+                </div>
+    
+                <div class="drag_group g1" data-group-limit="6" data-answer-single="[3,3]">
+                    <div class="droppable"></div>
+                    <div class="droppable"></div>
+                </div>
+                <div class="drag_group g2" data-group-limit="6" data-answer-single="[2,2,2]">
+                    <div class="droppable"></div>
+                    <div class="droppable"></div>
+                    <div class="droppable"></div>
+                </div>
+                <div class="drag_group g3" data-group-limit="6" data-answer-single="[2,2,1,1]">
+                    <div class="droppable"></div>
+                    <div class="droppable"></div>
+                    <div class="droppable"></div>
+                    <div class="droppable"></div>
+                </div>
+            </div>
+
+            <div class="btn_area">
+                <!-- 불필요한 태그 제외 후 사용 -->
+                <button class="btnType key">입력타입토글</button>
+                <button class="btnReset">리셋</button>
+                <button class="btnCheck">확인</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -18,7 +18,7 @@
 <body>
     <div id="app_wrap" class="ema521_01_su_0002">
         <section class="title type2">
-            <h2 data-type="2" data-text="생각 깨우기">윤우는 꽃 6송이를 꽃병에 남김없이 똑같이 나누어 꽂으려고 합니다. 꽃병 몇 개에 나누어 꽂을 수 있는지 알아봅시다.</h2>
+            <h2 data-type="2" data-text="생각 깨우기" lang="y">윤우는 꽃 6송이를 꽃병에 남김없이 똑같이 나누어 꽂으려고 합니다. 꽃병 몇 개에 나누어 꽂을 수 있는지 알아봅시다.</h2>
         </section>
 
         <section class="contents">
@@ -27,33 +27,24 @@
                     <button class="play" onclick="navigate('../guide_sample/vedio_player')"></button>
                 </div>
 
-                <div class="leftside">
-                    <ul class="videoExplainTitle">
-                        <li>영상을 보고, 꽃 6송이를 꽃병에 남김없이 똑같이 나누어 꽂으려면 어떻게 해야 할 지 이야기해 보세요.</li>
-                    </ul>
-                    <div class="input_area">
-                        <div class="input_wrap">
-                            <textarea id="inputElement01" type="text"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="example_area">
-                        <div class="example_title">예</div>
-                        <div class="example_contents">
-                            <ul>
-                                <li>꽃을 1송이씩 나누어 꽂으면 될 것 같습니다.</li>
-                                <li>꽃을 2송이씩 나누어 꽂으면 될 것 같습니다.</li>
-                            </ul>
-                        </div>
+                <div class="leftside input_area">
+                    <h3 lang="y">영상을 보고, 꽃 6송이를 꽃병에 남김없이 똑같이 나누어 꽂으려면 어떻게 해야 할 지 이야기해 보세요.</h3>
+                    <div class="input_wrap">
+                        <textarea placeholder=" "></textarea>
+                        <ol class="example_box">
+                            <li lang="y">꽃을 1송이씩 나누어 꽂으면 될 것 같습니다.</li>
+                            <li lang="y">꽃을 2송이씩 나누어 꽂으면 될 것 같습니다.</li>
+                        </ol>
                     </div>
                 </div>
             </div>
 
             <div class="btn_area">
                 <!-- 예시 필드에서 사용 -->
-                <button class="btnType key">입력타입토글</button>
-                <button class="btnReset btnBgGray">리셋</button>
-                <button class="btnSubmit">제출</button>
+                <button class="btnType key" lang="y">입력타입토글</button>
+                <button class="btnReset btnBgGray" lang="y">리셋</button>
+                <!-- <button class="btnSubmit">제출</button> -->
+                <button lang="y" class="btnSample" lang="y">예시</button>
             </div>
         </section>
     </div>
