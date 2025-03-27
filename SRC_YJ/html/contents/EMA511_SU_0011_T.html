@@ -12,33 +12,61 @@
     <link rel="stylesheet" href="./../../common_contents/common/css/app.css">
     
     <!-- 개별 -->
-    <link rel="stylesheet" href="./../../common_contents/css/ema511_00.css">
+    <link rel="stylesheet" href="./../../common_contents/css/ema511_su.css">
 
 </head>
 
  <body>
-    <div id="app_wrap" class="ema511_00_su_0004">
+    <div id="app_wrap" class="ema511_su_0011">
         <section class="title type2">
-            <h2 data-icon="speech" lang="y">각자 놀이판을 완성한 다음 순서를 정해 놀이를 시작해 봅시다.</h2>
+            <h2 data-type="5" lang="y">각자 놀이판을 완성한 다음 순서를 정해 놀이를 시작해 봅시다.</h2>
         </section>
-
         <section class="contents">
-            <div class="flex align-start">
-                
-                <div class="input_area">
-                    <div class="input_wrap">
-                        <textarea id="inputElement01" type="text"></textarea>
-                        <ol class="example_box">
-                            <li lang="y">학생들이 운동장 대여함에 있는 줄넘기 중에서 2개를 빌려 사용하고 있습니다.</li>
-                            <li lang="y">학급 임원들이 모여 회의를 하고 있습니다.</li>
-                            <li lang="y">자치회에서 안전한 학교생활 안내 자료를 만들기 위해 급식실 사진을 찍고 있습니다.</li>
-                            <li lang="y">자치회에서 관리하는 텃밭 상자에 모종을 심고 있습니다.</li>
-                        </ol>
+            <div class="flex align-start gap_100">
+                <div class="col left" >
+                    <!-- <img src="../../common_contents/img/EMA511_SU/0011_bg.png" alt="자치회 활동 이미지"> -->
+                    <ul class="btn_grid bingo_board" aria-label="빙고 게임판">
+                        <li><button class="reveal_btn" aria-label="1행 1열"></button></li>
+                        <li><button class="reveal_btn" aria-label="1행 2열"></button></li>
+                        <li><button class="reveal_btn" aria-label="1행 3열"></button></li>
+                        <li><button class="reveal_btn" aria-label="1행 4열"></button></li>
+
+                        <li><button class="reveal_btn" aria-label="2행 1열"></button></li>
+                        <li><button class="reveal_btn" aria-label="2행 2열"></button></li>
+                        <li><button class="reveal_btn" aria-label="2행 3열"></button></li>
+                        <li><button class="reveal_btn" aria-label="2행 4열"></button></li>
+
+                        <li><button class="reveal_btn" aria-label="3행 1열"></button></li>
+                        <li><button class="reveal_btn" aria-label="3행 2열"></button></li>
+                        <li><button class="reveal_btn" aria-label="3행 3열"></button></li>
+                        <li><button class="reveal_btn" aria-label="3행 4열"></button></li>
+
+                        <li><button class="reveal_btn" aria-label="4행 1열"></button></li>
+                        <li><button class="reveal_btn" aria-label="4행 2열"></button></li>
+                        <li><button class="reveal_btn" aria-label="4행 3열"></button></li>
+                        <li><button class="reveal_btn" aria-label="4행 4열"></button></li>
+                        
+                    </ul>
+                    <button class="ready">준비 완료!</button>
+                </div>
+                <div class="col right">
+                    <ul class="card_group">
+                        <li><span>카드뽑기</span></li>
+                    </ul>
+                    <div>
+                        <h3 lang="y">식을 만들어 보세요!</h3>
+                        <div class="input_area">
+                            <div class="input_wrap answer1">
+                                <input type="text" data-answer-single="15-(2+4)"/>
+                            </div>
+                            <span>=</span>
+                            <div class="input_wrap answer2">
+                                <input type="text" data-answer-single="9"/>
+                            </div>
+                        </div>
                     </div>
-        
                 </div>
             </div>
-
             <div class="btn_area">
                 <button class="btnType key">입력타입토글</button>
                 <button class="btnReset">리셋</button>

@@ -1,1 +1,48 @@
+.ema511_su_0011 {
+    section.contents {
+        .col.left.bingo_board {
+            width: 508px;
+        }
+        .btn_grid {
+            background: url('../img/EMA511_SU/0011_bg.png') center / contain no-repeat;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px 26px;
+            .reveal_btn {
+                width: 90px;
+                min-width: initial;
+                height: 90px;
+            }
+            .reveal_btn:not(:disabled):after {
+                width: 56px;
+                height: 64px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -43%);
+            }
+        }
+        .col.right {
+            width: 780px;
+            .card_group {
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 147.74px;
+                    height: 205.2px;
+                    background: url('../img/EMA511_SU/0011_card_back.svg') center / contain no-repeat;
+                    span {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .dot {
 
+    }
+    .gap_100{ 
+        gap: 100px;
+    }
+
+}
